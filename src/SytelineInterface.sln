@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SytelineInterface", "SytelineInterface\SytelineInterface.csproj", "{ED251823-403C-43AB-938E-729DCB6C0F98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SytelineUnitTests", "SytelineUnitTests\SytelineUnitTests.csproj", "{750178BE-A10C-4901-AA98-99B231AE4041}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SytelineIntegrationTests", "SytelineIntegrationTests\SytelineIntegrationTests.csproj", "{230C4348-AFEA-4839-975D-64DB580CE359}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED251823-403C-43AB-938E-729DCB6C0F98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED251823-403C-43AB-938E-729DCB6C0F98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED251823-403C-43AB-938E-729DCB6C0F98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED251823-403C-43AB-938E-729DCB6C0F98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{750178BE-A10C-4901-AA98-99B231AE4041}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{750178BE-A10C-4901-AA98-99B231AE4041}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{750178BE-A10C-4901-AA98-99B231AE4041}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{750178BE-A10C-4901-AA98-99B231AE4041}.Release|Any CPU.Build.0 = Release|Any CPU
+		{230C4348-AFEA-4839-975D-64DB580CE359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{230C4348-AFEA-4839-975D-64DB580CE359}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{230C4348-AFEA-4839-975D-64DB580CE359}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{230C4348-AFEA-4839-975D-64DB580CE359}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ED251823-403C-43AB-938E-729DCB6C0F98}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SytelineInterface</RootNamespace>
+    <AssemblyName>SytelineInterface</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IDOCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=87d3698afe01ef37, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dist\Syteline\IDOCore.dll</HintPath>
+    </Reference>
+    <Reference Include="IDOProtocol, Version=6.0.0.0, Culture=neutral, PublicKeyToken=87d3698afe01ef37, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dist\Syteline\IDOProtocol.dll</HintPath>
+    </Reference>
+    <Reference Include="IDORequestClient, Version=6.0.0.0, Culture=neutral, PublicKeyToken=87d3698afe01ef37, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dist\Syteline\IDORequestClient.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MGShared, Version=6.0.0.0, Culture=neutral, PublicKeyToken=87d3698afe01ef37, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dist\Syteline\MGShared.dll</HintPath>
+    </Reference>
+    <Reference Include="NCommon">
+      <HintPath>..\..\lib\NCommon\NCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap">
+      <HintPath>..\..\dist\StructureMap\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bootstrappers\SytelineInterfaceRegistry.cs" />
+    <Compile Include="Common\EnumerationOfInteger.cs" />
+    <Compile Include="Common\EnumerationOfString.cs" />
+    <Compile Include="Common\Extensions\CollectionExtensions.cs" />
+    <Compile Include="Common\Extensions\DataFieldExtensions.cs" />
+    <Compile Include="Common\Extensions\DateExtensions.cs" />
+    <Compile Include="Common\Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Common\Extensions\FlagsExtensions.cs" />
+    <Compile Include="Common\Extensions\KeyValueListExtensions.cs" />
+    <Compile Include="Common\Extensions\StreamExtensions.cs" />
+    <Compile Include="Common\Extensions\StringExtensions.cs" />
+    <Compile Include="Common\Extensions\XElementExtensions.cs" />
+    <Compile Include="Common\Logger.cs" />
+    <Compile Include="Common\SystemTime.cs" />
+    <Compile Include="Common\Utilities.cs" />
+    <Compile Include="Core\Enums\SytelineBool.cs" />
+    <Compile Include="Core\impl\ClientWrapper.cs" />
+    <Compile Include="Core\impl\IUserSessionService.cs" />
+    <Compile Include="Core\impl\LoadCollectionResponseWrapper.cs" />
+    <Compile Include="Core\Member.cs" />
+    <Compile Include="Core\ActiveUserSession.cs" />
+    <Compile Include="Core\SytelineInterfaceQueryException.cs" />
+    <Compile Include="Dsl\Commands\ARPaymentDetailValues.cs" />
+    <Compile Include="Dsl\Commands\ARPaymentValues.cs" />
+    <Compile Include="Dsl\Commands\UserSessionValues.cs" />
+    <Compile Include="Dsl\Criteria.cs" />
+    <Compile Include="Dsl\ExpressionInterpreter.cs" />
+    <Compile Include="Dsl\ExpressionResolverList.cs" />
+    <Compile Include="Dsl\FromSyteline.cs" />
+    <Compile Include="Dsl\MethodCalls\IDOConnectionInformations.ClearSessionSpMethodCallBuilder.cs" />
+    <Compile Include="Dsl\OperatorResolverList.cs" />
+    <Compile Include="Dsl\Queries\AFPShippingWorkbenchBuilder.cs" />
+    <Compile Include="Dsl\Queries\ArInvoices.cs" />
+    <Compile Include="Dsl\Queries\CustomerAddressesBuilder.cs" />
+    <Compile Include="Dsl\Queries\IdoApPostedTransactions.cs" />
+    <Compile Include="Dsl\Queries\IdoApTransactions.cs" />
+    <Compile Include="Dsl\Queries\IdoArTransactions.cs" />
+    <Compile Include="Dsl\Queries\IdoBlanketOrderLineBuilder.cs" />
+    <Compile Include="Dsl\Queries\IDOConnectionInformationsBuilder.cs" />
+    <Compile Include="Dsl\IdoCriteria.cs" />
+    <Compile Include="Dsl\Queries\IdoCustomerOrderItemLogs.cs" />
+    <Compile Include="Dsl\Queries\IdoCustomerOrderLinesHistory.cs" />
+    <Compile Include="Dsl\Queries\IdoItemLocs.cs" />
+    <Compile Include="Dsl\Queries\IdoJobRoutingSchedules.cs" />
+    <Compile Include="Dsl\Queries\IdoLocationsBuilder.cs" />
+    <Compile Include="Dsl\Queries\IdoLotLocationBuilder.cs" />
+    <Compile Include="Dsl\Queries\IdoNotesBuilder.cs" />
+    <Compile Include="Dsl\Queries\PackHeaderBuilder.cs" />
+    <Compile Include="Dsl\Queries\PackItemBuilder.cs" />
+    <Compile Include="Dsl\Queries\IdoPropertiesBuilder.cs" />
+    <Compile Include="Dsl\MethodCalls\SytelineMethod.cs" />
+    <Compile Include="Dsl\Queries\IDOARPaymentDetailBuilder.cs" />
+    <Compile Include="Dsl\Queries\IDOARPaymentBuilder.cs" />
+    <Compile Include="Dsl\Queries\IDOInvItemAllsBuilder.cs" />
+    <Compile Include="Dsl\Queries\IDOJobmatlsBuilder.cs" />
+    <Compile Include="Dsl\Queries\IDOJobRoutesBuilder.cs" />
+    <Compile Include="Dsl\Queries\IDOJobsBuilder.cs" />
+    <Compile Include="Dsl\Queries\IDOMatltransBuilder.cs" />
+    <Compile Include="Dsl\Queries\IdoCustomerOrderHistoryBuilder.cs" />
+    <Compile Include="Dsl\Queries\IdoPurchaseOrder.cs" />
+    <Compile Include="Dsl\Queries\IdoPurchaseOrderHistory.cs" />
+    <Compile Include="Dsl\Queries\IdoPurchaseOrderLineHistory.cs" />
+    <Compile Include="Dsl\Queries\IdoPurchaseOrderLines.cs" />
+    <Compile Include="Dsl\Queries\IdoTermsBuilder.cs" />
+    <Compile Include="Dsl\Queries\IdoVendorBuilder.cs" />
+    <Compile Include="Dsl\Queries\ReceiptsBuilder.cs" />
+    <Compile Include="Dsl\Queries\UserSessionBuilder.cs" />
+    <Compile Include="Dsl\Queries\UnitOfMeasureConversionsBuilder.cs" />
+    <Compile Include="Dsl\SytelineExpressionVisitor.cs" />
+    <Compile Include="Factories\IMethodRequestFactory.cs" />
+    <Compile Include="Core\impl\IdoItemWrapper.cs" />
+    <Compile Include="Core\impl\MethodCallResponseWrapper.cs" />
+    <Compile Include="Core\impl\UpdateCollectionResponseWrapper.cs" />
+    <Compile Include="Factories\ILoadCollectionRequestFactory.cs" />
+    <Compile Include="Factories\impl\LoadCollectionRequestFactory.cs" />
+    <Compile Include="Factories\impl\UpdateCollectionRequestFactory.cs" />
+    <Compile Include="Factories\IUpdateCollectionRequestFactory.cs" />
+    <Compile Include="Dsl\Queries\IdoCommandBuilder.cs" />
+    <Compile Include="Dsl\Queries\IIdoCommandBuilder.cs" />
+    <Compile Include="Dsl\MethodCalls\COLineMethodFinder.cs" />
+    <Compile Include="Core\ISytelineIdoClient.cs" />
+    <Compile Include="Core\impl\SytelineIdoClient.cs" />
+    <Compile Include="Core\IdoConstants.cs" />
+    <Compile Include="Dsl\Commands\CustomerOrderLineItemValues.cs" />
+    <Compile Include="Dsl\Commands\CustomerOrderValues.cs" />
+    <Compile Include="Dsl\Commands\CustomerPartNumberValues.cs" />
+    <Compile Include="Dsl\Queries\IDOCustomerOrderBuilder.cs" />
+    <Compile Include="Dsl\Queries\IdoCustomerOrderLineItemBuilder.cs" />
+    <Compile Include="Dsl\Queries\IdoCustomerPartNumberBuilder.cs" />
+    <Compile Include="Dsl\Queries\IdoCustomersBuilder.cs" />
+    <Compile Include="Dsl\IdoDsl.cs" />
+    <Compile Include="Dsl\IdoDslGrammar.cs" />
+    <Compile Include="Dsl\MethodCalls\IdoMethods.cs" />
+    <Compile Include="Dsl\Queries\IdoInventoryBuilder.cs" />
+    <Compile Include="Dsl\Queries\IdoInvoicedOrdersBuilder.cs" />
+    <Compile Include="Dsl\Queries\IdoItemBuilder.cs" />
+    <Compile Include="Dsl\Queries\IdoItemForecastBuilder.cs" />
+    <Compile Include="Dsl\Queries\IdoItemPriceBuilder.cs" />
+    <Compile Include="Dsl\Queries\IdoItemWarehouseBuilder.cs" />
+    <Compile Include="Dsl\Queries\IdoPullItemBuilder.cs" />
+    <Compile Include="Dsl\Queries\IdoShippedCustomerOrderBuilder.cs" />
+    <Compile Include="Dsl\Queries\IdoShippedCustomerOrderLineItemBuilder.cs" />
+    <Compile Include="Dsl\Queries\IdoShipToAddressBuilder.cs" />
+    <Compile Include="Dsl\Queries\IdoSitesBuilder.cs" />
+    <Compile Include="Dsl\Queries\IdoWarehouseBuilder.cs" />
+    <Compile Include="Dsl\Commands\InvoicedOrdersValues.cs" />
+    <Compile Include="Dsl\Commands\ItemForecastValues.cs" />
+    <Compile Include="Dsl\Commands\ItemWarehouseValues.cs" />
+    <Compile Include="Dsl\Commands\PullItemValues.cs" />
+    <Compile Include="Dsl\Commands\ShippedCustomerOrderLineItemValues.cs" />
+    <Compile Include="Dsl\Commands\ShippedCustomerOrderValues.cs" />
+    <Compile Include="Dsl\Commands\ShipToAddressValues.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Core\SytelineExtensions.cs" />
+    <Compile Include="SLConfiguration.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dsl\Queries\IdoJobRoutingSchedules.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

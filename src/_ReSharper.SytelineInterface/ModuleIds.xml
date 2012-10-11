@@ -1,0 +1,30 @@
+<Modules>
+  <Module PersistentId="ED251823-403C-43AB-938E-729DCB6C0F98" ModuleId="SytelineInterface" />
+  <Module PersistentId="230C4348-AFEA-4839-975D-64DB580CE359" ModuleId="SytelineIntegrationTests" />
+  <Module PersistentId="d:Miscellaneous Files" ModuleId="AFPST.Common" />
+  <Module PersistentId="750178BE-A10C-4901-AA98-99B231AE4041" ModuleId="SytelineUnitTests" />
+  <Module PersistentId="AFPST.Common, Version=0.0.1.0, Culture=neutral" ModuleId="AFPST.Common_1" />
+  <Module PersistentId="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="mscorlib" />
+  <Module PersistentId="IDOCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=87d3698afe01ef37" ModuleId="IDOCore" />
+  <Module PersistentId="IDOProtocol, Version=6.0.0.0, Culture=neutral, PublicKeyToken=87d3698afe01ef37" ModuleId="IDOProtocol" />
+  <Module PersistentId="IDORequestClient, Version=6.0.0.0, Culture=neutral, PublicKeyToken=87d3698afe01ef37" ModuleId="IDORequestClient" />
+  <Module PersistentId="MGShared, Version=6.0.0.0, Culture=neutral, PublicKeyToken=87d3698afe01ef37" ModuleId="MGShared" />
+  <Module PersistentId="NCommon, Version=1.0.0.0, Culture=neutral" ModuleId="NCommon" />
+  <Module PersistentId="StructureMap, Version=2.6.2.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223" ModuleId="StructureMap" />
+  <Module PersistentId="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="System" />
+  <Module PersistentId="System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="System.Core" />
+  <Module PersistentId="System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="System.Xml.Linq" />
+  <Module PersistentId="System.Data.DataSetExtensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="System.Data.DataSetExtensions" />
+  <Module PersistentId="System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="System.Data" />
+  <Module PersistentId="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="System.Xml" />
+  <Module PersistentId="Machine.Specifications, Version=0.4.112.0, Culture=neutral" ModuleId="Machine.Specifications" />
+  <Module PersistentId="Moq, Version=4.0.812.4, Culture=neutral, PublicKeyToken=69f491c39445e920" ModuleId="Moq" />
+  <Module PersistentId="nunit.framework, Version=2.5.2.9222, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77" ModuleId="nunit.framework" />
+  <Module PersistentId="log4net, Version=1.2.9.0, Culture=neutral, PublicKeyToken=b32731d11ce58905" ModuleId="log4net" />
+  <Module PersistentId="WSEnums, Version=6.0.0.0, Culture=neutral, PublicKeyToken=87d3698afe01ef37" ModuleId="WSEnums" />
+  <Module PersistentId="WSFormServerProtocol, Version=6.0.0.0, Culture=neutral, PublicKeyToken=87d3698afe01ef37" ModuleId="WSFormServerProtocol" />
+  <Module PersistentId="JetBrains.Annotations, Version=5.0.1659.36, Culture=neutral, PublicKeyToken=1010a0d8d6380325" ModuleId="JetBrains.Annotations" />
+  <Module PersistentId="System.Data.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="System.Data.Linq" />
+  <Module PersistentId="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4" ModuleId="Iesi.Collections" />
+  <Module PersistentId="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a" ModuleId="log4net_1" />
+</Modules>

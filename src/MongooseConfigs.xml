@@ -1,0 +1,196 @@
+<MongooseConfigs Version="5.00">
+  <Configs>
+    <Config Name="Austin Pilot">
+      <Application>SL801</Application>
+      <FormControlSSEnabled>0</FormControlSSEnabled>
+      <ObjectStudioSSEnabled>0</ObjectStudioSSEnabled>
+      <SSUNCPath>
+      </SSUNCPath>
+      <SSProjectName>Austin Pilot</SSProjectName>
+      <ConnectionRoles>
+        <ConnectionRole Name="App">
+          <Profile Name="Runtime">
+            <DBType>1</DBType>
+            <DataProvider>1</DataProvider>
+            <Driver>0</Driver>
+            <UserId>vqDidOyT671TiVOR39wodw==</UserId>
+            <Password>QCsdTyqHD3P6rF3vNvLs65rh+xR4Ep3F4G9q2EXE6PlRGK7p70tI4w==</Password>
+            <DataSource>lVGZRnnOijfWPZFNWnkB9g==</DataSource>
+            <DatabaseName>5/4lc+ZAEwidNJVNOG/08VvZiOvLQBVWmK9I7L73Ah20HsKXNoU0zZq72Zp29bwT</DatabaseName>
+            <MiscConnectionInfo>
+            </MiscConnectionInfo>
+            <DBTimeOut>0</DBTimeOut>
+          </Profile>
+        </ConnectionRole>
+        <ConnectionRole Name="Forms">
+          <Profile Name="Runtime">
+            <DBType>1</DBType>
+            <DataProvider>1</DataProvider>
+            <Driver>0</Driver>
+            <UserId>gzMLmXIBuSUrgEd5u+7vYQ==</UserId>
+            <Password>fQDl/qgZXF1YZ+3QF+E6TbBDhYbGPFhmCVnDX34feNsYkbswTRkw/A==</Password>
+            <DataSource>GGEDymxhBwelhETBKueVkg==</DataSource>
+            <DatabaseName>3PgSc5BB/Yp7IssDXIGvQR4ZSWG1hqZFGMWamXvOAkiKf/HSzD36D7SSqSV9MlXVSgbP8oWl3k8=</DatabaseName>
+            <MiscConnectionInfo>
+            </MiscConnectionInfo>
+            <DBTimeOut>0</DBTimeOut>
+          </Profile>
+        </ConnectionRole>
+        <ConnectionRole Name="FormTemplates">
+          <Profile Name="Runtime">
+            <DBType>1</DBType>
+            <DataProvider>1</DataProvider>
+            <Driver>0</Driver>
+            <UserId>CdlFF7McNi9ZspKIKQya7Q==</UserId>
+            <Password>AAZP1nwYknOjz1gjEJDFckndikHviQ3ENRANBxbolCxTMGQzlrGY1Q==</Password>
+            <DataSource>EDJ2mSf55u23ut5f4l45wg==</DataSource>
+            <DatabaseName>yGC87mOv/jypASpIecvt7g==</DatabaseName>
+            <MiscConnectionInfo>
+            </MiscConnectionInfo>
+            <DBTimeOut>0</DBTimeOut>
+          </Profile>
+        </ConnectionRole>
+      </ConnectionRoles>
+    </Config>
+  </Configs>
+  <Applications>
+    <Application Name="SL801">
+      <AppName>Infor ERP SL</AppName>
+      <RelWebServerURL>/IDORequestService/RequestService.aspx</RelWebServerURL>
+      <Copyright>Copyright 2009 Infor. All rights reserved. www.infor.com</Copyright>
+      <Version>8.01</Version>
+      <SplashFilename>ERPSplash.png</SplashFilename>
+      <IconFilename>ERP.ico</IconFilename>
+      <VBAFilename>
+      </VBAFilename>
+      <CompanyName>Infor Global Solutions Technology GmbH</CompanyName>
+      <FormCLSID>{1d62aa3c-b56f-47ee-8c97-d0087645bf18}</FormCLSID>
+      <FormFileExtension>
+      </FormFileExtension>
+      <LoginOverrideProgID>
+      </LoginOverrideProgID>
+      <UseHtmlHelp>0</UseHtmlHelp>
+      <HelpBasePath>
+      </HelpBasePath>
+      <BaseHelpFile>sl_goto.htm</BaseHelpFile>
+      <WallpaperFilename>ERPWallpaper.jpg</WallpaperFilename>
+      <WallpaperDisplayOption>center</WallpaperDisplayOption>
+      <ActiveScriptingOnly>0</ActiveScriptingOnly>
+      <VertComponentSpacing>0.2</VertComponentSpacing>
+      <HorzComponentSpacing>0.85</HorzComponentSpacing>
+      <ObjectMenuName>sActions</ObjectMenuName>
+      <PrimaryCacheUsesFormCaption>1</PrimaryCacheUsesFormCaption>
+      <HelpContentsIndexMenuText>
+      </HelpContentsIndexMenuText>
+      <ColSecurityPrimaryOnly>0</ColSecurityPrimaryOnly>
+      <DeleteExistingPrompt>mRemove</DeleteExistingPrompt>
+      <DeleteNewPrompt>
+      </DeleteNewPrompt>
+      <ProgIDRootAugment>
+      </ProgIDRootAugment>
+      <RightJustifyNewLabels>1</RightJustifyNewLabels>
+      <DefFormBGColor>255,255,255</DefFormBGColor>
+      <DefFormFGColor>64,64,64</DefFormFGColor>
+      <DefNormalBGColor>255,255,255</DefNormalBGColor>
+      <DefNormalFGColor>64,64,64</DefNormalFGColor>
+      <DefReadOnlyBGColor>228,228,228</DefReadOnlyBGColor>
+      <DefReadOnlyFGColor>0,0,0</DefReadOnlyFGColor>
+      <DefRequiredBGColor>255,255,111</DefRequiredBGColor>
+      <DefRequiredFGColor>0,0,0</DefRequiredFGColor>
+      <DefTbdBGColor>128,255,128</DefTbdBGColor>
+      <DefTbdFGColor>0,0,0</DefTbdFGColor>
+      <DefFormFont>8.25,0,0,0,0,0,0,0,0,0,0,0,0,Microsoft Sans Serif</DefFormFont>
+      <XPVisualStyle>0</XPVisualStyle>
+      <ValidationErrorIndicators>0</ValidationErrorIndicators>
+      <DisableInvalidValuePrompt>0</DisableInvalidValuePrompt>
+      <ReportViewerExecutable>
+      </ReportViewerExecutable>
+      <ReportViewerExecutablePath>
+      </ReportViewerExecutablePath>
+    </Application>
+    <Application Name="&lt;default&gt;">
+      <AppName>[AppName]</AppName>
+      <RelWebServerURL>/IDORequestService/RequestService.aspx</RelWebServerURL>
+      <Copyright>Copyright © 2008 Infor. All rights reserved. www.infor.com</Copyright>
+      <Version>1.00</Version>
+      <SplashFilename>
+      </SplashFilename>
+      <IconFilename>
+      </IconFilename>
+      <VBAFilename>
+      </VBAFilename>
+      <CompanyName>Infor</CompanyName>
+      <FormCLSID>{1d62aa3c-b56f-47ee-8c97-d0087645bf18}</FormCLSID>
+      <FormFileExtension>
+      </FormFileExtension>
+      <LoginOverrideProgID>
+      </LoginOverrideProgID>
+      <UseHtmlHelp>0</UseHtmlHelp>
+      <HelpBasePath>
+      </HelpBasePath>
+      <BaseHelpFile>
+      </BaseHelpFile>
+      <WallpaperFilename>
+      </WallpaperFilename>
+      <WallpaperDisplayOption>center</WallpaperDisplayOption>
+      <ActiveScriptingOnly>0</ActiveScriptingOnly>
+      <VertComponentSpacing>0.2</VertComponentSpacing>
+      <HorzComponentSpacing>0.85</HorzComponentSpacing>
+      <ObjectMenuName>sActions</ObjectMenuName>
+      <PrimaryCacheUsesFormCaption>0</PrimaryCacheUsesFormCaption>
+      <HelpContentsIndexMenuText>
+      </HelpContentsIndexMenuText>
+      <ColSecurityPrimaryOnly>0</ColSecurityPrimaryOnly>
+      <DeleteExistingPrompt>mRemove</DeleteExistingPrompt>
+      <DeleteNewPrompt>
+      </DeleteNewPrompt>
+      <ProgIDRootAugment>
+      </ProgIDRootAugment>
+      <RightJustifyNewLabels>0</RightJustifyNewLabels>
+      <DefFormBGColor>255,255,255</DefFormBGColor>
+      <DefFormFGColor>0,0,0</DefFormFGColor>
+      <DefNormalBGColor>
+      </DefNormalBGColor>
+      <DefNormalFGColor>
+      </DefNormalFGColor>
+      <DefReadOnlyBGColor>240,240,240</DefReadOnlyBGColor>
+      <DefReadOnlyFGColor>
+      </DefReadOnlyFGColor>
+      <DefRequiredBGColor>255,247,153</DefRequiredBGColor>
+      <DefRequiredFGColor>
+      </DefRequiredFGColor>
+      <DefTbdBGColor>165,180,132</DefTbdBGColor>
+      <DefTbdFGColor>
+      </DefTbdFGColor>
+      <DefFormFont>8.25,0,0,0,0,0,0,0,0,0,0,0,0,Microsoft Sans Serif</DefFormFont>
+      <XPVisualStyle>0</XPVisualStyle>
+      <ValidationErrorIndicators>0</ValidationErrorIndicators>
+      <DisableInvalidValuePrompt>0</DisableInvalidValuePrompt>
+      <ReportViewerExecutable>
+      </ReportViewerExecutable>
+      <ReportViewerExecutablePath>
+      </ReportViewerExecutablePath>
+    </Application>
+  </Applications>
+  <WebServers>
+    <WebServer Name="SL_UTIL1">
+      <RootURL>http://SL_UTIL1</RootURL>
+    </WebServer>
+  </WebServers>
+  <ConfigGroups>
+    <ConfigurationGroup>
+      <Name>~~d3f@u1t</Name>
+      <Description />
+      <Members>
+        <Config>Austin Pilot</Config>
+      </Members>
+    </ConfigurationGroup>
+    <ConfigurationGroup>
+      <Name>Pilot</Name>
+      <Description />
+      <Members>
+        <Config>Austin Pilot</Config>
+      </Members>
+    </ConfigurationGroup>
+  </ConfigGroups>
+</MongooseConfigs>

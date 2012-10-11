@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DF260DC2-E96F-4927-97A7-D56BAB5926F1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FluentNHibernateClasses</RootNamespace>
+    <AssemblyName>FluentNHibernateClasses</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AFPST.Common">
+      <HintPath>..\..\dist\AFP\AFPST.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\..\lib\fluentnhibernate\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\..\dist\NHibernate\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NCommon">
+      <HintPath>..\..\lib\NCommon\NCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\dist\NHibernate\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle">
+      <HintPath>..\..\dist\NHibernate\NHibernate.ByteCode.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FluentNHibernateConfigurationBuilderForSyteline.cs" />
+    <Compile Include="INHibernateUnitOfWork.cs" />
+    <Compile Include="ISytelineRepository.cs" />
+    <Compile Include="Entities\arpmt.cs" />
+    <Compile Include="Entities\arpmtd.cs" />
+    <Compile Include="Entities\appmt.cs" />
+    <Compile Include="Entities\appmtd.cs" />
+    <Compile Include="Mappings\appmtdMap.cs" />
+    <Compile Include="Mappings\appmtMap.cs" />
+    <Compile Include="Entities\aptrx.cs" />
+    <Compile Include="Entities\aptrxd.cs" />
+    <Compile Include="Mappings\aptrxdMap.cs" />
+    <Compile Include="Mappings\aptrxMap.cs" />
+    <Compile Include="Mappings\arpmtdMap.cs" />
+    <Compile Include="Mappings\arpmtMap.cs" />
+    <Compile Include="Entities\artran.cs" />
+    <Compile Include="Mappings\artranMap.cs" />
+    <Compile Include="Entities\co.cs" />
+    <Compile Include="Entities\coitem.cs" />
+    <Compile Include="Mappings\coitemMap.cs" />
+    <Compile Include="Entities\coitem_log.cs" />
+    <Compile Include="Mappings\coitem_logMap.cs" />
+    <Compile Include="Mappings\coMap.cs" />
+    <Compile Include="Entities\co_ship.cs" />
+    <Compile Include="Mappings\co_shipMap.cs" />
+    <Compile Include="Entities\custaddr.cs" />
+    <Compile Include="Mappings\custaddrMap.cs" />
+    <Compile Include="Entities\customer.cs" />
+    <Compile Include="Mappings\customerMap.cs" />
+    <Compile Include="Entities\do_hdr.cs" />
+    <Compile Include="Mappings\do_hdrMap.cs" />
+    <Compile Include="Entities\do_line.cs" />
+    <Compile Include="Mappings\do_lineMap.cs" />
+    <Compile Include="Entities\inv_hdr.cs" />
+    <Compile Include="Mappings\inv_hdrMap.cs" />
+    <Compile Include="Entities\inv_item.cs" />
+    <Compile Include="Mappings\inv_itemMap.cs" />
+    <Compile Include="Entities\item.cs" />
+    <Compile Include="Entities\itemcust.cs" />
+    <Compile Include="Mappings\itemcustMap.cs" />
+    <Compile Include="Mappings\itemMap.cs" />
+    <Compile Include="Entities\job.cs" />
+    <Compile Include="Entities\jobitem.cs" />
+    <Compile Include="Mappings\jobitemMap.cs" />
+    <Compile Include="Mappings\jobMap.cs" />
+    <Compile Include="Entities\jobmatl.cs" />
+    <Compile Include="Mappings\jobmatlMap.cs" />
+    <Compile Include="Entities\jobtran.cs" />
+    <Compile Include="Entities\jobtranitem.cs" />
+    <Compile Include="Mappings\jobtranitemMap.cs" />
+    <Compile Include="Mappings\jobtranMap.cs" />
+    <Compile Include="Mappings\locationMap.cs" />
+    <Compile Include="Entities\lot.cs" />
+    <Compile Include="Mappings\lotMap.cs" />
+    <Compile Include="Entities\lot_loc.cs" />
+    <Compile Include="Mappings\lot_locMap.cs" />
+    <Compile Include="Entities\PJ_ShipmentData.cs" />
+    <Compile Include="Mappings\PJ_ShipmentDataMap.cs" />
+    <Compile Include="Entities\po.cs" />
+    <Compile Include="Entities\poitem.cs" />
+    <Compile Include="Mappings\poitemMap.cs" />
+    <Compile Include="Mappings\poMap.cs" />
+    <Compile Include="Mappings\po_rcptMap.cs" />
+    <Compile Include="Entities\po_vch.cs" />
+    <Compile Include="Mappings\po_vchMap.cs" />
+    <Compile Include="Entities\rcpts.cs" />
+    <Compile Include="Mappings\rcptsMap.cs" />
+    <Compile Include="Entities\shipco.cs" />
+    <Compile Include="Mappings\shipcoMap.cs" />
+    <Compile Include="Entities\shipto.cs" />
+    <Compile Include="Mappings\shiptoMap.cs" />
+    <Compile Include="Entities\slsman.cs" />
+    <Compile Include="Mappings\slsmanMap.cs" />
+    <Compile Include="Entities\vendor.cs" />
+    <Compile Include="Mappings\vendorMap.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SessionSourceProvider.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

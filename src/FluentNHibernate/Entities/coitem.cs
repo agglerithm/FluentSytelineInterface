@@ -1,0 +1,123 @@
+﻿using System;
+using FluentNHibernate.Data;
+
+namespace FluentNHibernateClasses.Entities
+{
+    public class coitem : Entity
+    {
+        public virtual Guid RowPointer{ get;set; } 
+        public virtual int reprice{ get;set; } 
+        public virtual int packed{ get;set; } 
+        public virtual int bol{ get;set; } 
+        public virtual int sync_reqd{ get;set; } 
+        public virtual int consolidate{ get;set; } 
+        public virtual int summarize{ get;set; } 
+        public virtual int NoteExistsFlag{ get;set; } 
+        public virtual int InWorkflow{ get;set; } 
+        public virtual int print_kit_components{ get;set; } 
+        public virtual int co_line{ get;set; } 
+        public virtual int co_release{ get;set; } 
+        public virtual int ref_line_suf{ get;set; } 
+        public virtual int ref_release{ get;set; } 
+        public virtual int rma_line{ get;set; } 
+        public virtual int cust_seq{ get;set; } 
+        public virtual int cons_num{ get;set; } 
+        public virtual int Uf_LRM_Priority{ get;set; } 
+        public virtual int Uf_LRM_IntermediateCustSeq{ get;set; } 
+        public virtual DateTime due_date{ get;set; } 
+        public virtual DateTime ship_date{ get;set; } 
+        public virtual DateTime release_date{ get;set; } 
+        public virtual DateTime promise_date{ get;set; } 
+        public virtual DateTime pick_date{ get;set; } 
+        public virtual DateTime projected_date{ get;set; } 
+        public virtual DateTime RecordDate{ get;set; } 
+        public virtual DateTime CreateDate{ get;set; } 
+        public virtual DateTime due_date_day{ get;set; } 
+        public virtual decimal qty_ordered{ get;set; } 
+        public virtual decimal qty_ready{ get;set; } 
+        public virtual decimal qty_shipped{ get;set; } 
+        public virtual decimal qty_packed{ get;set; } 
+        public virtual decimal disc{ get;set; } 
+        public virtual decimal cost{ get;set; } 
+        public virtual decimal fovhd_cost_conv{ get;set; } 
+        public virtual decimal vovhd_cost_conv{ get;set; } 
+        public virtual decimal out_cost_conv{ get;set; } 
+        public virtual decimal suppl_qty_conv_factor{ get;set; } 
+        public virtual decimal cgs_total_fovhd{ get;set; } 
+        public virtual decimal cgs_total_vovhd{ get;set; } 
+        public virtual decimal cgs_total_out{ get;set; } 
+        public virtual decimal cost_conv{ get;set; } 
+        public virtual decimal matl_cost_conv{ get;set; } 
+        public virtual decimal lbr_cost_conv{ get;set; } 
+        public virtual decimal lbr_cost{ get;set; } 
+        public virtual decimal fovhd_cost{ get;set; } 
+        public virtual decimal vovhd_cost{ get;set; } 
+        public virtual decimal out_cost{ get;set; } 
+        public virtual decimal cgs_total_matl{ get;set; } 
+        public virtual decimal cgs_total_lbr{ get;set; } 
+        public virtual decimal unit_weight{ get;set; } 
+        public virtual decimal export_value{ get;set; } 
+        public virtual decimal qty_ordered_conv{ get;set; } 
+        public virtual decimal price_conv{ get;set; } 
+        public virtual decimal qty_rsvd{ get;set; } 
+        public virtual decimal matl_cost{ get;set; } 
+        public virtual decimal qty_invoiced{ get;set; } 
+        public virtual decimal qty_returned{ get;set; } 
+        public virtual decimal cgs_total{ get;set; } 
+        public virtual decimal prg_bill_tot{ get;set; } 
+        public virtual decimal prg_bill_app{ get;set; } 
+        public virtual decimal wks_value{ get;set; } 
+        public virtual decimal price{ get;set; } 
+        public virtual decimal brk_qty1{ get;set; } 
+        public virtual decimal brk_qty2{ get;set; } 
+        public virtual decimal brk_qty3{ get;set; } 
+        public virtual decimal brk_qty4{ get;set; } 
+        public virtual decimal brk_qty5{ get;set; } 
+        public virtual string rcpt_rqmt{ get;set; } 
+        public virtual string co_num{ get;set; } 
+        public virtual string item{ get;set; } 
+        public virtual string ref_num{ get;set; } 
+        public virtual string cust_item{ get;set; } 
+        public virtual string feat_str{ get;set; } 
+        public virtual string cust_num{ get;set; } 
+        public virtual string Uf_LRM_ShipPo{ get;set; } 
+        public virtual string Uf_LRM_IntermediateCustNum{ get;set; } 
+        public virtual string external_reservation_ref{ get;set; } 
+        public virtual string Uf_LRM_Carrier{ get;set; } 
+        public virtual string Uf_LRM_ClassOfService{ get;set; } 
+        public virtual string Uf_LRM_FreightAccount{ get;set; } 
+        public virtual string Uf_LRM_FreightTerms{ get;set; } 
+        public virtual string Uf_LRM_OnwardCarrier{ get;set; } 
+        public virtual string Uf_LRM_OnwardClassOfService{ get;set; } 
+        public virtual string config_id{ get;set; } 
+        public virtual string CreatedBy{ get;set; } 
+        public virtual string UpdatedBy{ get;set; } 
+        public virtual string trans_nat_2{ get;set; } 
+        public virtual string Uf_LRM_ShipmentServices1{ get;set; } 
+        public virtual string Uf_LRM_ShipmentServices2{ get;set; } 
+        public virtual string co_cust_num{ get;set; } 
+        public virtual string ship_site{ get;set; } 
+        public virtual string co_orig_site{ get;set; } 
+        public virtual string cust_po{ get;set; } 
+        public virtual string rma_num{ get;set; } 
+        public virtual string description{ get;set; } 
+        public virtual string tax_code1{ get;set; } 
+        public virtual string tax_code2{ get;set; } 
+        public virtual string ec_code{ get;set; } 
+        public virtual string transport{ get;set; } 
+        public virtual string pricecode{ get;set; } 
+        public virtual string u_m{ get;set; } 
+        public virtual string whse{ get;set; } 
+        public virtual string comm_code{ get;set; } 
+        public virtual string trans_nat{ get;set; } 
+        public virtual string process_ind{ get;set; } 
+        public virtual string delterm{ get;set; } 
+        public virtual string origin{ get;set; } 
+        public virtual string ref_type{ get;set; } 
+        public virtual string stat{ get;set; } 
+        public virtual string wks_basis{ get;set; } 
+        public virtual string inv_freq{ get;set; } 
+
+
+    }
+}

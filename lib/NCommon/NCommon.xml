@@ -1,0 +1,1681 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NCommon</name>
+    </assembly>
+    <members>
+        <member name="T:NCommon.Rules.EntityValidatorBase`1">
+            <summary>
+             Base class that implementors of <see cref="T:NCommon.Rules.IEntityValidator`1"/> can use to 
+             provide validation logic for their entities.
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="T:NCommon.Rules.IEntityValidator`1">
+            <summary>
+            Interface implemented by different flavors of validators that provide validation
+            logic on domain entities.
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="M:NCommon.Rules.IEntityValidator`1.Validate(`0)">
+            <summary>
+            Validates an entity against all validations defined for the entity.
+            </summary>
+            <param name="entity">The <typeparamref name="TEntity"/> to validate.</param>
+            <returns>A <see cref="T:NCommon.Rules.ValidationResult"/> that contains the results of the validation.</returns>
+        </member>
+        <member name="M:NCommon.Rules.EntityValidatorBase`1.AddValidation(System.String,NCommon.Rules.IValidationRule{`0})">
+            <summary>
+            Adds a <see cref="T:NCommon.Rules.IValidationRule`1"/> instance to the entity validator.
+            </summary>
+            <param name="rule">The <see cref="T:NCommon.Rules.IValidationRule`1"/> instance to add.</param>
+            <param name="ruleName">string. The unique name assigned to the validation rule.</param>
+        </member>
+        <member name="M:NCommon.Rules.EntityValidatorBase`1.RemoveValidation(System.String)">
+            <summary>
+            Removes a previously added rule, specified with the <paramref name="ruleName"/>, from the evaluator.
+            </summary>
+            <param name="ruleName">string. The name of the rule to remove.</param>
+        </member>
+        <member name="M:NCommon.Rules.EntityValidatorBase`1.Validate(`0)">
+            <summary>
+            Validates an entity against all validations defined for the entity.
+            </summary>
+            <param name="entity">The <typeparamref name="TEntity"/> to validate.</param>
+            <returns>A <see cref="T:NCommon.Rules.ValidationResult"/> that contains the results of the validation.</returns>
+        </member>
+        <member name="T:NCommon.Rules.ValidationError">
+            <summary>
+            Represents a validation error from a <see cref="M:NCommon.Rules.IEntityValidator`1.Validate(`0)"/> method
+            call.
+            </summary>
+        </member>
+        <member name="M:NCommon.Rules.ValidationError.#ctor(System.String,System.String)">
+            <summary>
+            Default Constructor.
+            Creates a new instance of the <see cref="T:NCommon.Rules.ValidationError"/> data structure.
+            </summary>
+            <param name="message">string. The validation error message.</param>
+            <param name="property">string. The property that was validated.</param>
+        </member>
+        <member name="M:NCommon.Rules.ValidationError.ToString">
+            <summary>
+            Overriden. Gets a string that represents the validation error.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Rules.ValidationError.Equals(System.Object)">
+            <summary>
+            Overridden. Compares if an object is equal to the <see cref="T:NCommon.Rules.ValidationError"/> instance.
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Rules.ValidationError.Equals(NCommon.Rules.ValidationError)">
+            <summary>
+            Overriden. Compares if a <see cref="T:NCommon.Rules.ValidationError"/> instance is equal to this
+            <see cref="T:NCommon.Rules.ValidationError"/> instance.
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Rules.ValidationError.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>
+            A 32-bit signed integer that is the hash code for this instance.
+            </returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:NCommon.Rules.ValidationError.op_Equality(NCommon.Rules.ValidationError,NCommon.Rules.ValidationError)">
+            <summary>
+            Equality operator.
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Rules.ValidationError.op_Inequality(NCommon.Rules.ValidationError,NCommon.Rules.ValidationError)">
+            <summary>
+            Inequality operator.
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="P:NCommon.Rules.ValidationError.Message">
+            <summary>
+             The message that describes this validation error.
+            </summary>
+        </member>
+        <member name="P:NCommon.Rules.ValidationError.Property">
+            <summary>
+             The property that this validation error is associated with.
+            </summary>
+        </member>
+        <member name="T:NCommon.Util.Inflector">
+            <summary>
+             Implementation of the Infelctor in Ruby that transforms words from singular to plural, 
+             class names to table names, modularized class names to ones without, and class names to foreign keys
+            </summary>
+        </member>
+        <member name="M:NCommon.Util.Inflector.#cctor">
+            <summary>
+            Class Constructor.
+            </summary>
+        </member>
+        <member name="M:NCommon.Util.Inflector.Pluralize(System.String)">
+            <summary>
+            Returns the plural form of the word in the string
+            </summary>
+            <param name="word">string. The word to pluralize.</param>
+            <returns>The pluralized word.</returns>
+        </member>
+        <member name="M:NCommon.Util.Inflector.Singularize(System.String)">
+            <summary>
+            The reverse of <see cref="M:NCommon.Util.Inflector.Pluralize(System.String)"/>, returns the singular form of a word in a string.
+            </summary>
+            <param name="word">string. The word to singularize.</param>
+            <returns>The singluralized word.</returns>
+        </member>
+        <member name="M:NCommon.Util.Inflector.Titleize(System.String)">
+            <summary>
+            Capitalizes all the words and replaces some characters in the string to create a nicer looking title.
+            </summary>
+            <param name="word">string. The word to titleize.</param>
+            <returns>The titlized word.</returns>
+        </member>
+        <member name="M:NCommon.Util.Inflector.Humanize(System.String)">
+            <summary>
+            Capitalizes the first word and turns underscores into spaces and strips _id. Formats the word into
+            human readable string.
+            </summary>
+            <param name="lowercaseAndUnderscoredWord">string. The word to humaize</param>
+            <returns>The humanized word.</returns>
+        </member>
+        <member name="M:NCommon.Util.Inflector.Pascalize(System.String)">
+            <summary>
+            Formats the string in pascal case.
+            </summary>
+            <param name="lowercaseAndUnderscoredWord">string. The word to Pascal case.</param>
+            <returns>The word in Pascal case.</returns>
+        </member>
+        <member name="M:NCommon.Util.Inflector.Camelize(System.String)">
+            <summary>
+            Formats the string in Camel case.
+            </summary>
+            <param name="lowercaseAndUnderscoredWord">string. The word to format in Camel case.</param>
+            <returns>string. The word in Camel case.</returns>
+        </member>
+        <member name="M:NCommon.Util.Inflector.Underscore(System.String)">
+            <summary>
+            Makes an underscored form from the expression in the string. 
+            </summary>
+            <param name="pascalCasedWord">string. The word to underscore.</param>
+            <returns>string. The word with underscore seperators.</returns>
+        </member>
+        <member name="M:NCommon.Util.Inflector.Capitalize(System.String)">
+            <summary>
+            Capitalizes the word.
+            </summary>
+            <param name="word">string. The word to capitalize.</param>
+            <returns>The Capitalized word.</returns>
+        </member>
+        <member name="M:NCommon.Util.Inflector.Uncapitalize(System.String)">
+            <summary>
+            Revers of <see cref="M:NCommon.Util.Inflector.Capitalize(System.String)"/>
+            </summary>
+            <param name="word">string. The word to un-capitalize.</param>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Util.Inflector.Ordinalize(System.String)">
+            <summary>
+            Ordinalize turns a number into an ordinal string used to denote the position in an ordered 
+            sequence such as 1st, 2nd, 3rd, 4th
+            </summary>
+            <param name="number">string. The number to ordinalize.</param>
+            <returns>string. The ordinalized number.</returns>
+        </member>
+        <member name="M:NCommon.Util.Inflector.Dasherize(System.String)">
+            <summary>
+            Replaces underscores with dashes in the string.
+            </summary>
+            <param name="underscoredWord">string. The word to dasherize.</param>
+            <returns>The word with dashes instead of underscores.</returns>
+        </member>
+        <member name="T:NCommon.Expressions.ExpressionVisitor">
+            <summary>
+            Provides virtual methods that can be used by subclasses to parse an expression tree.
+            </summary>
+            <remarks>
+            This class actually already exists in the System.Core assembly...as an internal class.
+            I can only speculate as to why it is internal, but it is obviously much too dangerous
+            for anyone outside of Microsoft to be using...
+            </remarks>
+        </member>
+        <member name="M:NCommon.Expressions.ExpressionVisitor.Visit(System.Linq.Expressions.Expression)">
+            <summary>
+             Visits and performs transaction on an expression.
+            </summary>
+            <param name="exp">The <see cref="T:System.Linq.Expressions.Expression"/> to visit and transform.</param>
+            <returns>A transformed <see cref="T:System.Linq.Expressions.Expression"/> instance.</returns>
+            <exception cref="T:System.NotSupportedException">Throws when a expression or sub-expression is not supported
+             by the Expression visitor.</exception>
+        </member>
+        <member name="M:NCommon.Expressions.ExpressionVisitor.VisitBinding(System.Linq.Expressions.MemberBinding)">
+            <summary>
+            Visit a bindingExp expression.
+            </summary>
+            <param name="bindingExp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Expressions.ExpressionVisitor.VisitElementInitializer(System.Linq.Expressions.ElementInit)">
+            <summary>
+            Visit a element initialized expression.
+            </summary>
+            <param name="elementInitExp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Expressions.ExpressionVisitor.VisitUnary(System.Linq.Expressions.UnaryExpression)">
+            <summary>
+            Visit a Unary expression.
+            </summary>
+            <param name="unaryExp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Expressions.ExpressionVisitor.VisitBinary(System.Linq.Expressions.BinaryExpression)">
+            <summary>
+            Visit a binary expression.
+            </summary>
+            <param name="binaryExp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Expressions.ExpressionVisitor.VisitTypeIs(System.Linq.Expressions.TypeBinaryExpression)">
+            <summary>
+            Visit a Is expression.
+            </summary>
+            <param name="typeBinaryExp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Expressions.ExpressionVisitor.VisitConstant(System.Linq.Expressions.ConstantExpression)">
+            <summary>
+            Visit a constant expression.
+            </summary>
+            <param name="constantExp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Expressions.ExpressionVisitor.VisitConditional(System.Linq.Expressions.ConditionalExpression)">
+            <summary>
+            Visit a conditional expression.
+            </summary>
+            <param name="conditionalExp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Expressions.ExpressionVisitor.VisitParameter(System.Linq.Expressions.ParameterExpression)">
+            <summary>
+            Visit a parameter expression.
+            </summary>
+            <param name="parameterExp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Expressions.ExpressionVisitor.VisitMemberAccess(System.Linq.Expressions.MemberExpression)">
+            <summary>
+            Visit a member access expression.
+            </summary>
+            <param name="methodExp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Expressions.ExpressionVisitor.VisitMethodCall(System.Linq.Expressions.MethodCallExpression)">
+            <summary>
+            Visit a method call expression.
+            </summary>
+            <param name="methodCallExp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Expressions.ExpressionVisitor.VisitList(System.Collections.ObjectModel.ReadOnlyCollection{System.Linq.Expressions.Expression})">
+            <summary>
+            Visit a list expression.
+            </summary>
+            <param name="listExp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Expressions.ExpressionVisitor.VisitMemberAssignment(System.Linq.Expressions.MemberAssignment)">
+            <summary>
+            Visit a member assignment expression.
+            </summary>
+            <param name="assignmentExp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Expressions.ExpressionVisitor.VisitMemberMemberBinding(System.Linq.Expressions.MemberMemberBinding)">
+            <summary>
+            Visit a member binding expression.
+            </summary>
+            <param name="memberBindingExp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Expressions.ExpressionVisitor.VisitMemberListBinding(System.Linq.Expressions.MemberListBinding)">
+            <summary>
+            Visit a member list binding expression.
+            </summary>
+            <param name="listBindingExp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Expressions.ExpressionVisitor.VisitBindingList(System.Collections.ObjectModel.ReadOnlyCollection{System.Linq.Expressions.MemberBinding})">
+            <summary>
+            Visint a binding list expression.
+            </summary>
+            <param name="original"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Expressions.ExpressionVisitor.VisitElementInitializerList(System.Collections.ObjectModel.ReadOnlyCollection{System.Linq.Expressions.ElementInit})">
+            <summary>
+            Visit a element list initializer expression
+            </summary>
+            <param name="original"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Expressions.ExpressionVisitor.VisitLambda(System.Linq.Expressions.LambdaExpression)">
+            <summary>
+            Visit a expression that represents a lambda.
+            </summary>
+            <param name="lambdaExp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Expressions.ExpressionVisitor.VisitNew(System.Linq.Expressions.NewExpression)">
+            <summary>
+            Visit a new expresson (ctor)
+            </summary>
+            <param name="newExp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Expressions.ExpressionVisitor.VisitMemberInit(System.Linq.Expressions.MemberInitExpression)">
+            <summary>
+            Visit a member initialization expression.
+            </summary>
+            <param name="memberInitExp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Expressions.ExpressionVisitor.VisitListInit(System.Linq.Expressions.ListInitExpression)">
+            <summary>
+            Visit a list initializatio expression.
+            </summary>
+            <param name="listInitExp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Expressions.ExpressionVisitor.VisitNewArray(System.Linq.Expressions.NewArrayExpression)">
+            <summary>
+            Visit a new array expression.
+            </summary>
+            <param name="newArrayExp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Expressions.ExpressionVisitor.VisitInvocation(System.Linq.Expressions.InvocationExpression)">
+            <summary>
+            Visit a invocation expression.
+            </summary>
+            <param name="invocationExp"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NCommon.Data.IFetchingStrategy`2">
+            <summary>
+             Specifies a fetching strategy for a <see cref="T:NCommon.Data.IRepository`1"/> instance.
+            </summary>
+        </member>
+        <member name="M:NCommon.Data.IFetchingStrategy`2.Define(NCommon.Data.IRepository{`0})">
+            <summary>
+             Instructs the instance to define the fetching strategy on the repository instance.
+            </summary>
+            <param name="repository"></param>
+        </member>
+        <member name="T:NCommon.Storage.SessionStorage">
+            <summary>
+             Inherits from the <see cref="T:NCommon.Storage.Store"/> class to allow storage of application specific data
+             in the current HttpSession.
+            </summary>
+        </member>
+        <member name="T:NCommon.Storage.Store">
+            <summary>
+            Provifes an in-memory store for storing application / thread specific data.
+            </summary>
+        </member>
+        <member name="F:NCommon.Storage.Store.AppStorageLock">
+            <summary>
+            Lock object that can be used to sync access to the Application store.
+            </summary>
+        </member>
+        <member name="F:NCommon.Storage.Store.LocalStorageLock">
+            <summary>
+            Lock object that can be used to sync acces to the Local store.
+            </summary>
+        </member>
+        <member name="F:NCommon.Storage.Store.SessionStorageLock">
+            <summary>
+            Lock object that can be used to sync acces to the Session store.
+            </summary>
+        </member>
+        <member name="M:NCommon.Storage.Store.Get``1(System.Object)">
+            <summary>
+            Gets the data stored with the specified key in <see cref="T:NCommon.Storage.Store"/>.
+            </summary>
+            <typeparam name="T">The type of data to get.</typeparam>
+            <param name="key">object. The key that uniquely identifies the data to retrieve.</param>
+            <returns>A <typeparamref name="T"/> instance or null if not found.</returns>
+        </member>
+        <member name="M:NCommon.Storage.Store.Set``1(System.Object,``0)">
+            <summary>
+            Adds or updates the data specified with the key in <see cref="T:NCommon.Storage.Store"/>.
+            </summary>
+            <typeparam name="T">The type of data to add or update.</typeparam>
+            <param name="key">object. The key that uniquely identifies the data being stored.</param>
+            <param name="value"><typeparamref name="T"/>. The value to add or update.</param>
+        </member>
+        <member name="M:NCommon.Storage.Store.Contains(System.Object)">
+            <summary>
+            Checks whether the <see cref="T:NCommon.Storage.AppStorage"/> contains data with the specified key.
+            </summary>
+            <param name="key">object. The unique key to check for.</param>
+            <returns>True if data specified with the key was found, else false.</returns>
+        </member>
+        <member name="M:NCommon.Storage.Store.Remove(System.Object)">
+            <summary>
+            Removes the data specified with the key in <see cref="T:NCommon.Storage.Store"/>.
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Storage.Store.Clear">
+            <summary>
+            Removes all data in <see cref="T:NCommon.Storage.Store"/>.
+            </summary>
+        </member>
+        <member name="M:NCommon.Storage.Store.GetInternalHashtable">
+            <summary>
+             When overriden by a sub class, provides the internal Hashtable used to store and retrieve
+             data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:NCommon.Storage.Store.IsWebApplication">
+            <summary>
+            Gets whether the current application is a web application.
+            </summary>
+            <value>bool. True if the current application is a web application.</value>
+        </member>
+        <member name="P:NCommon.Storage.Store.Local">
+            <summary>
+            Gets a <see cref="T:NCommon.Storage.Store"/> implementation that can be used to store application
+            sepcific data for the current thread / request.
+            </summary>
+        </member>
+        <member name="P:NCommon.Storage.Store.Application">
+            <summary>
+            Gets a <see cref="T:NCommon.Storage.Store"/> instance that can be used to store application specific
+            data for the applicatuion.
+            </summary>
+        </member>
+        <member name="P:NCommon.Storage.Store.Session">
+            <summary>
+            Gets a <see cref="T:NCommon.Storage.Store"/> instance that can be used to store application sepcific
+            data in the current session.
+            </summary>
+        </member>
+        <member name="P:NCommon.Storage.Store.UseLocking">
+            <summary>
+            When overriden, tells whether the <see cref="T:NCommon.Storage.Store"/> uses locking when retrieving and setting values.
+            </summary>
+        </member>
+        <member name="P:NCommon.Storage.Store.LockInstance">
+            <summary>
+            Gets the object used by the <see cref="T:NCommon.Storage.Store"/> for locking when retrieving and setting values.
+            </summary>
+        </member>
+        <member name="M:NCommon.Storage.SessionStorage.GetInternalHashtable">
+            <summary>
+            Overriden. Gets the <see cref="T:System.Collections.Hashtable"/> used to store thread specific data.
+            </summary>
+            <returns>A <see cref="T:System.Collections.Hashtable"/> that can be used to store Session specific data.</returns>
+            <remarks>
+            This code block uses locking to create the Hashtable as multiple requests can execute under the same session in
+            the case AJAX calls. 
+            </remarks>
+        </member>
+        <member name="P:NCommon.Storage.SessionStorage.UseLocking">
+            <summary>
+            Overriden. Configures the storage to use locking when getting and setting values.
+            </summary>
+        </member>
+        <member name="P:NCommon.Storage.SessionStorage.LockInstance">
+            <summary>
+            Gets the object used by the <see cref="T:NCommon.Storage.Store"/> for locking when retrieving and setting values.
+            </summary>
+        </member>
+        <member name="T:NCommon.Data.IUnitOfWork">
+            <summary>
+            A unit of work contract that that commits / flushes changes to the store
+            within a single transaction. The commit / flush should be called when the
+            implementation is disposed.
+            </summary>
+        </member>
+        <member name="M:NCommon.Data.IUnitOfWork.BeginTransaction">
+            <summary>
+            Instructs the <see cref="T:NCommon.Data.IUnitOfWork"/> instance to begin a new transaction.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Data.IUnitOfWork.BeginTransaction(System.Data.IsolationLevel)">
+            <summary>
+            Instructs the <see cref="T:NCommon.Data.IUnitOfWork"/> instance to begin a new transaction
+            with the specified isolation level.
+            </summary>
+            <param name="isolationLevel">One of the values of <see cref="T:System.Data.IsolationLevel"/>
+            that specifies the isolation level of the transaction.</param>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Data.IUnitOfWork.Flush">
+            <summary>
+            Flushes the changes made in the unit of work to the data store.
+            </summary>
+        </member>
+        <member name="M:NCommon.Data.IUnitOfWork.TransactionalFlush">
+            <summary>
+            Flushes the changes made in the unit of work to the data store
+            within a transaction.
+            </summary>
+        </member>
+        <member name="M:NCommon.Data.IUnitOfWork.TransactionalFlush(System.Data.IsolationLevel)">
+            <summary>
+            Flushes the changes made in the unit of work to the data store
+            within a transaction with the specified isolation level.
+            </summary>
+            <param name="isolationLevel"></param>
+        </member>
+        <member name="P:NCommon.Data.IUnitOfWork.IsInTransaction">
+            <summary>
+            Gets a boolean value indicating whether the current unit of work is running under
+            a transaction.
+            </summary>
+        </member>
+        <member name="T:NCommon.Data.IRepository`1">
+            <summary>
+            The <see cref="T:NCommon.Data.IRepository`1"/> interface defines a standard contract that repository
+            components should implement.
+            </summary>
+            <typeparam name="TEntity">The type of entity that the repository encapsulates.</typeparam>
+        </member>
+        <member name="M:NCommon.Data.IRepository`1.Add(`0)">
+            <summary>
+            Marks the entity instance to be saved to the store.
+            </summary>
+            <param name="entity">An instance of <typeparamref name="TEntity"/> that should be saved
+            to the database.</param>
+            <remarks>Implementors of this method must handle the Insert scenario.</remarks>
+        </member>
+        <member name="M:NCommon.Data.IRepository`1.Save(`0)">
+            <summary>
+            Marks the changes of an existing entity to be saved to the store.
+            </summary>
+            <param name="entity">An instance of <typeparamref name="TEntity"/> that should be
+            updated in the database.</param>
+        </member>
+        <member name="M:NCommon.Data.IRepository`1.Delete(`0)">
+            <summary>
+            Marks the changes of an existing entity to be saved to the store.
+            </summary>
+            <param name="entity">An instance of <typeparamref name="TEntity"/> that should be
+            updated in the database.</param>
+            <remarks>Implementors of this method must handle the Update scneario. </remarks>
+        </member>
+        <member name="M:NCommon.Data.IRepository`1.Query(NCommon.Specifications.ISpecification{`0})">
+            <summary>
+            Querries the repository based on the provided specification and returns results that
+            are only satisfied by the specification.
+            </summary>
+            <param name="specification">A <see cref="T:NCommon.Specifications.ISpecification`1"/> instnace used to filter results
+            that only satisfy the specification.</param>
+            <returns>A <see cref="T:System.Collections.Generic.IEnumerable`1"/> that can be used to enumerate over the results
+            of the query.</returns>
+        </member>
+        <member name="M:NCommon.Data.IRepository`1.Detach(`0)">
+            <summary>
+            Detaches a instance from the repository.
+            </summary>
+            <param name="entity">The entity instance, currently being tracked via the repository, to detach.</param>
+            <exception cref="T:System.NotSupportedException">Implentors should throw the NotImplementedException if Detaching
+            entities is not supported.</exception>
+        </member>
+        <member name="M:NCommon.Data.IRepository`1.Attach(`0)">
+            <summary>
+            Attaches a detached entity, previously detached via the <see cref="M:NCommon.Data.IRepository`1.Detach(`0)"/> method.
+            </summary>
+            <param name="entity">The entity instance to attach back to the repository.</param>
+            <exception cref="T:System.NotSupportedException">Implentors should throw the NotImplementedException if Attaching
+            entities is not supported.</exception>
+        </member>
+        <member name="M:NCommon.Data.IRepository`1.Refresh(`0)">
+            <summary>
+            Refreshes a entity instance.
+            </summary>
+            <param name="entity">The entity to refresh.</param>
+            <exception cref="T:System.NotSupportedException">Implementors should throw the NotImplementedException if Refreshing
+            entities is not supported.</exception>
+        </member>
+        <member name="M:NCommon.Data.IRepository`1.With(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
+            <summary>
+            Instructs the repository to eager load a child entities. 
+            </summary>
+            <param name="path">The path of the child entities to eager load.</param>
+            <remarks>Implementors should throw a <see cref="T:System.NotSupportedException"/> if the underling provider
+            does not support eager loading of entities</remarks>
+        </member>
+        <member name="M:NCommon.Data.IRepository`1.With``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})">
+            <summary>
+            Instructs the repository to eager load entities that may be in the repository's association path.
+            </summary>
+            <param name="path">The path of the child entities to eager load.</param>
+            <remarks>Implementors should throw a <see cref="T:System.NotSupportedException"/> if the underling provider
+            does not support eager loading of entities</remarks>
+        </member>
+        <member name="M:NCommon.Data.IRepository`1.Cached(System.String)">
+            <summary>
+            Intructs the repository to cache the current 
+            </summary>
+            <param name="cachedQueryName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Data.IRepository`1.For``1">
+            <summary>
+            Defines the service context under which the repository will execute.
+            </summary>
+            <typeparam name="TService">The service type that defines the context of the repository.</typeparam>
+            <returns>The same <see cref="T:NCommon.Data.IRepository`1"/> instance.</returns>
+            <remarks>
+            Implementors should perform context specific actions within this method call and return
+            the exact same instance.
+            </remarks>
+        </member>
+        <member name="M:NCommon.Data.IRepository`1.SetBatchSize(System.Int32)">
+            <summary>
+            Sets a batch size on the repository.
+            </summary>
+            <param name="size">int. A positive integer representing the batch size.</param>
+            <remarks>Use this property when persisteing large amounts of data to batch insert statements.</remarks>
+        </member>
+        <member name="T:NCommon.Events.DomainEvent">
+            <summary>
+             DomainEvent class that allowes raising domain events from domain entities and allow registring
+             custom callbacks to execute when a <see cref="T:NCommon.Events.IDomainEvent"/> is raised.
+            </summary>
+        </member>
+        <member name="M:NCommon.Events.DomainEvent.RegisterCallback``1(System.Action{``0})">
+            <summary>
+             Registers a callback to be called when a domain event is raised.
+            </summary>
+            <param name="callback">An <see cref="T:System.Action`1"/> to be invoked.</param>
+            <typeparam name="T">The domain event that the callback is registered to handle.</typeparam>
+        </member>
+        <member name="M:NCommon.Events.DomainEvent.ClearCallbacks">
+            <summary>
+             Clears all callbacks registered on the current thread.
+            </summary>
+        </member>
+        <member name="M:NCommon.Events.DomainEvent.Raise``1(``0)">
+            <summary>
+            </summary>
+            <param name="event"></param>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:NCommon.Storage.AppStorage">
+            <summary>
+             Inherits from <see cref="T:NCommon.Storage.Store"/> to allow storing of application specific data
+             in the AppDomain / current HttpContext.
+            </summary>
+        </member>
+        <member name="M:NCommon.Storage.AppStorage.GetInternalHashtable">
+            <summary>
+             Overriden. Gets the internal hash table that is used to store and retrieve application
+             specific data.
+            </summary>
+            <returns>A <see cref="T:System.Collections.Hashtable"/> that is used to store application specific data.</returns>
+             <remarks>
+             This method implementation uses locking as multiple threads (or requests in the case of a web app) can call
+             the GetInternalHashtable at the same time.
+             </remarks>
+        </member>
+        <member name="P:NCommon.Storage.AppStorage.UseLocking">
+            <summary>
+            Overriden. Configures the storage to use locking when getting and setting values.
+            </summary>
+        </member>
+        <member name="P:NCommon.Storage.AppStorage.LockInstance">
+            <summary>
+            Gets the object used by the <see cref="T:NCommon.Storage.Store"/> for locking when retrieving and setting values.
+            </summary>
+        </member>
+        <member name="T:NCommon.Extensions.CollectionExtensions">
+            <summary>
+            Contains some usefull extensions for working will collections.
+            </summary>
+        </member>
+        <member name="M:NCommon.Extensions.CollectionExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
+            <summary>
+            ForEach extension that enumerates over all items in an <see cref="T:System.Collections.Generic.IEnumerable`1"/> and executes 
+            an action.
+            </summary>
+            <typeparam name="T">The type that this extension is applicable for.</typeparam>
+            <param name="collection">The enumerable instance that this extension operates on.</param>
+            <param name="action">The action executed for each iten in the enumerable.</param>
+        </member>
+        <member name="M:NCommon.Extensions.CollectionExtensions.ForEach``1(System.Collections.Generic.IEnumerator{``0},System.Action{``0})">
+            <summary>
+            ForEach extension that enumerates over all items in an <see cref="T:System.Collections.Generic.IEnumerator`1"/> and executes 
+            an action.
+            </summary>
+            <typeparam name="T">The type that this extension is applicable for.</typeparam>
+            <param name="collection">The enumerator instance that this extension operates on.</param>
+            <param name="action">The action executed for each iten in the enumerable.</param>
+        </member>
+        <member name="M:NCommon.Extensions.CollectionExtensions.TryForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
+            <summary>
+            For Each extension that enumerates over a enumerable collection and attempts to execute 
+            the provided action delegate and it the action throws an exception, continues enumerating.
+            </summary>
+            <typeparam name="T">The type that this extension is applicable for.</typeparam>
+            <param name="collection">The IEnumerable instance that ths extension operates on.</param>
+            <param name="action">The action excecuted for each item in the enumerable.</param>
+        </member>
+        <member name="M:NCommon.Extensions.CollectionExtensions.TryForEach``1(System.Collections.Generic.IEnumerator{``0},System.Action{``0})">
+            <summary>
+            For each extension that enumerates over an enumerator and attempts to execute the provided
+            action delegate and if the action throws an exception, continues executing.
+            </summary>
+            <typeparam name="T">The type that this extension is applicable for.</typeparam>
+            <param name="enumerator">The IEnumerator instace</param>
+            <param name="action">The action executed for each item in the enumerator.</param>
+        </member>
+        <member name="T:NCommon.Data.ITransaction">
+            <summary>
+             Encapsulates a data store transaction. Used by <see cref="T:NCommon.Data.IUnitOfWork"/> to flush changes
+             under a transaction.
+            </summary>
+        </member>
+        <member name="M:NCommon.Data.ITransaction.Commit">
+            <summary>
+            Commits the changes made to the data store.
+            </summary>
+            <remarks>Implementors MUST raise the <see cref="E:NCommon.Data.ITransaction.TransactionCommitted"/> event.</remarks>
+        </member>
+        <member name="M:NCommon.Data.ITransaction.Rollback">
+            <summary>
+            Rollsback any changes made.
+            </summary>
+            <remarks>Implementors MUST raise the <see cref="E:NCommon.Data.ITransaction.TransactionRolledback"/> event.</remarks>
+        </member>
+        <member name="E:NCommon.Data.ITransaction.TransactionCommitted">
+            <summary>
+            Event raised when the transaction has been comitted.
+            </summary>
+        </member>
+        <member name="E:NCommon.Data.ITransaction.TransactionRolledback">
+            <summary>
+            Event raised when the transaction has been rolledback.
+            </summary>
+        </member>
+        <member name="T:NCommon.Rules.IBusinessRule`1">
+            <summary>
+            An interface that defines business rule for an entity instance.
+            </summary>
+            <typeparam name="TEntity">The type of entity that this business rule evaluates.</typeparam>
+        </member>
+        <member name="M:NCommon.Rules.IBusinessRule`1.Evaluate(`0)">
+            <summary>
+            Evaluates the business rule against an entity instance.
+            </summary>
+            <param name="entity"><typeparamref name="TEntity"/>. The entity instance against which
+            the business rule is evaluated.</param>
+        </member>
+        <member name="T:NCommon.Util.GuidCombGenerator">
+            <summary>
+            Implementation borrowed from Rhino.Queues.
+            </summary>
+        </member>
+        <member name="M:NCommon.Util.GuidCombGenerator.Generate">
+            <summary>
+             Generates a GuidComb.
+            </summary>
+            <returns><see cref="T:System.Guid"/></returns>
+        </member>
+        <member name="T:NCommon.Storage.LocalStorage">
+            <summary>
+            Inherits from <see cref="T:NCommon.Storage.Store"/> to allow storing of application specific data
+            in the current thread / web request.
+            </summary>
+        </member>
+        <member name="M:NCommon.Storage.LocalStorage.GetInternalHashtable">
+            <summary>
+            Overriden. Gets the <see cref="T:System.Collections.Hashtable"/> used to store thread specific data.
+            </summary>
+            <returns>A <see cref="T:System.Collections.Hashtable"/> that can be used to store thread / request specific data.</returns>
+            <remarks>
+            No locking is used when initializing the Hashtables as only one request to GetInternalHashtable can be made at one time.
+            This code block is thread-safe
+            </remarks>
+        </member>
+        <member name="P:NCommon.Storage.LocalStorage.UseLocking">
+            <summary>
+            Overriden. Configures the storage to not use locking when getting and setting values.
+            </summary>
+        </member>
+        <member name="P:NCommon.Storage.LocalStorage.LockInstance">
+            <summary>
+            Gets the object used by the <see cref="T:NCommon.Storage.Store"/> for locking when retrieving and setting values.
+            </summary>
+        </member>
+        <member name="T:NCommon.Rules.BusinessRulesEvaluatorBase`1">
+            <summary>
+             A base class that implementors of <see cref="T:NCommon.Rules.IBusinessRulesEvaluator`1"/> can use to provide
+             business rule evaulation logic for their entites.
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="T:NCommon.Rules.IBusinessRulesEvaluator`1">
+            <summary>
+            Defines an interface implemented by a business rule evaluator for an entity.
+            </summary>
+            <typeparam name="TEntity">The entity type that the business rules are applicable for.</typeparam>
+        </member>
+        <member name="M:NCommon.Rules.IBusinessRulesEvaluator`1.Evauluate(`0)">
+            <summary>
+            Evaluates a business rules against an entity.
+            </summary>
+            <param name="entity">A <typeparamref name="TEntity"/> instance against which the business
+            rules are evaluated.</param>
+        </member>
+        <member name="M:NCommon.Rules.BusinessRulesEvaluatorBase`1.AddRule(System.String,NCommon.Rules.IBusinessRule{`0})">
+            <summary>
+            Adds a <see cref="T:NCommon.Rules.IBusinessRule`1"/> instance to the rules evaluator.
+            </summary>
+            <param name="rule">The <see cref="T:NCommon.Rules.IBusinessRule`1"/> instance to add.</param>
+            <param name="ruleName">string. The unique name assigned to the business rule.</param>
+        </member>
+        <member name="M:NCommon.Rules.BusinessRulesEvaluatorBase`1.RemoveRule(System.String)">
+            <summary>
+            Removes a previously added rule, specified with the <paramref name="ruleName"/>, from the evaluator.
+            </summary>
+            <param name="ruleName">string. The name of the rule to remove.</param>
+        </member>
+        <member name="M:NCommon.Rules.BusinessRulesEvaluatorBase`1.Evauluate(`0)">
+            <summary>
+            Evaluates all business rules registred with the evaluator against a entity instance.
+            </summary>
+            <param name="entity">The <typeparamref name="TEntity"/> instance against which all 
+            registered business rules are evauluated.</param>
+        </member>
+        <member name="M:NCommon.Rules.BusinessRulesEvaluatorBase`1.EvaluateRule(System.String,`0)">
+            <summary>
+            Evaluates a business rules against an entity.
+            </summary>
+            <param name="ruleName">string. The name of the rule to evaluate.</param>
+            <param name="entity">A <typeparamref name="TEntity"/> instance against which the business rules are evaluated.</param>
+        </member>
+        <member name="T:NCommon.Guard">
+            <summary>
+            Provides utility methods to guard parameter and local variables.
+            </summary>
+        </member>
+        <member name="M:NCommon.Guard.Against``1(System.Boolean,System.String)">
+            <summary>
+            Throws an exception of type <typeparamref name="TException"/> with the specified message
+            when the assertion statement is true.
+            </summary>
+            <typeparam name="TException">The type of exception to throw.</typeparam>
+            <param name="assertion">The assertion to evaluate. If true then the <typeparamref name="TException"/> exception is thrown.</param>
+            <param name="message">string. The exception message to throw.</param>
+        </member>
+        <member name="M:NCommon.Guard.Against``1(System.Func{System.Boolean},System.String)">
+            <summary>
+            Throws an exception of type <typeparamref name="TException"/> with the specified message
+            when the assertion
+            </summary>
+            <typeparam name="TException"></typeparam>
+            <param name="assertion"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:NCommon.Guard.InheritsFrom``1(System.Object,System.String)">
+            <summary>
+            Throws a <see cref="T:System.InvalidOperationException"/> when the specified object
+            instance does not inherit from <typeparamref name="TBase"/> type.
+            </summary>
+            <typeparam name="TBase">The base type to check for.</typeparam>
+            <param name="instance">The object to check if it inherits from <typeparamref name="TBase"/> type.</param>
+            <param name="message">string. The exception message to throw.</param>
+        </member>
+        <member name="M:NCommon.Guard.InheritsFrom``1(System.Type,System.String)">
+            <summary>
+            Throws a <see cref="T:System.InvalidOperationException"/> when the specified type does not
+            inherit from the <typeparamref name="TBase"/> type.
+            </summary>
+            <typeparam name="TBase">The base type to check for.</typeparam>
+            <param name="type">The <see cref="T:System.Type"/> to check if it inherits from <typeparamref name="TBase"/> type.</param>
+            <param name="message">string. The exception message to throw.</param>
+        </member>
+        <member name="M:NCommon.Guard.Implements``1(System.Object,System.String)">
+            <summary>
+            Throws a <see cref="T:System.InvalidOperationException"/> when the specified object
+            instance does not implement the <typeparamref name="TInterface"/> interface.
+            </summary>
+            <typeparam name="TInterface">The interface type the object instance should implement.</typeparam>
+            <param name="instance">The object insance to check if it implements the <typeparamref name="TInterface"/> interface</param>
+            <param name="message">string. The exception message to throw.</param>
+        </member>
+        <member name="M:NCommon.Guard.Implements``1(System.Type,System.String)">
+            <summary>
+            Throws an <see cref="T:System.InvalidOperationException"/> when the specified type does not
+            implement the <typeparamref name="TInterface"/> interface.
+            </summary>
+            <typeparam name="TInterface">The interface type that the <paramref name="type"/> should implement.</typeparam>
+            <param name="type">The <see cref="T:System.Type"/> to check if it implements from <typeparamref name="TInterface"/> interface.</param>
+            <param name="message">string. The exception message to throw.</param>
+        </member>
+        <member name="M:NCommon.Guard.TypeOf``1(System.Object,System.String)">
+            <summary>
+            Throws an <see cref="T:System.InvalidOperationException"/> when the specified object instance is
+            not of the specified type.
+            </summary>
+            <typeparam name="TType">The Type that the <paramref name="instance"/> is expected to be.</typeparam>
+            <param name="instance">The object instance whose type is checked.</param>
+            <param name="message">The message of the <see cref="T:System.InvalidOperationException"/> exception.</param>
+        </member>
+        <member name="M:NCommon.Guard.IsEqual``1(System.Object,System.Object,System.String)">
+            <summary>
+            Throws an exception if an instance of an object is not equal to another object instance.
+            </summary>
+            <typeparam name="TException">The type of exception to throw when the guard check evaluates false.</typeparam>
+            <param name="compare">The comparison object.</param>
+            <param name="instance">The object instance to compare with.</param>
+            <param name="message">string. The message of the exception.</param>
+        </member>
+        <member name="T:NCommon.Expressions.MemberAccessPathVisitor">
+            <summary>
+            Inherits from the <see cref="T:NCommon.Expressions.ExpressionVisitor"/> base class and implements a expression visitor
+            that builds up a path string that represents meber access in a Expression.
+            </summary>
+        </member>
+        <member name="M:NCommon.Expressions.MemberAccessPathVisitor.VisitMemberAccess(System.Linq.Expressions.MemberExpression)">
+            <summary>
+            Overriden. Overrides all MemberAccess to build a path string.
+            </summary>
+            <param name="methodExp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Expressions.MemberAccessPathVisitor.VisitMethodCall(System.Linq.Expressions.MethodCallExpression)">
+            <summary>
+            Overriden. Throws a <see cref="T:System.NotSupportedException"/> when a method call is encountered.
+            </summary>
+            <param name="methodCallExp"></param>
+            <returns></returns>
+        </member>
+        <member name="P:NCommon.Expressions.MemberAccessPathVisitor.Path">
+            <summary>
+            Gets the path analyzed by the visitor.
+            </summary>
+        </member>
+        <member name="T:NCommon.Data.RepositoryBase`1">
+            <summary>
+             A base class for implementors of <see cref="T:NCommon.Data.IRepository`1"/>.
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="M:NCommon.Data.RepositoryBase`1.GetCurrentUnitOfWork``1">
+            <summary>
+            Gets the <see cref="T:NCommon.Data.IUnitOfWork"/> that the repository should use.
+            </summary>
+            <typeparam name="TUnitOfWork">A compatible unit of work instance.</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Data.RepositoryBase`1.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+            <returns>
+            A <see cref="T:System.Collections.Generic.IEnumerator`1"/> that can be used to iterate through the collection.
+            </returns>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:NCommon.Data.RepositoryBase`1.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through a collection.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerator"/> object that can be used to iterate through the collection.
+            </returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:NCommon.Data.RepositoryBase`1.Add(`0)">
+            <summary>
+            Marks the entity instance to be saved to the store.
+            </summary>
+            <param name="entity">An instance of <typeparamref name="TEntity"/> that should be saved
+            to the database.</param>
+            <remarks>Implementors of this method must handle the Insert scenario.</remarks>
+        </member>
+        <member name="M:NCommon.Data.RepositoryBase`1.Save(`0)">
+            <summary>
+            Marks the changes of an existing entity to be saved to the store.
+            </summary>
+            <param name="entity">An instance of <typeparamref name="TEntity"/> that should be
+            updated in the database.</param>
+            <remarks>Implementors of this method must handle the Update scneario. </remarks>
+        </member>
+        <member name="M:NCommon.Data.RepositoryBase`1.Delete(`0)">
+            <summary>
+            Marks the entity instance to be deleted from the store.
+            </summary>
+            <param name="entity">An instance of <typeparamref name="TEntity"/> that should be deleted.</param>
+        </member>
+        <member name="M:NCommon.Data.RepositoryBase`1.Detach(`0)">
+            <summary>
+            Detaches a instance from the repository.
+            </summary>
+            <param name="entity">The entity instance, currently being tracked via the repository, to detach.</param>
+            <exception cref="T:System.NotImplementedException">Implentors should throw the NotImplementedException if Detaching
+            entities is not supported.</exception>
+        </member>
+        <member name="M:NCommon.Data.RepositoryBase`1.Attach(`0)">
+            <summary>
+            Attaches a detached entity, previously detached via the <see cref="M:NCommon.Data.IRepository`1.Detach(`0)"/> method.
+            </summary>
+            <param name="entity">The entity instance to attach back to the repository.</param>
+            <exception cref="T:System.NotImplementedException">Implentors should throw the NotImplementedException if Attaching
+            entities is not supported.</exception>
+        </member>
+        <member name="M:NCommon.Data.RepositoryBase`1.Refresh(`0)">
+            <summary>
+            Refreshes a entity instance.
+            </summary>
+            <param name="entity">The entity to refresh.</param>
+            <exception cref="T:System.NotImplementedException">Implementors should throw the NotImplementedException if Refreshing
+            entities is not supported.</exception>
+        </member>
+        <member name="M:NCommon.Data.RepositoryBase`1.With(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
+            <summary>
+            Instructs the repository to eager load a child entities. 
+            </summary>
+            <param name="path">The path of the child entities to eager load.</param>
+            <remarks>Implementors should throw a <see cref="T:System.NotSupportedException"/> if the underling provider
+            does not support eager loading of entities</remarks>
+        </member>
+        <member name="M:NCommon.Data.RepositoryBase`1.With``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})">
+            <summary>
+            Instructs the repository to eager load entities that may be in the repository's association path.
+            </summary>
+            <param name="path">The path of the child entities to eager load.</param>
+            <remarks>Implementors should throw a <see cref="T:System.NotSupportedException"/> if the underling provider
+            does not support eager loading of entities</remarks>
+        </member>
+        <member name="M:NCommon.Data.RepositoryBase`1.Cached(System.String)">
+            <summary>
+            Instructs the repository to cache the following query.
+            </summary>
+            <param name="cachedQueryName">string. The name to give to the cached query.</param>
+            <remarks>Implementors should return the repository if caching is not supported.</remarks>
+        </member>
+        <member name="M:NCommon.Data.RepositoryBase`1.For``1">
+            <summary>
+            Defines the service context under which the repository will execute.
+            </summary>
+            <typeparam name="TService">The service type that defines the context of the repository.</typeparam>
+            <returns>The same <see cref="T:NCommon.Data.IRepository`1"/> instance.</returns>
+            <remarks>
+            Gets all fetching strategies define for a service for the current type and configures the
+            repository to use that fetching strategy. 
+            </remarks>
+        </member>
+        <member name="M:NCommon.Data.RepositoryBase`1.SetBatchSize(System.Int32)">
+            <summary>
+            Sets the batch size on the repository
+            </summary>
+            <param name="size"></param>
+        </member>
+        <member name="M:NCommon.Data.RepositoryBase`1.Query(NCommon.Specifications.ISpecification{`0})">
+            <summary>
+            Querries the repository based on the provided specification and returns results that
+            are only satisfied by the specification.
+            </summary>
+            <param name="specification">A <see cref="T:NCommon.Specifications.ISpecification`1"/> instnace used to filter results
+            that only satisfy the specification.</param>
+            <returns>A <see cref="T:System.Collections.Generic.IEnumerable`1"/> that can be used to enumerate over the results
+            of the query.</returns>
+        </member>
+        <member name="P:NCommon.Data.RepositoryBase`1.RepositoryQuery">
+            <summary>
+            Gets the <see cref="T:System.Linq.IQueryable`1"/> used by the <see cref="T:NCommon.Data.RepositoryBase`1"/> 
+            to execute Linq queries.
+            </summary>
+            <value>A <see cref="T:System.Linq.IQueryable`1"/> instance.</value>
+            <remarks>
+            Inheritos of this base class should return a valid non-null <see cref="T:System.Linq.IQueryable`1"/> instance.
+            </remarks>
+        </member>
+        <member name="P:NCommon.Data.RepositoryBase`1.Expression">
+            <summary>
+            Gets the expression tree that is associated with the instance of <see cref="T:System.Linq.IQueryable"/>.
+            </summary>
+            <returns>
+            The <see cref="P:NCommon.Data.RepositoryBase`1.Expression"/> that is associated with this instance of <see cref="T:System.Linq.IQueryable"/>.
+            </returns>
+        </member>
+        <member name="P:NCommon.Data.RepositoryBase`1.ElementType">
+            <summary>
+            Gets the type of the element(s) that are returned when the expression tree associated with this instance of <see cref="T:System.Linq.IQueryable"/> is executed.
+            </summary>
+            <returns>
+            A <see cref="T:System.Type"/> that represents the type of the element(s) that are returned when the expression tree associated with this object is executed.
+            </returns>
+        </member>
+        <member name="P:NCommon.Data.RepositoryBase`1.Provider">
+            <summary>
+            Gets the query provider that is associated with this data source.
+            </summary>
+            <returns>
+            The <see cref="T:System.Linq.IQueryProvider"/> that is associated with this data source.
+            </returns>
+        </member>
+        <member name="T:NCommon.Rules.BusinessRule`1">
+            <summary>
+            Implements the <see cref="T:NCommon.Rules.IBusinessRule`1"/> interface and inherits from the
+            <see cref="T:NCommon.Rules.SpecificationRuleBase`1"/> to provide a implementation of a business rule that
+            uses specifications as rule logic.
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="T:NCommon.Rules.SpecificationRuleBase`1">
+            <summary>
+            Base implementation that uses <see cref="T:NCommon.Specifications.ISpecification`1"/> instances that provide the logic to check if the
+            rule is satisfied.
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="M:NCommon.Rules.SpecificationRuleBase`1.#ctor(NCommon.Specifications.ISpecification{`0})">
+            <summary>
+            Default Constructor. 
+            Protected. Must be called by implementors.
+            </summary>
+            <param name="rule">A <see cref="T:NCommon.Specifications.ISpecification`1"/> instance that specifies the rule.</param>
+        </member>
+        <member name="M:NCommon.Rules.SpecificationRuleBase`1.IsSatisfied(`0)">
+            <summary>
+            Checks if the entity instance satisfies this rule.
+            </summary>
+            <param name="entity">The <typeparamref name="TEntity"/> insance.</param>
+            <returns>bool. True if the rule is satsified, else false.</returns>
+        </member>
+        <member name="M:NCommon.Rules.BusinessRule`1.#ctor(NCommon.Specifications.ISpecification{`0},System.Action{`0})">
+            <summary>
+            Default Constructor.
+            Creates a new instance of the <see cref="T:NCommon.Rules.BusinessRule`1"/> instance.
+            </summary>
+            <param name="rule">A <see cref="T:NCommon.Specifications.ISpecification`1"/> instance that acts as the underlying
+            specification that this business rule is evaluated against.</param>
+            <param name="action">A <see cref="T:System.Action`1"/> instance that is invoked when the business rule
+            is satisfied.</param>
+        </member>
+        <member name="M:NCommon.Rules.BusinessRule`1.Evaluate(`0)">
+            <summary>
+            Evaluates the business rule against an entity instance.
+            </summary>
+            <param name="entity"><typeparamref name="TEntity"/>. The entity instance against which
+            the business rule is evaluated.</param>
+        </member>
+        <member name="T:NCommon.Events.Handles`1">
+            <summary>
+            Interface used by handlers of domain events.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:NCommon.Data.UnitOfWorkScopeTransaction">
+            <summary>
+            The <see cref="T:NCommon.Data.UnitOfWorkScopeTransaction"/> identifies a unique transaciton that can
+            be shared by multiple <see cref="T:NCommon.Data.UnitOfWorkScope"/> instances.
+            </summary>
+        </member>
+        <member name="M:NCommon.Data.UnitOfWorkScopeTransaction.#ctor(NCommon.Data.IUnitOfWorkFactory,System.Data.IsolationLevel)">
+            <summary>
+            Overloaded Constructor.
+            Creates a new instance of the <see cref="T:NCommon.Data.UnitOfWorkScopeTransaction"/> that takes in a 
+            <see cref="T:NCommon.Data.IUnitOfWorkFactory"/> instance that is responsible for creating instances of <see cref="T:NCommon.Data.IUnitOfWork"/> and
+            a <see cref="T:System.Data.IDbConnection"/> that is used by the instance to connect to the data store.
+            </summary>
+            <param name="unitOfWorkFactory">The <see cref="T:NCommon.Data.IUnitOfWorkFactory"/> implementation that is responsible
+            for creating instances of <see cref="T:NCommon.Data.IUnitOfWork"/> instances.</param>
+            <param name="isolationLevel">One of the values of <see cref="P:NCommon.Data.UnitOfWorkScopeTransaction.IsolationLevel"/> that specifies the transaction
+            isolation level of the <see cref="T:NCommon.Data.UnitOfWorkScopeTransaction"/> instance.</param>
+        </member>
+        <member name="M:NCommon.Data.UnitOfWorkScopeTransaction.GetTransactionForScope(NCommon.Data.UnitOfWorkScope,System.Data.IsolationLevel)">
+            <summary>
+            Gets a <see cref="T:NCommon.Data.UnitOfWorkScopeTransaction"/> instance that can be used by a <see cref="T:NCommon.Data.UnitOfWorkScope"/> instance.
+            </summary>
+            <param name="scope">The <see cref="T:NCommon.Data.UnitOfWorkScope"/> instance that is requesting the transaction.</param>
+            <param name="isolationLevel">One of the values of <see cref="P:NCommon.Data.UnitOfWorkScopeTransaction.IsolationLevel"/> that specifies the transaction isolation level.</param>
+            <returns>A <see cref="T:NCommon.Data.UnitOfWorkScopeTransaction"/> instance.</returns>
+        </member>
+        <member name="M:NCommon.Data.UnitOfWorkScopeTransaction.GetTransactionForScope(NCommon.Data.UnitOfWorkScope,System.Data.IsolationLevel,NCommon.Data.UnitOfWorkScopeTransactionOptions)">
+            <summary>
+            Gets a <see cref="T:NCommon.Data.UnitOfWorkScopeTransaction"/> instance that can be used by a <see cref="T:NCommon.Data.UnitOfWorkScope"/> instance.
+            </summary>
+            <param name="scope">The <see cref="T:NCommon.Data.UnitOfWorkScope"/> instance that is requesting the transaction.</param>
+            <param name="isolationLevel">One of the values of <see cref="P:NCommon.Data.UnitOfWorkScopeTransaction.IsolationLevel"/> that specifies the transaction isolation level.</param>
+            <param name="options">One of the values of <see cref="T:NCommon.Data.UnitOfWorkScopeTransactionOptions"/> that specifies options for using existing
+            transacitons or creating new ones.</param>
+            <returns>A <see cref="T:NCommon.Data.UnitOfWorkScopeTransaction"/> instance.</returns>
+        </member>
+        <member name="M:NCommon.Data.UnitOfWorkScopeTransaction.AttachScope(NCommon.Data.UnitOfWorkScope)">
+            <summary>
+            Attaches a <see cref="T:NCommon.Data.UnitOfWorkScope"/> instance to the <see cref="T:NCommon.Data.UnitOfWorkScopeTransaction"/> instance.
+            </summary> 
+            <param name="scope"></param>
+        </member>
+        <member name="M:NCommon.Data.UnitOfWorkScopeTransaction.Commit(NCommon.Data.UnitOfWorkScope)">
+            <summary>
+            Causes a comit operation on the <see cref="T:NCommon.Data.UnitOfWorkScopeTransaction"/> instance.
+            </summary>
+            <param name="scope">The <see cref="T:NCommon.Data.UnitOfWorkScope"/> instance that is calling the commit.</param>
+            <remarks>
+            This method can only by called by the scope currently on top of the stack. If Called by another scope then an 
+            <see cref="T:System.InvalidOperationException"/> is called. If the calling scope is last in the attached scope hierarchy,
+            then a commit is called on the underling unit of work instance.
+            </remarks>
+        </member>
+        <member name="M:NCommon.Data.UnitOfWorkScopeTransaction.Rollback(NCommon.Data.UnitOfWorkScope)">
+            <summary>
+            Causes a Rollback operation on the <see cref="T:NCommon.Data.UnitOfWorkScopeTransaction"/> instance.
+            </summary>
+            <param name="scope">The <see cref="T:NCommon.Data.UnitOfWorkScope"/> instance that is calling the commit.</param>
+            <remarks>
+            This method can only be called by the scope currently on top of the stack. If called by another scope than the
+            current <see cref="T:NCommon.Data.UnitOfWorkScope"/> instance, then a <see cref="T:System.InvalidOperationException"/> is thrown. If the
+            calling scope is the last in the attached scope hierarchy, then a rollback is called on the underlying UnitOfWork
+            instance.
+            </remarks>
+        </member>
+        <member name="M:NCommon.Data.UnitOfWorkScopeTransaction.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:NCommon.Data.UnitOfWorkScopeTransaction.TransactionID">
+            <summary>
+            Gets a <see cref="T:System.Guid"/> that uniqely identifies the transaction.
+            </summary>
+            <value>A <see cref="T:System.Guid"/> that uniquely identifies the transaction.</value>
+        </member>
+        <member name="P:NCommon.Data.UnitOfWorkScopeTransaction.IsolationLevel">
+            <summary>
+            Gets the <see cref="P:NCommon.Data.UnitOfWorkScopeTransaction.IsolationLevel"/> of the <see cref="T:NCommon.Data.UnitOfWorkScopeTransaction"/> instance.
+            </summary>
+            <value>One of the values of <see cref="P:NCommon.Data.UnitOfWorkScopeTransaction.IsolationLevel"/>.</value>
+        </member>
+        <member name="P:NCommon.Data.UnitOfWorkScopeTransaction.UnitOfWork">
+            <summary>
+            Gets the <see cref="T:NCommon.Data.IUnitOfWork"/> instance of the <see cref="T:NCommon.Data.UnitOfWorkScopeTransaction"/> instance.
+            </summary>
+        </member>
+        <member name="P:NCommon.Data.UnitOfWorkScopeTransaction.CurrentTransactions">
+            <summary>
+            Gets a <see cref="T:System.Collections.Generic.IList`1"/> containing instances of <see cref="T:NCommon.Data.UnitOfWorkScopeTransaction"/> currently
+            started for the current request / thread.
+            </summary>
+        </member>
+        <member name="T:NCommon.Data.IUnitOfWorkFactory">
+            <summary>
+            Factory interface that the <see cref="T:NCommon.Data.UnitOfWork"/> uses to create instances of
+            <see cref="T:NCommon.Data.IUnitOfWork"/>
+            </summary>
+        </member>
+        <member name="M:NCommon.Data.IUnitOfWorkFactory.Create">
+            <summary>
+            Creates a new instance of <see cref="T:NCommon.Data.IUnitOfWork"/>.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:NCommon.Extensions.SpecificationExtensions">
+            <summary>
+             Extension methods for <see cref="T:NCommon.Specifications.ISpecification`1"/>.
+            </summary>
+        </member>
+        <member name="M:NCommon.Extensions.SpecificationExtensions.And``1(NCommon.Specifications.ISpecification{``0},NCommon.Specifications.ISpecification{``0})">
+            <summary>
+            Retuns a new specification adding this one with the passed one.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="rightHand">The right hand.</param>
+            <param name="leftHand">The left hand.</param>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Extensions.SpecificationExtensions.Or``1(NCommon.Specifications.ISpecification{``0},NCommon.Specifications.ISpecification{``0})">
+            <summary>
+            Retuns a new specification or'ing this one with the passed one.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="rightHand">The right hand.</param>
+            <param name="leftHand">The left hand.</param>
+            <returns></returns>
+        </member>
+        <member name="T:NCommon.Data.UnitOfWorkScopeTransactionOptions">
+            <summary>
+            Specifies the transaction options for creating a <see cref="T:NCommon.Data.UnitOfWorkScopeTransaction"/> instance.
+            </summary>
+        </member>
+        <member name="F:NCommon.Data.UnitOfWorkScopeTransactionOptions.UseCompatible">
+            <summary>
+            Specifies that if a <see cref="T:NCommon.Data.UnitOfWorkScopeTransaction"/> instance with a compatible isolation level
+            exists for the current thread / request, use that transaction or create a new one. <see cref="T:NCommon.Data.UnitOfWorkScope"/>
+            defaults to this option.
+            </summary>
+        </member>
+        <member name="F:NCommon.Data.UnitOfWorkScopeTransactionOptions.CreateNew">
+            <summary>
+            Specifies that the a new <see cref="T:NCommon.Data.UnitOfWorkScopeTransaction"/> should be created irrespective of whether
+            a compaible transaction already exists.
+            </summary>
+        </member>
+        <member name="F:NCommon.Data.UnitOfWorkScopeTransactionOptions.AutoComplete">
+            <summary>
+            Specifies that the <see cref="T:NCommon.Data.UnitOfWorkScopeTransaction"/> should be marked as completed and
+            committed automatically when the current <see cref="T:NCommon.Data.UnitOfWorkScope"/> is disposed.
+            </summary>
+            <remarks>
+            Attribution: AutoComplete implementation based on patch provided by Pablo Ruiz [http://humm4life.blogspot.com/2009/04/adding-transaction-autocomplete-support.html].
+            </remarks>
+        </member>
+        <member name="T:NCommon.Specifications.ISpecification`1">
+            <summary>
+            The <see cref="T:NCommon.Specifications.ISpecification`1"/> interface defines a basic contract to express specifications declaratively.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:NCommon.Specifications.ISpecification`1.IsSatisfiedBy(`0)">
+            <summary>
+            Evaluates the specification against an entity of <typeparamref name="T"/>.
+            </summary>
+            <param name="entity">The <typeparamref name="T"/> instance to evaluate the specificaton
+            against.</param>
+            <returns>Should return true if the specification was satisfied by the entity, else false. </returns>
+        </member>
+        <member name="P:NCommon.Specifications.ISpecification`1.Predicate">
+            <summary>
+            Gets the expression that encapsulates the criteria of the specification.
+            </summary>
+        </member>
+        <member name="T:NCommon.Rules.IValidationRule`1">
+            <summary>
+            Provides a contract that defines a validation rule that provides validation logic  for an entity.
+            </summary>
+            <typeparam name="TEntity">The type of entity this validation rule is applicable for.</typeparam>
+        </member>
+        <member name="M:NCommon.Rules.IValidationRule`1.Validate(`0)">
+            <summary>
+            Validates whether the entity violates the validation rule or not.
+            </summary>
+            <param name="entity">The <typeparamref name="TEntity"/> entity instance to validate.</param>
+            <returns>Should return true if the entity instance is valid, else false.</returns>
+        </member>
+        <member name="P:NCommon.Rules.IValidationRule`1.ValidationMessage">
+            <summary>
+            Gets the message of the validation rule.
+            </summary>
+        </member>
+        <member name="P:NCommon.Rules.IValidationRule`1.ValidationProperty">
+            <summary>
+            Gets a generic or specific name of a property that was validated.
+            </summary>
+        </member>
+        <member name="T:NCommon.Expressions.MemberAccessPropertyInfoVisitor">
+            <summary>
+            Inherits from the <see cref="T:NCommon.Expressions.ExpressionVisitor"/> base class and implements a expression visitor
+            that gets a <see cref="T:System.Reflection.PropertyInfo"/> that represents the property representd by the expresion.
+            </summary>
+        </member>
+        <member name="M:NCommon.Expressions.MemberAccessPropertyInfoVisitor.VisitMemberAccess(System.Linq.Expressions.MemberExpression)">
+            <summary>
+            Overriden. Overrides all MemberAccess to build a path string.
+            </summary>
+            <param name="methodExp"></param>
+            <returns></returns>
+        </member>
+        <member name="P:NCommon.Expressions.MemberAccessPropertyInfoVisitor.Property">
+            <summary>
+            Gets the <see cref="T:System.Reflection.PropertyInfo"/> that the expression represents.
+            </summary>
+        </member>
+        <member name="T:NCommon.Data.UnitOfWork">
+            <summary>
+            Manages the lifetime of a <see cref="T:NCommon.Data.IUnitOfWork"/>
+            </summary>
+        </member>
+        <member name="F:NCommon.Data.UnitOfWork.currentUnitOfWorkKey">
+            <summary>
+            The Key used to store the current unit of work in <see cref="P:NCommon.Storage.Store.Local"/>.
+            </summary>
+        </member>
+        <member name="M:NCommon.Data.UnitOfWork.Start">
+            <summary>
+            Starts a new <see cref="T:NCommon.Data.IUnitOfWork"/> session that implements a unit of work operation.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Data.UnitOfWork.Finish(System.Boolean)">
+            <summary>
+            Finishes the current IUnitOfWork instance.
+            </summary>
+            <param name="flush">bool. True if the Finish operation should flush the changes made 
+            to the current <see cref="T:NCommon.Data.IUnitOfWork"/> instance.</param>
+        </member>
+        <member name="P:NCommon.Data.UnitOfWork.HasStarted">
+            <summary>
+            Gets a boolean value indicating whether a _unitOfWork has been started for the current
+            thread or current session.
+            </summary>
+            <value>
+            True if a _unitOfWork has already started for the current thread or request.
+            </value>
+        </member>
+        <member name="P:NCommon.Data.UnitOfWork.Current">
+            <summary>
+            Gets the current <see cref="T:NCommon.Data.IUnitOfWork"/> instance.
+            </summary>
+            <value>
+            A <see cref="T:NCommon.Data.IUnitOfWork"/> instance for the current thread or request.
+            </value>
+        </member>
+        <member name="T:NCommon.Specifications.Specification`1">
+            <summary>
+            Provides a default implementation of the <see cref="T:NCommon.Specifications.ISpecification`1"/> interface.
+            </summary>
+            <remarks>
+            The <see cref="T:NCommon.Specifications.Specification`1"/> implements Composite Specification pattern by overloading
+            the &amp; and | (And, Or in VB.Net) operators to allow composing multiple specifications together.
+            </remarks>
+        </member>
+        <member name="M:NCommon.Specifications.Specification`1.#ctor(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Default Constructor.
+            Creates a new instance of the <see cref="T:NCommon.Specifications.Specification`1"/> instnace with the
+            provided predicate expression.
+            </summary>
+            <param name="predicate">A predicate that can be used to check entities that
+            satisfy the specification.</param>
+        </member>
+        <member name="M:NCommon.Specifications.Specification`1.IsSatisfiedBy(`0)">
+            <summary>
+            Evaluates the specification against an entity of <typeparamref name="T"/>.
+            </summary>
+            <param name="entity">The <typeparamref name="T"/> instance to evaluate the specificaton
+            against.</param>
+            <returns>Should return true if the specification was satisfied by the entity, else false. </returns>
+        </member>
+        <member name="M:NCommon.Specifications.Specification`1.op_BitwiseAnd(NCommon.Specifications.Specification{`0},NCommon.Specifications.Specification{`0})">
+            <summary>
+            Overloads the &amp; operator and combines two <see cref="T:NCommon.Specifications.Specification`1"/> in a Boolean And expression
+            and returns a new see cref="Specification{TEntity}"/&gt;.
+            </summary>
+            <param name="leftHand">The left hand <see cref="T:NCommon.Specifications.Specification`1"/> to combine.</param>
+            <param name="rightHand">The right hand <see cref="T:NCommon.Specifications.Specification`1"/> to combine.</param>
+            <returns>The combined <see cref="T:NCommon.Specifications.Specification`1"/> instance.</returns>
+        </member>
+        <member name="M:NCommon.Specifications.Specification`1.op_BitwiseOr(NCommon.Specifications.Specification{`0},NCommon.Specifications.Specification{`0})">
+            <summary>
+            Overloads the &amp; operator and combines two <see cref="T:NCommon.Specifications.Specification`1"/> in a Boolean Or expression
+            and returns a new see cref="Specification{TEntity}"/&gt;.
+            </summary>
+            <param name="leftHand">The left hand <see cref="T:NCommon.Specifications.Specification`1"/> to combine.</param>
+            <param name="rightHand">The right hand <see cref="T:NCommon.Specifications.Specification`1"/> to combine.</param>
+            <returns>The combined <see cref="T:NCommon.Specifications.Specification`1"/> instance.</returns>
+        </member>
+        <member name="P:NCommon.Specifications.Specification`1.Predicate">
+            <summary>
+            Gets the expression that encapsulates the criteria of the specification.
+            </summary>
+        </member>
+        <member name="T:NCommon.Rules.ValidationRule`1">
+            <summary>
+            Implements the <see cref="T:NCommon.Rules.IValidationRule`1"/> interface and inherits from the
+            <see cref="T:NCommon.Rules.SpecificationRuleBase`1"/> to provide a very basic implementation of an
+            entity validation rule that uses specifications as underlying rule logic.
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="M:NCommon.Rules.ValidationRule`1.#ctor(NCommon.Specifications.ISpecification{`0},System.String,System.String)">
+            <summary>
+            Default Constructor.
+            Creates a new instance of the <see cref="T:NCommon.Rules.ValidationRule`1"/> class.
+            </summary>
+            <param name="message">string. The validation message associated with the rule.</param>
+            <param name="property">string. The generic or specific name of the property that was validated.</param>
+            <param name="rule"></param>
+        </member>
+        <member name="M:NCommon.Rules.ValidationRule`1.Validate(`0)">
+            <summary>
+            Validates whether the entity violates the validation rule or not.
+            </summary>
+            <param name="entity">The <typeparamref name="TEntity"/> entity instance to validate.</param>
+            <returns>Should return true if the entity instance is valid, else false.</returns>
+        </member>
+        <member name="P:NCommon.Rules.ValidationRule`1.ValidationMessage">
+            <summary>
+            Gets the message of the validation rule.
+            </summary>
+        </member>
+        <member name="P:NCommon.Rules.ValidationRule`1.ValidationProperty">
+            <summary>
+            Gets a generic or specific name of a property that was validated.
+            </summary>
+        </member>
+        <member name="T:NCommon.Rules.ValidationResult">
+            <summary>
+            Contains the result of a <see cref="M:NCommon.Rules.IEntityValidator`1.Validate(`0)"/> method call.
+            </summary>
+        </member>
+        <member name="M:NCommon.Rules.ValidationResult.AddError(NCommon.Rules.ValidationError)">
+            <summary>
+            Adds a validation error into the result.
+            </summary>
+            <param name="error"></param>
+        </member>
+        <member name="M:NCommon.Rules.ValidationResult.RemoveError(NCommon.Rules.ValidationError)">
+            <summary>
+            Removes a validation error from the result.
+            </summary>
+            <param name="error"></param>
+        </member>
+        <member name="P:NCommon.Rules.ValidationResult.IsValid">
+            <summary>
+            Gets wheater the validation operation on an entity was valid or not.
+            </summary>
+        </member>
+        <member name="P:NCommon.Rules.ValidationResult.Errors">
+            <summary>
+            Gets an <see cref="T:System.Collections.Generic.IEnumerable`1"/> that can be used to enumerate over
+            the validation errors as a result of a <see cref="M:NCommon.Rules.IEntityValidator`1.Validate(`0)"/> method
+            call.
+            </summary>
+        </member>
+        <member name="T:NCommon.Events.IDomainEvent">
+            <summary>
+            Base interface that specifies a domain event.
+            </summary>
+        </member>
+        <member name="T:NCommon.Data.UnitOfWorkScope">
+            <summary>
+            Helper class that allows starting and using a unit of work like:
+            <![CDATA[
+                using (UnitOfWorkScope scope = new UnitOfWorkScope()) {
+                    //Do some stuff here.
+                    scope.Commit();
+                }
+            
+            ]]>
+            </summary>
+        </member>
+        <member name="M:NCommon.Data.UnitOfWorkScope.#ctor">
+            <summary>
+            Default Constuctor.
+            Creates a new <see cref="T:NCommon.Data.UnitOfWorkScope"/> with the <see cref="F:System.Data.IsolationLevel.Serializable"/> 
+            transaction isolation level.
+            </summary>
+        </member>
+        <member name="M:NCommon.Data.UnitOfWorkScope.#ctor(NCommon.Data.UnitOfWorkScopeTransactionOptions)">
+            <summary>
+            Overloaded Constructor.
+            Creates a new instance of the <see cref="T:NCommon.Data.UnitOfWorkScope"/> with the 
+            specified <see cref="T:NCommon.Data.UnitOfWorkScopeTransactionOptions"/> and default <see cref="T:System.Data.IsolationLevel"/>
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="M:NCommon.Data.UnitOfWorkScope.#ctor(System.Data.IsolationLevel)">
+            <summary>
+            Overloaded Constructor.
+            Creates a new instance of <see cref="T:NCommon.Data.UnitOfWorkScope"/> with the specified transaction
+            isolation level.
+            </summary>
+            <param name="isolationLevel">One of the values of <see cref="T:System.Data.IsolationLevel"/> that specifies
+            the transation isolation level the scope should use.</param>
+        </member>
+        <member name="M:NCommon.Data.UnitOfWorkScope.#ctor(System.Data.IsolationLevel,NCommon.Data.UnitOfWorkScopeTransactionOptions)">
+            <summary>
+            Overloaded Constructor.
+            Creates a new instance of <see cref="T:NCommon.Data.UnitOfWorkScope"/> with the specified transaction isolation level, option connection and
+            a transaction option that specifies if an existing transaction should be used or to create a new transaction.
+            </summary>
+            <param name="isolationLevel"></param>
+            <param name="transactionOptions"></param>
+        </member>
+        <member name="M:NCommon.Data.UnitOfWorkScope.GetScopeIsolationLevel">
+            <summary>
+            Gets the current isolation level to use for a <see cref="T:NCommon.Data.UnitOfWorkScopeTransaction"/>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NCommon.Data.UnitOfWorkScope.MapToSystemDataIsolationLevel(System.Transactions.IsolationLevel)">
+            <summary>
+            Maps a <see cref="T:System.Transactions.IsolationLevel"/> to <see cref="T:System.Data.IsolationLevel"/>
+            </summary>
+            <param name="isolationLevel">The isolation level to map.</param>
+            <returns>A corresponding <see cref="T:System.Data.IsolationLevel"/></returns>
+        </member>
+        <member name="M:NCommon.Data.UnitOfWorkScope.Dispose">
+            <summary>
+            Disposes off the <see cref="T:NCommon.Data.UnitOfWorkScope"/> insance.
+            </summary>
+        </member>
+        <member name="M:NCommon.Data.UnitOfWorkScope.Dispose(System.Boolean)">
+            <summary>
+            Disposes off the managed and un-managed resources used.
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:NCommon.Data.UnitOfWorkScope.RegisterScope(NCommon.Data.UnitOfWorkScope)">
+            <summary>
+            Registers a scope as the top level scope on the <see cref="P:NCommon.Data.UnitOfWorkScope.RunningScopes"/> stack.
+            </summary>
+            <param name="scope">The <see cref="T:NCommon.Data.UnitOfWorkScope"/> instance to set as the top level scope on the stack.</param>
+        </member>
+        <member name="M:NCommon.Data.UnitOfWorkScope.UnRegisterScope(NCommon.Data.UnitOfWorkScope)">
+            <summary>
+            UnRegisters a <see cref="T:NCommon.Data.UnitOfWorkScope"/> as the top level scope on the stack.
+            </summary>
+            <param name="scope"></param>
+        </member>
+        <member name="M:NCommon.Data.UnitOfWorkScope.Commit">
+            <summary>
+             Commits the current running transaction in the scope.
+            </summary>
+        </member>
+        <member name="P:NCommon.Data.UnitOfWorkScope.HasStarted">
+            <summary>
+            Checks if the current thread or request has a <see cref="T:NCommon.Data.UnitOfWorkScope"/> instance started.
+            </summary>
+            <value>True if a <see cref="T:NCommon.Data.UnitOfWorkScope"/> instance has started and is present.</value>
+        </member>
+        <member name="P:NCommon.Data.UnitOfWorkScope.Current">
+            <summary>
+            Gets the current <see cref="T:NCommon.Data.UnitOfWorkScope"/> instance for the current thread or request.
+            </summary>
+            <value>The current and most recent <see cref="T:NCommon.Data.UnitOfWorkScope"/> instance started for the current thread or request.
+            If none started, then a null reference is returned.</value>
+        </member>
+        <member name="P:NCommon.Data.UnitOfWorkScope.RunningScopes">
+            <summary>
+            Gets a <see cref="T:System.Collections.Generic.Stack`1"/> of <see cref="T:NCommon.Data.UnitOfWorkScope"/> that is used to store and retrieve
+            running scope instances.
+            </summary>
+        </member>
+        <member name="P:NCommon.Data.UnitOfWorkScope.UnitOfWork">
+            <summary>
+            Gets the <see cref="T:NCommon.Data.UnitOfWorkScope"/> instance used by the <see cref="T:NCommon.Data.IUnitOfWork"/> instance.
+            </summary>
+        </member>
+    </members>
+</doc>

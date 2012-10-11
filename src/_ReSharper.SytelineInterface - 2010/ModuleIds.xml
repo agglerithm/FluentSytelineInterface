@@ -1,0 +1,37 @@
+<Modules>
+  <Module PersistentId="230C4348-AFEA-4839-975D-64DB580CE359" ModuleId="SytelineIntegrationTests" />
+  <Module PersistentId="ED251823-403C-43AB-938E-729DCB6C0F98" ModuleId="SytelineInterface" />
+  <Module PersistentId="750178BE-A10C-4901-AA98-99B231AE4041" ModuleId="SytelineUnitTests" />
+  <Module PersistentId="d:Miscellaneous Files" ModuleId="AFPST.Common" />
+  <Module PersistentId="DF260DC2-E96F-4927-97A7-D56BAB5926F1" ModuleId="FluentNHibernateClasses" />
+  <Module PersistentId="AFPST.Common, Version=0.0.1.1087, Culture=neutral" ModuleId="AFPST.Common_1" />
+  <Module PersistentId="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="mscorlib" />
+  <Module PersistentId="Castle.Core, Version=1.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc" ModuleId="Castle.Core" />
+  <Module PersistentId="Castle.MicroKernel, Version=2.1.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc" ModuleId="Castle.MicroKernel" />
+  <Module PersistentId="Castle.Windsor, Version=2.1.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc" ModuleId="Castle.Windsor" />
+  <Module PersistentId="FluentNHibernate, Version=1.0.0.593, Culture=neutral, PublicKeyToken=8aa435e3cb308880" ModuleId="FluentNHibernate" />
+  <Module PersistentId="IDOCore, Version=6.0.0.0, Culture=neutral, PublicKeyToken=87d3698afe01ef37" ModuleId="IDOCore" />
+  <Module PersistentId="IDOProtocol, Version=6.0.0.0, Culture=neutral, PublicKeyToken=87d3698afe01ef37" ModuleId="IDOProtocol" />
+  <Module PersistentId="IDORequestClient, Version=6.0.0.0, Culture=neutral, PublicKeyToken=87d3698afe01ef37" ModuleId="IDORequestClient" />
+  <Module PersistentId="MGShared, Version=6.0.0.0, Culture=neutral, PublicKeyToken=87d3698afe01ef37" ModuleId="MGShared" />
+  <Module PersistentId="nunit.framework, Version=2.4.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77" ModuleId="nunit.framework" />
+  <Module PersistentId="System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="System" />
+  <Module PersistentId="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="System.Core" />
+  <Module PersistentId="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="System.Xml.Linq" />
+  <Module PersistentId="System.Data.DataSetExtensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="System.Data.DataSetExtensions" />
+  <Module PersistentId="System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="System.Data" />
+  <Module PersistentId="System.Xml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="System.Xml" />
+  <Module PersistentId="Machine.Specifications, Version=0.3.0.0, Culture=neutral" ModuleId="Machine.Specifications" />
+  <Module PersistentId="Moq, Version=4.0.812.4, Culture=neutral, PublicKeyToken=69f491c39445e920" ModuleId="Moq" />
+  <Module PersistentId="IDORequestProcessor, Version=6.0.0.0, Culture=neutral, PublicKeyToken=87d3698afe01ef37" ModuleId="IDORequestProcessor" />
+  <Module PersistentId="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821" ModuleId="log4net" />
+  <Module PersistentId="Mongoose.Interop.IDO, Version=6.0.0.3, Culture=neutral, PublicKeyToken=87d3698afe01ef37" ModuleId="Mongoose.Interop.IDO" />
+  <Module PersistentId="WSEnums, Version=6.0.0.0, Culture=neutral, PublicKeyToken=87d3698afe01ef37" ModuleId="WSEnums" />
+  <Module PersistentId="WSFormServerProtocol, Version=6.0.0.0, Culture=neutral, PublicKeyToken=87d3698afe01ef37" ModuleId="WSFormServerProtocol" />
+  <Module PersistentId="Castle.DynamicProxy2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc" ModuleId="Castle.DynamicProxy2" />
+  <Module PersistentId="NCommon, Version=1.0.0.0, Culture=neutral" ModuleId="NCommon" />
+  <Module PersistentId="NHibernate, Version=2.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4" ModuleId="NHibernate" />
+  <Module PersistentId="NHibernate.ByteCode.Castle, Version=2.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4" ModuleId="NHibernate.ByteCode.Castle" />
+  <Module PersistentId="NHibernate.Linq, Version=1.0.0.4000, Culture=neutral, PublicKeyToken=444cf6a87fdab271" ModuleId="NHibernate.Linq" />
+  <Module PersistentId="JetBrains.Annotations, Version=5.0.1659.36, Culture=neutral, PublicKeyToken=1010a0d8d6380325" ModuleId="JetBrains.Annotations" />
+</Modules>
