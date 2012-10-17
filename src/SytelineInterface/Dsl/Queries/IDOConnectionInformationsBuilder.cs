@@ -2,7 +2,9 @@ using SytelineInterface.Core;
 
                 namespace SytelineInterface.Dsl
                 {
-                  public class ConnectionInformations : IdoConstants 
+                    using Commands;
+
+                    public class ConnectionInformations : IdoConstants 
                 { 
                            public const string IDO_NAME = "ConnectionInformations";
        public const string ConnectionID = "ConnectionID";

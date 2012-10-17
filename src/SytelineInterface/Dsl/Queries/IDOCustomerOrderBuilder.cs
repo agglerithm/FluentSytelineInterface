@@ -4,7 +4,9 @@ using Mongoose.IDO.Protocol;
 using SytelineInterface.Core;
 
 namespace SytelineInterface.Dsl.Queries
-{ 
+{
+    using Commands;
+
     public class CustomerOrder : IdoConstants
     {
         public const string IDO_NAME = "SL.SLCos";
@@ -28,11 +30,7 @@ namespace SytelineInterface.Dsl.Queries
         public const string Salesman = "Slsman";
         public const string EndUserType = "EndUserType";
         public const string Discount = "Disc";
-        public const string TaxCode = "TaxCode1";
-        public const string Carrier = "coUf_LRM_Carrier";
-        public const string ClassOfService = "coUf_LRM_ClassOfService";
-        public const string ShippingInstructions = "coUf_LRM_BOLMsg";
-        public const string PackListInstructions = "coUf_LRM_PackListMsg"; 
+        public const string TaxCode = "TaxCode1"; 
         public const string ShipToAddr1 = "ShipToAddr_1";
         public const string ShipToAddr2 = "ShipToAddr_2"; 
         public const string ShipToCity = "ShipToCity";
@@ -44,18 +42,7 @@ namespace SytelineInterface.Dsl.Queries
         public const string TermsCodeDesc = "TermsCodeDesc";
         public const string TermsCodeDiscDays = "TermsCodeDiscDays";
         public const string TermsCodeDiscPct = "TermsCodeDiscPct";
-        public const string TermsCodeDueDays = "TermsCodeDueDays"; 
-        public const string DropShipOverride = "couf_enduser_flag";
-        public const string DropShipName = "couf_enduser_name";
-        public const string DropShipAddress1 = "couf_enduser_addr1";
-        public const string DropShipAddress2 = "couf_enduser_addr2";
-
-        public const string DropShipCity = "couf_enduser_city";
-        public const string DropShipState = "couf_enduser_state";
-        public const string DropShipZip = "couf_enduser_zip";
-        public const string DropShipCountry = "couf_enduser_country";
-        public const string PickStatus = "couf_pick_status";
-        public const string CancelBackorders = "couf_cancel_backorders";
+        public const string TermsCodeDueDays = "TermsCodeDueDays";  
 
 
         public const string DiscountAmount = "DiscAmount"; public const string AckStat = "AckStat";
@@ -255,9 +242,9 @@ namespace SytelineInterface.Dsl.Queries
         {
             return FromSyteline.CustomerOrder.CustomerNumber.Discount.OrderNumber
                 .OrderDate.OrderType.EndUserType.PONumber.Salesman.
-                ShippingInstructions.ShipToName.ShipToAddr1
+                ShipToName.ShipToAddr1
                 .ShipToAddr2.ShipToCity.ShipToState.ShipToZip.ShipToCountry.
-                Site.Status.TaxCode.Terms.Warehouse.Carrier.DiscountAmount.DropShipAddress1.DropShipAddress2.DropShipCity.DropShipState.DropShipCountry.DropShipOverride.DropShipName.PickStatus.PackListInstructions;
+                Site.Status.TaxCode.Terms.Warehouse.DiscountAmount;
         }
 
         public static CustomerOrderBuilder GetFullProjectionWithCustomerAndLineItems()
@@ -297,14 +284,10 @@ namespace SytelineInterface.Dsl.Queries
         public CustomerOrderBuilder TermsDescription { get { AddProperty(CustomerOrder.TermsCodeDesc); return this; } }
         public CustomerOrderBuilder Salesman { get { AddProperty(CustomerOrder.Salesman); return this; } }
         public CustomerOrderBuilder EndUserType { get { AddProperty(CustomerOrder.EndUserType); return this; } }
-        public CustomerOrderBuilder CancelBackorders { get {AddProperty(CustomerOrder.CancelBackorders);
-            return this;}}
+ 
         public CustomerOrderBuilder Discount { get { AddProperty(CustomerOrder.Discount); return this; } }
         public CustomerOrderBuilder TaxCode { get { AddProperty(CustomerOrder.TaxCode); return this; } }
-        public CustomerOrderBuilder Carrier { get { AddProperty(CustomerOrder.Carrier); return this; } }
-        public CustomerOrderBuilder ShippingInstructions { get { AddProperty(CustomerOrder.ShippingInstructions); return this; } }
-        public CustomerOrderBuilder PackListInstructions { get { AddProperty(CustomerOrder.PackListInstructions); return this; } }
-
+  
         public CustomerOrderBuilder ShipToAddr1 { get { AddProperty(CustomerOrder.ShipToAddr1); return this; } }
         public CustomerOrderBuilder ShipToAddr2 { get { AddProperty(CustomerOrder.ShipToAddr2); return this; } } 
         public CustomerOrderBuilder ShipToCity { get { AddProperty(CustomerOrder.ShipToCity); return this; } }
@@ -321,70 +304,10 @@ namespace SytelineInterface.Dsl.Queries
         public CustomerOrderBuilder BillToState { get { AddProperty(CustomerOrder.BillToState); return this; } }
         public CustomerOrderBuilder BillToZip { get { AddProperty(CustomerOrder.BillToZip); return this; } }  
         public CustomerOrderBuilder BillToName { get { AddProperty(CustomerOrder.BillToName); return this; } }
-        public CustomerOrderBuilder BillToContact { get { AddProperty(CustomerOrder.BillToContact); return this; } }
-        public CustomerOrderBuilder PickStatus { get { AddProperty(CustomerOrder.PickStatus); return this; } }
+        public CustomerOrderBuilder BillToContact { get { AddProperty(CustomerOrder.BillToContact); return this; } } 
         public CustomerOrderBuilder CustSeq { get { AddProperty(CustomerOrder.CustSeq); return this; } }
-        public CustomerOrderBuilder DropShipOverride { get { AddProperty(CustomerOrder.DropShipOverride);
-        return this;
-        }
-        }
-        public CustomerOrderBuilder DropShipAddress1
-        {
-            get
-            {
-                AddProperty(CustomerOrder.DropShipAddress1);
-                return this;
-            }
-        }
-        public CustomerOrderBuilder DropShipAddress2
-        {
-            get
-            {
-                AddProperty(CustomerOrder.DropShipAddress2);
-                return this;
-            }
-        }
-        public CustomerOrderBuilder DropShipCity
-        {
-            get
-            {
-                AddProperty(CustomerOrder.DropShipCity);
-                return this;
-            }
-        }
-        public CustomerOrderBuilder DropShipState
-        {
-            get
-            {
-                AddProperty(CustomerOrder.DropShipState);
-                return this;
-            }
-        }
-        public CustomerOrderBuilder DropShipZip
-        {
-            get
-            {
-                AddProperty(CustomerOrder.DropShipZip);
-                return this;
-            }
-        }
-        public CustomerOrderBuilder DropShipCountry
-        {
-            get
-            {
-                AddProperty(CustomerOrder.DropShipCountry);
-                return this;
-            }
-        }
-
-        public CustomerOrderBuilder DropShipName
-        {
-            get
-            {
-                AddProperty(CustomerOrder.DropShipName);
-                return this;
-            }
-        }
+ 
+ 
 
         public CustomerOrderBuilder DiscountAmount
         {
@@ -596,8 +519,7 @@ namespace SytelineInterface.Dsl.Queries
         public CustomerOrderBuilder UbProgBillPercentToBill { get { AddProperty(CustomerOrder.UbProgBillPercentToBill); return this; } }
         public CustomerOrderBuilder UseExchRate { get { AddProperty(CustomerOrder.UseExchRate); return this; } }
         public CustomerOrderBuilder VovhdCostT { get { AddProperty(CustomerOrder.VovhdCostT); return this; } }
-        public CustomerOrderBuilder Weight { get { AddProperty(CustomerOrder.Weight); return this; } } 
-        public CustomerOrderBuilder ClassOfService { get { AddProperty(CustomerOrder.ClassOfService); return this; } } 
+        public CustomerOrderBuilder Weight { get { AddProperty(CustomerOrder.Weight); return this; } }  
                     
 
  
@@ -621,10 +543,7 @@ namespace SytelineInterface.Dsl.Queries
         {
             get { return new FilterExpression<CustomerOrderBuilder, CustomerOrderFilterExpressionBuilder>(_builder, CustomerOrder.OrderDate); }
         }
-        public FilterExpression<CustomerOrderBuilder, CustomerOrderFilterExpressionBuilder> PickStatus
-        {
-            get { return new FilterExpression<CustomerOrderBuilder, CustomerOrderFilterExpressionBuilder>(_builder, CustomerOrder.PickStatus); }
-        }
+ 
         public FilterExpression<CustomerOrderBuilder, CustomerOrderFilterExpressionBuilder>  Status
         {
             get { return new FilterExpression<CustomerOrderBuilder, CustomerOrderFilterExpressionBuilder>(_builder, CustomerOrder.Status); }

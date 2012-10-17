@@ -117,6 +117,7 @@
     <Compile Include="Core\SytelineInterfaceQueryException.cs" />
     <Compile Include="Dsl\Commands\ARPaymentDetailValues.cs" />
     <Compile Include="Dsl\Commands\ARPaymentValues.cs" />
+    <Compile Include="Dsl\Commands\IdoDslGrammar.cs" />
     <Compile Include="Dsl\Commands\UserSessionValues.cs" />
     <Compile Include="Dsl\Criteria.cs" />
     <Compile Include="Dsl\ExpressionInterpreter.cs" />
@@ -184,7 +185,6 @@
     <Compile Include="Dsl\Queries\IdoCustomerPartNumberBuilder.cs" />
     <Compile Include="Dsl\Queries\IdoCustomersBuilder.cs" />
     <Compile Include="Dsl\IdoDsl.cs" />
-    <Compile Include="Dsl\IdoDslGrammar.cs" />
     <Compile Include="Dsl\MethodCalls\IdoMethods.cs" />
     <Compile Include="Dsl\Queries\IdoInventoryBuilder.cs" />
     <Compile Include="Dsl\Queries\IdoInvoicedOrdersBuilder.cs" />

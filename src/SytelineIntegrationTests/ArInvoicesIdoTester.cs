@@ -4,6 +4,7 @@ namespace SytelineIntegrationTests
     using NUnit.Framework;
     using SytelineInterface.Core;
     using SytelineInterface.Dsl;
+    using SytelineInterface.Dsl.Commands;
     using SytelineInterface.Dsl.Queries;
 
     [TestFixture]
@@ -16,7 +17,7 @@ namespace SytelineIntegrationTests
         {
             _client = TestHelper.GetTestIdoClient();
             _builder =
-                FromSyteline.ArInvoices.InvoiceNumber.InvoiceDate.InvoiceTotal.SalesTax.WhereExp<ArInvoicesCriteria>(
+                FromSyteline.ArInvoices.InvoiceNumber.InvoiceDate.InvoiceTotal.SalesTax.Where<ArInvoicesCriteria>(
                     i => i.OrderNumber != "");
         }
 

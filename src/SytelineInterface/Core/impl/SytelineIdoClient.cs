@@ -15,6 +15,8 @@ using SytelineInterface.Factories;
 
 namespace SytelineInterface.Core.impl
 {
+    using Dsl.Commands;
+
     public class SytelineIdoClient : ISytelineIdoClient
     {
 

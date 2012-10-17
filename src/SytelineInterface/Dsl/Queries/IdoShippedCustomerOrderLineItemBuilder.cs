@@ -6,7 +6,8 @@ using SytelineInterface.Core;
 
 namespace SytelineInterface.Dsl.Queries
 {
-    
+    using Commands;
+
     public class ShippedCustomerOrderLineItem : IdoConstants
     {
         public const string IDO_NAME = "SLCoShips";

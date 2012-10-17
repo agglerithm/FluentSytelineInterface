@@ -14,6 +14,7 @@ using It=Machine.Specifications.It;
 namespace SytelineUnitTests
 {
     using SytelineInterface;
+    using SytelineInterface.Dsl.Commands;
 
     [Subject(typeof(UpdateCollectionRequestFactory))]
     public class when_update_collection_envelope_is_requested_for_update
@@ -81,7 +82,7 @@ namespace SytelineUnitTests
 
                                      _req =
                                          _factory.GetInsertCollectionRequest(ToSyteline.CustomerOrder.CustomerNumber(
-                                                                                 "WWTI001").Carrier("01")
+                                                                                 "WWTI001")
                                                                                  .OrderNumber("9230493").LinkProperty(
                                                                                  CustomerOrder.OrderNumber).WithChildren(
                                                                                  () => ToSyteline.CustomerOrderLineItems.

@@ -2,7 +2,9 @@
 
 namespace SytelineInterface.Dsl
 {
-                  public class IdoArTransaction : IdoConstants 
+    using Commands;
+
+    public class IdoArTransaction : IdoConstants 
                 { 
                            public const string IDO_NAME = "SLArtrans";
                            public const string Acct = "Acct";

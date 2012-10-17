@@ -4,7 +4,9 @@ using Mongoose.IDO.Protocol;
 using SytelineInterface.Core;
 
 namespace SytelineInterface.Dsl.Queries
-{ 
+{
+    using Commands;
+
     public class CustomerOrderLineItem : IdoConstants
     { 
         public const string IDO_NAME = "SLCoitems";

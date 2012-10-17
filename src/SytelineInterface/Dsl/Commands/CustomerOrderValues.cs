@@ -21,11 +21,7 @@ namespace SytelineInterface.Dsl.Commands
             return FromSyteline.CustomerOrder.Add(get_property_names());
         }
 
-        public CustomerOrderValues Carrier(string value)
-        {
-            AddValue(CustomerOrder.Carrier, value);
-            return this;
-        }
+  
  
         public CustomerOrderValues CustomerNumber(string value)
         {
@@ -75,17 +71,8 @@ namespace SytelineInterface.Dsl.Commands
             return this;
         }
 
-        public CustomerOrderValues ShippingInstructions(string value)
-        {
-            AddValue(CustomerOrder.ShippingInstructions, value);
-            return this;
-        }
-
-        public CustomerOrderValues PackListInstructions(string value)
-        {
-            AddValue(CustomerOrder.PackListInstructions, value);
-            return this;
-        }
+ 
+ 
 
         public CustomerOrderValues ShipToCode(string value)
         {
@@ -164,11 +151,7 @@ namespace SytelineInterface.Dsl.Commands
         }
 
  
-        public CustomerOrderValues CancelBackorders(string value)
-        {
-            AddValue(CustomerOrder.CancelBackorders, value);
-            return this;
-        }
+  
 //        public CustomerOrderValues ShipToEmailAddr(string value)
 //        {
 //            AddValue(CustomerOrder.ShipToEmailAddr, value);
@@ -189,60 +172,9 @@ namespace SytelineInterface.Dsl.Commands
             AddValue(CustomerOrder.ShipToName, value);
             return this;
         }
-
-        public CustomerOrderValues DropShipOverride(SytelineBool value)
-        {
-            AddValue(CustomerOrder.DropShipOverride, value.Value);
-            return this;
-        }
-
-        public CustomerOrderValues DropShipAddress1(string value)
-        {
-            AddValue(CustomerOrder.DropShipAddress1, value);
-            return this;
-        }
-
-        public CustomerOrderValues DropShipAddress2(string value)
-        {
-            AddValue(CustomerOrder.DropShipAddress2, value);
-            return this;
-        }
-
-        public CustomerOrderValues DropShipCity(string value)
-        {
-            AddValue(CustomerOrder.DropShipCity, value);
-            return this;
-        }
-
-        public CustomerOrderValues DropShipState(string value)
-        {
-            AddValue(CustomerOrder.DropShipState, value);
-            return this;
-        }
-        public CustomerOrderValues DropShipZip(string value)
-        {
-            AddValue(CustomerOrder.DropShipZip, value);
-            return this;
-        }
-
-        public CustomerOrderValues DropShipCountry(string value)
-        {
-            AddValue(CustomerOrder.DropShipCountry, value);
-            return this;
-        }
-
-        public CustomerOrderValues DropShipName(string value)
-        {
-            AddValue(CustomerOrder.DropShipName, value);
-            return this;
-        }
-
-        public CustomerOrderValues ClassOfService(string value)
-        {
-            AddValue(CustomerOrder.ClassOfService, value);
-            return this;
-        }
-
+ 
+ 
+ 
         public CustomerOrderValues TakenBy(string value)
         {
             AddValue(CustomerOrder.TakenBy, value);

@@ -8,6 +8,7 @@ namespace SytelineIntegrationTests
     using NUnit.Framework;
     using SytelineInterface.Core;
     using SytelineInterface.Dsl;
+    using SytelineInterface.Dsl.Commands;
     using SytelineInterface.Dsl.Queries;
     [TestFixture]
     public class CustomerOrderIdoTester
@@ -18,7 +19,8 @@ namespace SytelineIntegrationTests
         public void SetUp()
         {
             _client = TestHelper.GetLiveIdoClient();
-            _builder = CustomerOrder.GetFullProjectionWithCustomer().Where.OrderNumber.Eq("2343543");
+            _builder = CustomerOrder.GetFullProjectionWithCustomer()
+                .Where<CustomerOrderCriteria>(o => o. OrderNumber =="2343543");
         }
 
         [Test, NUnit.Framework.Ignore] //This test sucks
@@ -44,8 +46,7 @@ namespace SytelineIntegrationTests
             resp.ContainsField(CustomerOrder.BillToContact).ShouldBeTrue(); 
             resp.ContainsField(CustomerOrder.BillToName).ShouldBeTrue(); 
             resp.ContainsField(CustomerOrder.BillToState).ShouldBeTrue();
-            resp.ContainsField(CustomerOrder.BillToZip).ShouldBeTrue();
-            resp.ContainsField(CustomerOrder.Carrier).ShouldBeTrue();
+            resp.ContainsField(CustomerOrder.BillToZip).ShouldBeTrue(); 
             resp.ContainsField(CustomerOrder.CustomerNumber).ShouldBeTrue();
             resp.ContainsField(CustomerOrder.CustSeq).ShouldBeTrue();
             resp.ContainsField(CustomerOrder.Discount).ShouldBeTrue();
@@ -69,9 +70,7 @@ namespace SytelineIntegrationTests
             resp.ContainsField(CustomerOrder.TermsCodeDiscDays).ShouldBeTrue();
             resp.ContainsField(CustomerOrder.TermsCodeDiscPct).ShouldBeTrue();
             resp.ContainsField(CustomerOrder.TermsCodeDueDays).ShouldBeTrue();
-            resp.ContainsField(CustomerOrder.Warehouse).ShouldBeTrue();
-            resp.ContainsField(CustomerOrder.DropShipOverride).ShouldBeTrue();
-            resp.ContainsField(CustomerOrder.PickStatus).ShouldBeTrue(); 
+            resp.ContainsField(CustomerOrder.Warehouse).ShouldBeTrue(); 
         }
 
         [Test]
@@ -81,11 +80,11 @@ namespace SytelineIntegrationTests
             var  CustomerName = "WWT";
             var builder =FromSyteline.CustomerOrderLineItems.OrderNumber.CoOrderDate.ShipDate.QtyInvoiced.QtyOrdered.QtyShipped.Item.Description.CustomerPartNumber.QtyOrdered
                 .Bol.Address1.Address2.AddressCity.AddressState.AddressZip.AddressName.Warehouse.LineNumber.CustomerNumber.Price.ExtendedPrice.Origin.ExtendedPrice.DerNetPrice.DerProgBillTotalBilled
-                .Disc.CoPrice.CoStat.CustPo.WhereExp<CustomerOrderLineItemCriteria>(l => l.QtyInvoiced > 0 && l.CustomerNumber == CustomerName)
+                .Disc.CoPrice.CoStat.CustPo.Where<CustomerOrderLineItemCriteria>(l => l.QtyInvoiced > 0 && l.CustomerNumber == CustomerName)
                 .WithChildren( 
                 FromSyteline.InvoicedOrders.InvNum.InvSeq.OrderNumber.CustPo.CustomerID.Slsman.Terms.ShipDate
                 .InvDate
-                .WhereExp<InvoicedOrdersCriteria>(i => i.OrderNumber != "" && i.CustomerID == CustomerName)
+                .Where<InvoicedOrdersCriteria>(i => i.OrderNumber != "" && i.CustomerID == CustomerName)
                  
                 .LinkBy(InvoicedOrders.OrderNumber, CustomerOrderLineItem.OrderNumber));
 

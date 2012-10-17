@@ -1,7 +1,9 @@
 using SytelineInterface.Core;
 
 namespace SytelineInterface.Dsl.Queries
-{ 
+{
+    using Commands;
+
     public class Customers : IdoConstants
     {
         public const string IDO_NAME = "SL.SLCustomers";
@@ -208,8 +210,7 @@ namespace SytelineInterface.Dsl.Queries
         public const string TransNatDescription = "TransNatDescription";
         public const string UBRowPointer = "UBRowPointer";
         public const string UseExchRate = "UseExchRate";
-        public const string UseRevisionPayDays = "UseRevisionPayDays";
-        public const string CancelBackorders = "cusuf_cancel_backorders";
+        public const string UseRevisionPayDays = "UseRevisionPayDays"; 
         public static CustomersBuilder GetFullProjection()
         {
             return FromSyteline.Customers.Address1.Address2.BalMethod.BankCode.BranchId.City.Zip
@@ -217,7 +218,7 @@ namespace SytelineInterface.Dsl.Queries
                 .CustomerSequence.CustType.Delterm.DoInvoice.EndUserType
                 .InvCategory.InvFreq.Name
                 .RowPointer.ShipCode.Slsman.State
-                .TaxCode.TaxRegNum.TermsCode.TerritoryCode.Whse.CancelBackorders;
+                .TaxCode.TaxRegNum.TermsCode.TerritoryCode.Whse;
         }
 
     }
@@ -236,8 +237,7 @@ namespace SytelineInterface.Dsl.Queries
         public CustomersBuilder Address1 { get { AddProperty(Customers.Address1); return this; } }
         public CustomersBuilder Address2 { get { AddProperty(Customers.Address2); return this; } }  
         public CustomersBuilder BalMethod { get { AddProperty(Customers.BalMethod); return this; } } 
-        public CustomersBuilder CancelBackorders { get {AddProperty(Customers.CancelBackorders);
-            return this;}}
+  
         public CustomersBuilder BranchId { get { AddProperty(Customers.BranchId); return this; } }
         public CustomersBuilder City { get { AddProperty(Customers.City); return this; } } 
         public CustomersBuilder Contact2 { get { AddProperty(Customers.Contact2); return this; } }

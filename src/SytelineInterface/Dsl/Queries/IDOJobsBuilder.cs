@@ -2,7 +2,9 @@ using SytelineInterface.Core;
 
                 namespace SytelineInterface.Dsl.Queries
                 {
-                  public class Jobs : IdoConstants 
+                    using Commands;
+
+                    public class Jobs : IdoConstants 
                 { 
                            public const string IDO_NAME = "SLJobs";
        public const string CfgMainConfigGid = "CfgMainConfigGid";

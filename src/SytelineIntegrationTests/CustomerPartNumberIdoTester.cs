@@ -1,4 +1,4 @@
-﻿using Machine.Specifications;
+using Machine.Specifications;
 using NUnit.Framework;
 using SytelineInterface.Core;
 using SytelineInterface.Dsl;
@@ -6,6 +6,8 @@ using SytelineInterface.Dsl.Queries;
 
 namespace SytelineIntegrationTests
 {
+    using SytelineInterface.Dsl.Commands;
+
     [TestFixture]
     public class CustomerPartNumberIdoTester
     {
@@ -16,7 +18,9 @@ namespace SytelineIntegrationTests
         public void SetUp()
         {
             _client = TestHelper.GetTestIdoClient();
-            _builder = CustomerPartNumbers.GetFullProjection().Where.CustomerNumber.Eq("WWTI001").Or.CustomerNumber.Eq("WWTI002");
+            _builder = CustomerPartNumbers.GetFullProjection()
+                .Where<CustomerPartNumbersCriteria>(pn => pn.CustomerNumber == "WWTI001" 
+                    || pn.CustomerNumber == "WWTI002");
         }
 
         [Test]

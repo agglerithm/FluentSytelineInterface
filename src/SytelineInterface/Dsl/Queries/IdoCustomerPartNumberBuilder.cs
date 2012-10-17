@@ -4,15 +4,15 @@ using Mongoose.IDO.Protocol;
 using SytelineInterface.Core;
 
 namespace SytelineInterface.Dsl.Queries
-{ 
+{
+    using Commands;
+
     public class CustomerPartNumbers : IdoConstants
     {
         public const string IDO_NAME = "SL.SLItemCusts";
         public const string Item = "Item";
         public const string CustomerNumber = "CustNum";
-        public const string CustomerPartNumber = "CustItem";
-        public const string IsBacklogAutomationBlocked = "itmcstuf_block_backlog_automation";
-        public const string IsForecastAutomationBlocked = "itmcstuf_block_forecast_automation";
+        public const string CustomerPartNumber = "CustItem"; 
 
         public static CustomerPartNumberBuilder GetFullProjection()
         {
@@ -29,9 +29,7 @@ namespace SytelineInterface.Dsl.Queries
 
         public CustomerPartNumberBuilder CustomerNumber { get { AddProperty(CustomerPartNumbers.CustomerNumber); return this; } }
 
-        public CustomerPartNumberBuilder CustomerPartNumber { get { AddProperty(CustomerPartNumbers.CustomerPartNumber); return this; } }
-        public CustomerPartNumberBuilder IsBacklogAutomationBlocked { get { AddProperty(CustomerPartNumbers.IsBacklogAutomationBlocked); return this; } }
-        public CustomerPartNumberBuilder IsForecastAutomationBlocked { get { AddProperty(CustomerPartNumbers.IsForecastAutomationBlocked); return this; } }
+        public CustomerPartNumberBuilder CustomerPartNumber { get { AddProperty(CustomerPartNumbers.CustomerPartNumber); return this; } } 
 
         public CustomerPartNumberBuilder WithChildren(params IIdoQueryBuilder[] builders)
         {
@@ -54,14 +52,7 @@ namespace SytelineInterface.Dsl.Queries
         {
             get { return new FilterExpression<CustomerPartNumberBuilder, CustomerPartNumberFilterExpressionBuilder>(_builder, CustomerPartNumbers.CustomerNumber); }
         }
-        public FilterExpression<CustomerPartNumberBuilder, CustomerPartNumberFilterExpressionBuilder> IsBacklogAutomationBlocked
-        {
-            get { return new FilterExpression<CustomerPartNumberBuilder, CustomerPartNumberFilterExpressionBuilder>(_builder, CustomerPartNumbers.IsBacklogAutomationBlocked); }
-        }
-        public FilterExpression<CustomerPartNumberBuilder, CustomerPartNumberFilterExpressionBuilder> IsForecastAutomationBlocked
-        {
-            get { return new FilterExpression<CustomerPartNumberBuilder, CustomerPartNumberFilterExpressionBuilder>(_builder, CustomerPartNumbers.IsForecastAutomationBlocked); }
-        }
+ 
 
     }
 }

@@ -87,7 +87,7 @@ namespace SytelineUnitTests
         private Establish context = () =>
                                         {
                                             _factory = new UpdateCollectionRequestFactory();
-                                            _builder = ToSyteline.CustomerOrder.ShippingInstructions("Instructions")
+                                            _builder = ToSyteline.CustomerOrder.CustomerNumber("Instructions")
                                                            .WithChildren(() =>
                                                                          ToSyteline.CustomerOrderLineItems
                                                                              .UnitOfMeasure("EA")

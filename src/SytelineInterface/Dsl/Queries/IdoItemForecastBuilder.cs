@@ -5,7 +5,8 @@ using SytelineInterface.Core;
 
 namespace SytelineInterface.Dsl.Queries
 {
-    
+    using Commands;
+
     public class ItemForecast : IdoConstants
     {
         public const string IDO_NAME = "SLForecasts";
@@ -23,8 +24,7 @@ namespace SytelineInterface.Dsl.Queries
         public const string RecordDate = "RecordDate";
         public const string RowPointer = "RowPointer";
         public const string Status = "Stat";
-        public const string UpdatedBy = "UpdatedBy";
-        public const string ForcastType = "fcstuf_fcst_type";
+        public const string UpdatedBy = "UpdatedBy"; 
     }
 
     public class ItemForecastBuilder :
@@ -47,8 +47,7 @@ namespace SytelineInterface.Dsl.Queries
         public new ItemForecastBuilder RowPointer { get { AddProperty(ItemForecast.RowPointer); return this; } }
         public ItemForecastBuilder Status { get { AddProperty(ItemForecast.Status); return this; } }
         public ItemForecastBuilder UpdatedBy { get { AddProperty(ItemForecast.UpdatedBy); return this; } }
-        public ItemForecastBuilder ForcastType { get { AddProperty(ItemForecast.ForcastType); return this; } }
-
+ 
 
         public ItemForecastBuilder WithChildren(params IIdoQueryBuilder[] builders)
         {
@@ -77,7 +76,6 @@ namespace SytelineInterface.Dsl.Queries
         public FilterExpression<ItemForecastBuilder, ItemForecastFilterExpressionBuilder> RecordDate{ get { return new FilterExpression<ItemForecastBuilder,ItemForecastFilterExpressionBuilder>(_builder, ItemForecast.RecordDate);  }  } 
         public FilterExpression<ItemForecastBuilder, ItemForecastFilterExpressionBuilder> RowPointer{ get { return new FilterExpression<ItemForecastBuilder,ItemForecastFilterExpressionBuilder>(_builder, ItemForecast.RowPointer);  }  } 
         public FilterExpression<ItemForecastBuilder, ItemForecastFilterExpressionBuilder> Status{ get { return new FilterExpression<ItemForecastBuilder,ItemForecastFilterExpressionBuilder>(_builder, ItemForecast.Status);  }  }
-        public FilterExpression<ItemForecastBuilder, ItemForecastFilterExpressionBuilder> UpdatedBy { get { return new FilterExpression<ItemForecastBuilder, ItemForecastFilterExpressionBuilder>(_builder, ItemForecast.UpdatedBy); } }
-        public FilterExpression<ItemForecastBuilder, ItemForecastFilterExpressionBuilder> ForcastType { get { return new FilterExpression<ItemForecastBuilder, ItemForecastFilterExpressionBuilder>(_builder, ItemForecast.ForcastType); } } 
+        public FilterExpression<ItemForecastBuilder, ItemForecastFilterExpressionBuilder> UpdatedBy { get { return new FilterExpression<ItemForecastBuilder, ItemForecastFilterExpressionBuilder>(_builder, ItemForecast.UpdatedBy); } } 
     }
 }

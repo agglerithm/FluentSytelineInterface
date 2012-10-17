@@ -7,6 +7,7 @@ using SytelineInterface.Dsl;
 namespace SytelineInterface.Factories.impl
 {
     using Common.Extensions;
+    using Dsl.Commands;
 
     public class LoadCollectionRequestFactory : ILoadCollectionRequestFactory
     {

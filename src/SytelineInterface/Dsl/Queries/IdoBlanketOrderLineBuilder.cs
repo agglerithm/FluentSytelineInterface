@@ -1,5 +1,6 @@
-﻿namespace SytelineInterface.Dsl.Queries
+namespace SytelineInterface.Dsl.Queries
 {
+    using Commands;
     using SytelineInterface.Core;
 
     public class BlanketOrderLine : IdoConstants

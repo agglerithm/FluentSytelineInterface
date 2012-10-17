@@ -5247,11 +5247,7 @@ namespace SytelineInterface.Dsl
         [FieldName(CustomerOrder.Discount)]
         public decimal Discount { get; set; }
         [FieldName(CustomerOrder.TaxCode)]
-        public string TaxCode { get; set; }
-        [FieldName(CustomerOrder.Carrier)]
-        public string Carrier { get; set; }
-        [FieldName(CustomerOrder.ShippingInstructions)]
-        public string ShippingInstructions { get; set; } 
+        public string TaxCode { get; set; }  
         [FieldName(CustomerOrder.ShipToAddr1)]
         public string ShipToAddr1 { get; set; }
         [FieldName(CustomerOrder.ShipToAddr2)]
@@ -5275,23 +5271,7 @@ namespace SytelineInterface.Dsl
         [FieldName(CustomerOrder.TermsCodeDiscPct)]
         public decimal TermsCodeDiscPct { get; set; }
         [FieldName(CustomerOrder.TermsCodeDueDays)]
-        public int TermsCodeDueDays { get; set; }
-        [FieldName(CustomerOrder.DropShipOverride)]
-        public string DropShipOverride { get; set; }
-        [FieldName(CustomerOrder.DropShipName)]
-        public string DropShipName { get; set; }
-        [FieldName(CustomerOrder.DropShipAddress1)]
-        public string DropShipAddress1 { get; set; }
-        [FieldName(CustomerOrder.DropShipAddress2)]
-        public string DropShipAddress2 { get; set; }
-        [FieldName(CustomerOrder.DropShipCity)]
-        public string DropShipCity { get; set; }
-        [FieldName(CustomerOrder.DropShipState)]
-        public string DropShipState { get; set; }
-        [FieldName(CustomerOrder.DropShipZip)]
-        public string DropShipZip { get; set; }
-        [FieldName(CustomerOrder.DropShipCountry)]
-        public string DropShipCountry { get; set; }
+        public int TermsCodeDueDays { get; set; }  
         [FieldName(CustomerOrder.DiscountAmount)]
         public decimal DiscountAmount { get; set; }
         [FieldName(CustomerOrder.AckStat)]

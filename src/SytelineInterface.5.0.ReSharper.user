@@ -1,0 +1,743 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">True</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="ED251823-403C-43AB-938E-729DCB6C0F98/d:Factories/d:impl/f:LoadCollectionRequestFactory.cs" caret="761" fromTop="8" />
+      <File id="750178BE-A10C-4901-AA98-99B231AE4041/f:SytelineIdoClientTester.cs" caret="4914" fromTop="8" />
+      <File id="ED251823-403C-43AB-938E-729DCB6C0F98/d:Dsl/d:Queries/f:IdoArTransactions.cs" caret="0" fromTop="0" />
+      <File id="ED251823-403C-43AB-938E-729DCB6C0F98/d:Dsl/d:Queries/f:IdoCommandBuilder.cs" caret="0" fromTop="0" />
+      <File id="ED251823-403C-43AB-938E-729DCB6C0F98/d:Dsl/d:Commands/f:CustomerOrderValues.cs" caret="4897" fromTop="8" />
+      <File id="ED251823-403C-43AB-938E-729DCB6C0F98/d:Dsl/d:Commands/f:ItemForecastValues.cs" caret="2021" fromTop="8" />
+      <File id="ED251823-403C-43AB-938E-729DCB6C0F98/d:Dsl/f:Criteria.cs" caret="258502" fromTop="8" />
+      <File id="230C4348-AFEA-4839-975D-64DB580CE359/f:LoadCollectionTester.cs" caret="1053" fromTop="9" />
+      <File id="230C4348-AFEA-4839-975D-64DB580CE359/f:UpdateCollectionTester.cs" caret="5779" fromTop="9" />
+      <File id="ED251823-403C-43AB-938E-729DCB6C0F98/d:Dsl/d:Queries/f:IDOCustomerOrderBuilder.cs" caret="43148" fromTop="7" />
+      <File id="ED251823-403C-43AB-938E-729DCB6C0F98/d:Dsl/d:Queries/f:IdoCustomerPartNumberBuilder.cs" caret="2417" fromTop="7" />
+      <File id="ED251823-403C-43AB-938E-729DCB6C0F98/d:Dsl/d:Queries/f:IdoCustomersBuilder.cs" caret="12669" fromTop="9" />
+      <File id="ED251823-403C-43AB-938E-729DCB6C0F98/d:Dsl/d:Queries/f:IdoItemForecastBuilder.cs" caret="6972" fromTop="8" />
+      <File id="750178BE-A10C-4901-AA98-99B231AE4041/f:FromSytelineTester.cs" caret="817" fromTop="12" />
+      <File id="750178BE-A10C-4901-AA98-99B231AE4041/f:LoadCollectionEnvelopeFactoryTester.cs" caret="706" fromTop="9" />
+      <File id="750178BE-A10C-4901-AA98-99B231AE4041/f:UpdateActionTester.cs" caret="3838" fromTop="16" />
+      <File id="750178BE-A10C-4901-AA98-99B231AE4041/f:UpdateCollectionEnvelopeFactoryTester.cs" caret="2667" fromTop="3" />
+      <File id="ED251823-403C-43AB-938E-729DCB6C0F98/d:Dsl/d:Commands/f:ShippedCustomerOrderValues.cs" caret="4886" fromTop="94" />
+      <File id="ED251823-403C-43AB-938E-729DCB6C0F98/d:Dsl/d:Commands/f:ShippedCustomerOrderLineItemValues.cs" caret="1864" fromTop="8" />
+      <File id="ED251823-403C-43AB-938E-729DCB6C0F98/d:Dsl/d:Commands/f:InvoicedOrdersValues.cs" caret="1642" fromTop="14" />
+      <File id="ED251823-403C-43AB-938E-729DCB6C0F98/d:Core/d:impl/f:IUserSessionService.cs" caret="1041" fromTop="9" />
+      <File id="230C4348-AFEA-4839-975D-64DB580CE359/d:builders/f:idoInterfacesBuilder.cs" caret="1506" fromTop="11" />
+      <File id="230C4348-AFEA-4839-975D-64DB580CE359/f:ArInvoicesIdoTester.cs" caret="737" fromTop="13" />
+      <File id="230C4348-AFEA-4839-975D-64DB580CE359/f:CustItemTester.cs" caret="793" fromTop="11" />
+      <File id="230C4348-AFEA-4839-975D-64DB580CE359/f:CustomerIdoTester.cs" caret="848" fromTop="8" />
+      <File id="230C4348-AFEA-4839-975D-64DB580CE359/f:CustomerOrderIdoTester.cs" caret="4664" fromTop="14" />
+      <File id="230C4348-AFEA-4839-975D-64DB580CE359/f:CustomerOrderLineItemTester.cs" caret="3294" fromTop="12" />
+      <File id="ED251823-403C-43AB-938E-729DCB6C0F98/d:Dsl/d:Commands/f:IdoDslGrammar.cs" caret="7513" fromTop="6" />
+      <File id="230C4348-AFEA-4839-975D-64DB580CE359/f:CustomerPartNumberIdoTester.cs" caret="774" fromTop="0" />
+      <File id="230C4348-AFEA-4839-975D-64DB580CE359/f:InClauseTester.cs" caret="914" fromTop="0" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="ED251823-403C-43AB-938E-729DCB6C0F98/d:Dsl/d:Queries/f:IDOCustomerOrderBuilder.cs" caret="16808" fromTop="12" />
+      <File id="230C4348-AFEA-4839-975D-64DB580CE359/f:UpdateCollectionTester.cs" caret="5692" fromTop="8" />
+      <File id="ED251823-403C-43AB-938E-729DCB6C0F98/d:Dsl/d:Queries/f:IDOCustomerOrderBuilder.cs" caret="18879" fromTop="0" />
+      <File id="ED251823-403C-43AB-938E-729DCB6C0F98/d:Dsl/d:Queries/f:IDOCustomerOrderBuilder.cs" caret="13776" fromTop="9" />
+      <File id="ED251823-403C-43AB-938E-729DCB6C0F98/d:Dsl/d:Queries/f:IDOCustomerOrderBuilder.cs" caret="41905" fromTop="8" />
+      <File id="ED251823-403C-43AB-938E-729DCB6C0F98/d:Dsl/d:Queries/f:IDOCustomerOrderBuilder.cs" caret="43148" fromTop="7" />
+      <File id="ED251823-403C-43AB-938E-729DCB6C0F98/d:Dsl/d:Queries/f:IdoCustomerPartNumberBuilder.cs" caret="1259" fromTop="8" />
+      <File id="ED251823-403C-43AB-938E-729DCB6C0F98/d:Dsl/d:Queries/f:IdoCustomerPartNumberBuilder.cs" caret="2417" fromTop="7" />
+      <File id="ED251823-403C-43AB-938E-729DCB6C0F98/d:Dsl/d:Queries/f:IdoCustomersBuilder.cs" caret="13748" fromTop="9" />
+      <File id="ED251823-403C-43AB-938E-729DCB6C0F98/d:Dsl/d:Queries/f:IdoCustomersBuilder.cs" caret="12669" fromTop="9" />
+      <File id="ED251823-403C-43AB-938E-729DCB6C0F98/d:Dsl/d:Queries/f:IdoItemForecastBuilder.cs" caret="2939" fromTop="9" />
+      <File id="ED251823-403C-43AB-938E-729DCB6C0F98/d:Dsl/d:Queries/f:IdoItemForecastBuilder.cs" caret="6972" fromTop="8" />
+      <File id="750178BE-A10C-4901-AA98-99B231AE4041/f:UpdateActionTester.cs" caret="3172" fromTop="9" />
+      <File id="750178BE-A10C-4901-AA98-99B231AE4041/f:UpdateCollectionEnvelopeFactoryTester.cs" caret="2990" fromTop="9" />
+      <File id="ED251823-403C-43AB-938E-729DCB6C0F98/d:Dsl/d:Commands/f:ShippedCustomerOrderValues.cs" caret="4886" fromTop="9" />
+      <File id="ED251823-403C-43AB-938E-729DCB6C0F98/d:Dsl/d:Commands/f:IdoDslGrammar.cs" caret="8148" fromTop="425" />
+      <File id="ED251823-403C-43AB-938E-729DCB6C0F98/d:Dsl/d:Commands/f:IdoDslGrammar.cs" caret="2624" fromTop="9" />
+      <File id="230C4348-AFEA-4839-975D-64DB580CE359/d:builders/f:idoInterfacesBuilder.cs" caret="1295" fromTop="9" />
+      <File id="230C4348-AFEA-4839-975D-64DB580CE359/f:ArInvoicesIdoTester.cs" caret="639" fromTop="9" />
+      <File id="230C4348-AFEA-4839-975D-64DB580CE359/f:CustItemTester.cs" caret="769" fromTop="9" />
+      <File id="230C4348-AFEA-4839-975D-64DB580CE359/f:CustomerIdoTester.cs" caret="976" fromTop="9" />
+      <File id="230C4348-AFEA-4839-975D-64DB580CE359/f:CustomerOrderIdoTester.cs" caret="654" fromTop="10" />
+      <File id="230C4348-AFEA-4839-975D-64DB580CE359/f:CustomerOrderIdoTester.cs" caret="4278" fromTop="9" />
+      <File id="230C4348-AFEA-4839-975D-64DB580CE359/f:CustomerOrderIdoTester.cs" caret="4563" fromTop="13" />
+      <File id="230C4348-AFEA-4839-975D-64DB580CE359/f:CustomerOrderLineItemTester.cs" caret="822" fromTop="11" />
+      <File id="230C4348-AFEA-4839-975D-64DB580CE359/f:CustomerOrderLineItemTester.cs" caret="3286" fromTop="11" />
+      <File id="ED251823-403C-43AB-938E-729DCB6C0F98/d:Dsl/d:Commands/f:IdoDslGrammar.cs" caret="4200" fromTop="4" />
+      <File id="ED251823-403C-43AB-938E-729DCB6C0F98/d:Dsl/d:Commands/f:IdoDslGrammar.cs" caret="7742" fromTop="10" />
+      <File id="230C4348-AFEA-4839-975D-64DB580CE359/f:CustomerPartNumberIdoTester.cs" caret="734" fromTop="10" />
+      <File id="230C4348-AFEA-4839-975D-64DB580CE359/f:InClauseTester.cs" caret="1118" fromTop="9" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="var" priority="66" />
+      <Item value="TestHelper`0" priority="2" />
+      <Item value="loc" priority="1" />
+      <Item value="public" priority="94" />
+      <Item value="class" priority="18" />
+      <Item value="private" priority="10" />
+      <Item value="ISession`0" priority="0" />
+      <Item value="SytelineNHibernateSessionSelector`0" priority="1" />
+      <Item value="_sessions" priority="1" />
+      <Item value="ISytelineNHibernateSessionSelector`0" priority="0" />
+      <Item value="return" priority="73" />
+      <Item value="s" priority="6" />
+      <Item value="connectionKey" priority="0" />
+      <Item value="string" priority="45" />
+      <Item value="_connectionKey" priority="0" />
+      <Item value="ISessionSource`0" priority="1" />
+      <Item value="source" priority="2" />
+      <Item value="Container`0" priority="0" />
+      <Item value="if" priority="27" />
+      <Item value="null" priority="12" />
+      <Item value="throw" priority="4" />
+      <Item value="new" priority="33" />
+      <Item value="ApplicationException" priority="0" />
+      <Item value="static" priority="31" />
+      <Item value="void" priority="6" />
+      <Item value="sytelineConnectionKey" priority="1" />
+      <Item value="sess" priority="0" />
+      <Item value="_sessionSelector" priority="0" />
+      <Item value="SytelineNHibernateSessionSelector" priority="0" />
+      <Item value="IExpressionInterpreter`0" priority="0" />
+      <Item value="get_file_text`0" priority="0" />
+      <Item value="Console`0" priority="1" />
+      <Item value="typeof" priority="7" />
+      <Item value="row" priority="0" />
+      <Item value="collectionName" priority="4" />
+      <Item value="get_filter_builder`0" priority="0" />
+      <Item value="ido" priority="0" />
+      <Item value="IdoCustomerOrderLinesHistoryBuilder`0" priority="0" />
+      <Item value="IdoCustomerOrderLinesHistoryBuilder" priority="0" />
+      <Item value="IdoPurchaseOrderHistory`0" priority="0" />
+      <Item value="IdoPurchaseOrderHistory" priority="0" />
+      <Item value="IdoPurchaseOrderLineHistoryBuilder`0" priority="0" />
+      <Item value="IdoPurchaseOrderLineHistoryBuilder" priority="0" />
+      <Item value="ExpressionInterpreter`0" priority="10" />
+      <Item value="IdoApTransactions`0" priority="0" />
+      <Item value="IdoApTransactionsBuilder" priority="0" />
+      <Item value="IdoArTransactions`0" priority="0" />
+      <Item value="IdoArTransactions" priority="0" />
+      <Item value="IdoItemLocsBuilder" priority="0" />
+      <Item value="response" priority="1" />
+      <Item value="r" priority="4" />
+      <Item value="this" priority="9" />
+      <Item value="IdoPurchaseOrderBuilder`0" priority="0" />
+      <Item value="IdoCustomerOrderItemLogsBuilder`0" priority="0" />
+      <Item value="t" priority="0" />
+      <Item value="CustomerAddresses`0" priority="0" />
+      <Item value="LotLocationBuilder`0" priority="0" />
+      <Item value="NotesBuilder`0" priority="0" />
+      <Item value="NotesBuilder" priority="0" />
+      <Item value="ReceiptsBuilder`0" priority="0" />
+      <Item value="VendorsBuilder`0" priority="0" />
+      <Item value="VendorsBuilder" priority="0" />
+      <Item value="IdoJobRoutingSchedules" priority="0" />
+      <Item value="UnitOfMeasureConversions`0" priority="0" />
+      <Item value="UnitOfMeasureConversionsBuilder" priority="0" />
+      <Item value="TermsBuilder`0" priority="0" />
+      <Item value="Ignore" priority="0" />
+      <Item value="CustomerOrderLineItemCriteria`0" priority="2" />
+      <Item value="location" priority="0" />
+      <Item value="l" priority="2" />
+      <Item value="member" priority="57" />
+      <Item value="c" priority="24" />
+      <Item value="object" priority="9" />
+      <Item value="m" priority="5" />
+      <Item value="lst" priority="0" />
+      <Item value="ForEach`1" priority="2" />
+      <Item value="mem" priority="11" />
+      <Item value="returnVal" priority="2" />
+      <Item value="false" priority="3" />
+      <Item value="props" priority="0" />
+      <Item value="p" priority="3" />
+      <Item value="interface" priority="0" />
+      <Item value="ISytelineExpressionVisitor`0" priority="4" />
+      <Item value="SytelineExpressionVisitor`0" priority="0" />
+      <Item value="visitor" priority="2" />
+      <Item value="exp" priority="19" />
+      <Item value="memb" priority="0" />
+      <Item value="Expression`0" priority="5" />
+      <Item value="binder" priority="1" />
+      <Item value="BindingFlags`0" priority="4" />
+      <Item value="obj" priority="12" />
+      <Item value="DateTime`0" priority="8" />
+      <Item value="else" priority="1" />
+      <Item value="Binder`0" priority="0" />
+      <Item value="prop" priority="0" />
+      <Item value="InvalidOperationException" priority="0" />
+      <Item value="_expressionList" priority="1" />
+      <Item value="CallExpressionResolver`0" priority="0" />
+      <Item value="expr" priority="0" />
+      <Item value="AndAlso" priority="0" />
+      <Item value="ExpressionType`0" priority="4" />
+      <Item value="MethodCallExpression`0" priority="1" />
+      <Item value="method" priority="1" />
+      <Item value="IResolveExpressions`0" priority="2" />
+      <Item value="protected" priority="2" />
+      <Item value="MemberExpression`0" priority="5" />
+      <Item value="GetValue`0" priority="3" />
+      <Item value="InvalidOperationException`0" priority="0" />
+      <Item value="GetAttribute`0" priority="2" />
+      <Item value="parm" priority="11" />
+      <Item value="val" priority="0" />
+      <Item value="ParameterExpression`0" priority="1" />
+      <Item value="GetProperty`0" priority="0" />
+      <Item value="parent" priority="6" />
+      <Item value="Terms" priority="0" />
+      <Item value="cust" priority="1" />
+      <Item value="bool" priority="2" />
+      <Item value="And" priority="0" />
+      <Item value="Equal" priority="0" />
+      <Item value="BaseExpressionResolver`0" priority="0" />
+      <Item value="Type`0" priority="1" />
+      <Item value="tpe" priority="0" />
+      <Item value="do" priority="0" />
+      <Item value="while" priority="1" />
+      <Item value="MemberAccess" priority="0" />
+      <Item value="GetObject`0" priority="2" />
+      <Item value="fieldName" priority="2" />
+      <Item value="catch" priority="0" />
+      <Item value="MissingMethodException`0" priority="0" />
+      <Item value="ConstantExpression`0" priority="1" />
+      <Item value="DrillToConstant`0" priority="5" />
+      <Item value="Expression" priority="1" />
+      <Item value="members" priority="0" />
+      <Item value="Where`1" priority="0" />
+      <Item value="DrillToConstantParent`0" priority="0" />
+      <Item value="Stack&lt;object&gt;" priority="0" />
+      <Item value="stack" priority="6" />
+      <Item value="addLevels`0" priority="0" />
+      <Item value="Member`0" priority="1" />
+      <Item value="memberName" priority="0" />
+      <Item value="name" priority="0" />
+      <Item value="Member" priority="1" />
+      <Item value="parentMember" priority="1" />
+      <Item value="MemberInfo`0" priority="0" />
+      <Item value="info" priority="1" />
+      <Item value="internal" priority="0" />
+      <Item value="resolver" priority="0" />
+      <Item value="InvalidExpressionException" priority="0" />
+      <Item value="_addr" priority="0" />
+      <Item value="_addrEntity" priority="1" />
+      <Item value="AddressEntity`0" priority="0" />
+      <Item value="int" priority="0" />
+      <Item value="addr" priority="1" />
+      <Item value="node" priority="6" />
+      <Item value="Convert" priority="0" />
+      <Item value="true" priority="1" />
+      <Item value="UnaryExpression`0" priority="1" />
+      <Item value="unary" priority="0" />
+      <Item value="System" priority="1" />
+      <Item value="Linq" priority="1" />
+      <Item value="Expressions" priority="0" />
+      <Item value="conv" priority="2" />
+      <Item value="Call" priority="0" />
+      <Item value="Address2" priority="0" />
+      <Item value="evaluateOp" priority="0" />
+      <Item value="bin" priority="1" />
+      <Item value="evaluateNode" priority="0" />
+      <Item value="rvalue" priority="0" />
+      <Item value="op" priority="1" />
+      <Item value="const" priority="19" />
+      <Item value="IdoConstants`0" priority="1" />
+      <Item value="AFPShippingWorkbench`0" priority="2" />
+      <Item value="AFPShippingWorkbenchBuilder" priority="0" />
+      <Item value="IIdoQueryBuilder`0" priority="1" />
+      <Item value="ISytelineIdoClient`0" priority="4" />
+      <Item value="ItemWarehouseBuilder`0" priority="0" />
+      <Item value="GetConfigurationsResponseData`0" priority="0" />
+      <Item value="AddProperty`0" priority="4" />
+      <Item value="ItemWarehouse`0" priority="0" />
+      <Item value="ItemPriceBuilder`0" priority="0" />
+      <Item value="IdoCriteria`0" priority="0" />
+      <Item value="ItemPriceCriteria" priority="0" />
+      <Item value="ItemPrice`0" priority="1" />
+      <Item value="JobsBuilder`0" priority="0" />
+      <Item value="Jobs`0" priority="1" />
+      <Item value="resp" priority="4" />
+      <Item value="BlanketOrderLineBuilder`0" priority="0" />
+      <Item value="BlanketOrderLineBuilder" priority="0" />
+      <Item value="BlanketOrderLine`0" priority="0" />
+      <Item value="FromSyteline`0" priority="2" />
+      <Item value="CustomersBuilder`0" priority="0" />
+      <Item value="Customers`0" priority="0" />
+      <Item value="CustomerOrderBuilder`0" priority="0" />
+      <Item value="CustomerOrder`0" priority="2" />
+      <Item value="CustomerOrderValues`0" priority="0" />
+      <Item value="AddValue`0" priority="0" />
+      <Item value="street" priority="0" />
+      <Item value="TrimExpressionResolver`0" priority="0" />
+      <Item value="ShippedCustomerOrderCriteria`0" priority="0" />
+      <Item value="ShippedCustomerOrder`0" priority="0" />
+      <Item value="attr" priority="2" />
+      <Item value="IdoQueryBuilder" priority="0" />
+      <Item value="SytelineSessionBuilder`0" priority="0" />
+      <Item value="SytelineSession`0" priority="2" />
+      <Item value="SytelineSession" priority="1" />
+      <Item value="IdoCommandBuilder`0" priority="0" />
+      <Item value="UserSessionCriteria`0" priority="1" />
+      <Item value="base" priority="0" />
+      <Item value="FieldName" priority="3" />
+      <Item value="UserSession`0" priority="14" />
+      <Item value="_builder" priority="0" />
+      <Item value="ToSyteline`0" priority="0" />
+      <Item value="_client" priority="1" />
+      <Item value="builder" priority="2" />
+      <Item value="_testLoc" priority="2" />
+      <Item value="session" priority="4" />
+      <Item value="UserName" priority="1" />
+      <Item value="arg" priority="11" />
+      <Item value="RecordDate" priority="1" />
+      <Item value="ActiveUserSession`0" priority="1" />
+      <Item value="GeoLocation`0" priority="1" />
+      <Item value="UserSessionBuilder`0" priority="0" />
+      <Item value="getUserSessionBuilder`0" priority="0" />
+      <Item value="ActiveUserSession" priority="0" />
+      <Item value="ConnectionID" priority="0" />
+      <Item value="CreateDate" priority="0" />
+      <Item value="_sessionService" priority="1" />
+      <Item value="config" priority="1" />
+      <Item value="IUserSessionService`0" priority="3" />
+      <Item value="sytelineDate" priority="0" />
+      <Item value="UserSessionService" priority="2" />
+      <Item value="Mock`0" priority="1" />
+      <Item value="_userSessionService" priority="2" />
+      <Item value="Mock&lt;IUserSessionService&gt;" priority="1" />
+      <Item value="get_session_service`0" priority="0" />
+      <Item value="FilterExpressionBuilder" priority="0" />
+      <Item value="ArInvoicesBuilder`0" priority="0" />
+      <Item value="ArInvoicesBuilder" priority="0" />
+      <Item value="ArInvoicesCriteria`0" priority="0" />
+      <Item value="i" priority="1" />
+      <Item value="ArInvoices`0" priority="4" />
+      <Item value="InvoicedOrders`0" priority="2" />
+      <Item value="rex" priority="2" />
+      <Item value="tax" priority="0" />
+      <Item value="taxInv" priority="0" />
+      <Item value="IdoArTransaction`0" priority="1" />
+      <Item value="ref" priority="0" />
+      <Item value="IdoArTransactionCriteria`0" priority="0" />
+      <Item value="Subject" priority="0" />
+      <Item value="Exception`0" priority="2" />
+      <Item value="It`0" priority="0" />
+      <Item value="idoParameterBuilder" priority="1" />
+      <Item value="SytelineInterfaceQueryException" priority="0" />
+      <Item value="getLoadCollectionRequest`0" priority="0" />
+      <Item value="CustomerPartNumbersCriteria`0" priority="4" />
+      <Item value="using" priority="1" />
+      <Item value="Xml" priority="0" />
+      <Item value="Linq.Expressions" priority="0" />
+      <Item value="NCommon" priority="0" />
+      <Item value="Extensions" priority="0" />
+      <Item value="SytelineInterface" priority="0" />
+      <Item value="Common.Extensions" priority="1" />
+      <Item value="Address1" priority="0" />
+      <Item value="_config" priority="0" />
+      <Item value="_database" priority="0" />
+      <Item value="IDOCollectionsCriteria`0" priority="0" />
+      <Item value="can_get_cust_item_records`0" priority="0" />
+      <Item value="CustomersCriteria`0" priority="0" />
+      <Item value="can_get_records_from_ido`0" priority="1" />
+      <Item value="o" priority="0" />
+      <Item value="log4net" priority="0" />
+      <Item value="CustomerOrderCriteria`0" priority="0" />
+      <Item value="get_orders`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SytelineIntegrationTests.TestHelper">
+      <Item value="GetAustinSyteline`0" priority="0" />
+      <Item value="GetTestSyteline`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@AFPST.Common.Infrastructure.Container">
+      <Item value="ResolveAll`1" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Where`1" priority="0" />
+      <Item value="ForEach`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FluentNHibernate.ISessionSource">
+      <Item value="CreateSession`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AFPST.Common.Structures.GeoLocation">
+      <Item value="DatabaseText" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SytelineInterface.Core.SytelineNHibernateSessionSelector">
+      <Item value="Setup`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FluentNHibernate.Cfg.Db.MsSqlConnectionStringBuilder">
+      <Item value="FromConnectionStringWithKey`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FluentNHibernate.Mapping.PropertyPart">
+      <Item value="Column`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Object">
+      <Item value="ToString`0" priority="16" />
+      <Item value="GetType`0" priority="10" />
+      <Item value="FormatValue`0" priority="5" />
+      <Item value="CastToDateTime`0" priority="0" />
+      <Item value="CastToGuid`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Console">
+      <Item value="WriteLine`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SytelineInterface.Dsl.ExpressionInterpreter">
+      <Item value="Build`0" priority="11" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SytelineInterface.Core.impl.LoadCollectionResponseWrapper">
+      <Item value="Records" priority="2" />
+      <Item value="ContainsField`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SytelineInterface.Core.impl.IdoItemWrapper">
+      <Item value="IdoName" priority="2" />
+      <Item value="GetValue`0" priority="0" />
+      <Item value="Records" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="Find`1" priority="0" />
+      <Item value="Where`1" priority="1" />
+      <Item value="First`1" priority="0" />
+      <Item value="ShouldNotBeNull`0" priority="0" />
+      <Item value="ToList`1" priority="0" />
+      <Item value="Count`1" priority="0" />
+      <Item value="Contains`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Type">
+      <Item value="Name" priority="0" />
+      <Item value="GetProperties`0" priority="1" />
+      <Item value="GetProperty`0" priority="2" />
+      <Item value="GetMembers`0" priority="1" />
+      <Item value="InvokeMember`0" priority="2" />
+      <Item value="IsByRef" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SytelineInterface.Dsl.InvoicedOrdersCriteria">
+      <Item value="OrderNumber" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@AFPST.Common.Enumerations.LocationDatabase">
+      <Item value="AUSLocalDev" priority="1" />
+      <Item value="NAS" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SytelineInterface.Dsl.Queries.CustomerOrderLineItemBuilder">
+      <Item value="WhereExp`1" priority="0" />
+      <Item value="DerProgBillTotalBilled" priority="0" />
+      <Item value="CustPo" priority="1" />
+      <Item value="Disc" priority="0" />
+      <Item value="CoPrice" priority="0" />
+      <Item value="Where" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SytelineInterface.Dsl.CustomerOrderLineItemCriteria">
+      <Item value="OrderNumber" priority="0" />
+      <Item value="QtyInvoiced" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Reflection.MemberInfo">
+      <Item value="DeclaringType" priority="0" />
+      <Item value="Name" priority="7" />
+      <Item value="GetCustomAttributes`0" priority="0" />
+      <Item value="MemberType" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.Expressions.MemberExpression">
+      <Item value="Expression" priority="20" />
+      <Item value="Member" priority="18" />
+      <Item value="GetType`0" priority="1" />
+      <Item value="NodeType" priority="1" />
+      <Item value="Type" priority="0" />
+      <Item value="GetValue`0" priority="2" />
+      <Item value="GetAttribute`0" priority="0" />
+      <Item value="ParseContainsCall`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.Expressions.ConstantExpression">
+      <Item value="Value" priority="8" />
+      <Item value="GetType`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Reflection.PropertyInfo">
+      <Item value="Name" priority="0" />
+      <Item value="GetValue`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SytelineInterface.Dsl.ISytelineExpressionVisitor">
+      <Item value="Visit`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Linq.Expressions.Expression">
+      <Item value="Bind`0" priority="2" />
+      <Item value="MemberBind`0" priority="0" />
+      <Item value="Invoke`0" priority="0" />
+      <Item value="Call`0" priority="1" />
+      <Item value="Constant`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.Expressions.MemberAssignment">
+      <Item value="Expression" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Reflection.BindingFlags">
+      <Item value="GetField" priority="0" />
+      <Item value="Instance" priority="0" />
+      <Item value="GetProperty" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SytelineInterface.Dsl.CustomerOrderCriteria">
+      <Item value="OrderDate" priority="0" />
+      <Item value="TermsCodeDiscDays" priority="0" />
+      <Item value="TermsCodeDueDays" priority="0" />
+      <Item value="BillToAddress1" priority="0" />
+      <Item value="OrderNumber" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Today" priority="4" />
+      <Item value="Now" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="ToString`0" priority="0" />
+      <Item value="AddMinutes`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.Expressions.MethodCallExpression">
+      <Item value="Object" priority="2" />
+      <Item value="Method" priority="2" />
+      <Item value="Arguments" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IList`1">
+      <Item value="Add`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.Expressions.Expression`1">
+      <Item value="Body" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.Expressions.Expression">
+      <Item value="NodeType" priority="17" />
+      <Item value="Type" priority="1" />
+      <Item value="GetValue`0" priority="0" />
+      <Item value="ParseContainsCall`0" priority="0" />
+      <Item value="ParseTrimCall`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Linq.Expressions.ExpressionType">
+      <Item value="Call" priority="1" />
+      <Item value="MemberAccess" priority="0" />
+      <Item value="Parameter" priority="0" />
+      <Item value="AndAlso" priority="0" />
+      <Item value="Or" priority="0" />
+      <Item value="GreaterThanOrEqual" priority="0" />
+      <Item value="NotEqual" priority="0" />
+      <Item value="LessThan" priority="0" />
+      <Item value="ExclusiveOr" priority="0" />
+      <Item value="Extension" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Reflection.MethodInfo">
+      <Item value="Invoke`0" priority="0" />
+      <Item value="Name" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AFPST.Common.Structures.Customer">
+      <Item value="Terms" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AFPST.Common.Structures.TermsOfSale">
+      <Item value="DiscountDays" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Reflection.MemberTypes">
+      <Item value="NestedType" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.Stack`1">
+      <Item value="Push`0" priority="1" />
+      <Item value="Peek`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SytelineInterface.Dsl.ClassValueVariableMemberExpressionResolver+Member">
+      <Item value="memberName" priority="1" />
+      <Item value="parent" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="IsNullOrEmpty`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AFPST.Common.Structures.AddressEntity">
+      <Item value="Address1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.Expressions.UnaryExpression">
+      <Item value="Operand" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.Expressions.BinaryExpression">
+      <Item value="NodeType" priority="0" />
+      <Item value="Right" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Trim`0" priority="2" />
+      <Item value="FromSytelineDateTime`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SytelineInterface.Dsl.Queries.AFPShippingWorkbench">
+      <Item value="IDO_NAME" priority="0" />
+      <Item value="OrderDate" priority="0" />
+      <Item value="PickStatus" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SytelineInterface.Dsl.Queries.AFPShippingWorkbenchBuilder">
+      <Item value="CustNum" priority="0" />
+      <Item value="OrderNumber" priority="0" />
+      <Item value="OrderDate" priority="0" />
+      <Item value="PickStatus" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SytelineInterface.Dsl.Queries.CustomerOrder">
+      <Item value="PickStatus" priority="0" />
+      <Item value="PackListInstructions" priority="0" />
+      <Item value="CancelBackorders" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SytelineInterface.Dsl.Queries.CustomerOrderBuilder">
+      <Item value="PickStatus" priority="0" />
+      <Item value="PackListInstructions" priority="0" />
+      <Item value="CancelBackorders" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SytelineInterface.Dsl.Queries.ItemWarehouse">
+      <Item value="AvgCost" priority="0" />
+      <Item value="FreezeDate" priority="0" />
+      <Item value="QtyAllocatedOrders" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SytelineInterface.Dsl.Queries.ItemWarehouseBuilder">
+      <Item value="AvgCost" priority="0" />
+      <Item value="UnitCost" priority="0" />
+      <Item value="FreezeCost" priority="0" />
+      <Item value="FreezeDate" priority="0" />
+      <Item value="QtyAllocatedJobs" priority="0" />
+      <Item value="QtyAllocatedOrders" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SytelineInterface.Dsl.Queries.ItemPrice">
+      <Item value="EffectiveDate" priority="0" />
+      <Item value="IDO_NAME" priority="0" />
+      <Item value="BreakPrice1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SytelineInterface.Dsl.Queries.Jobs">
+      <Item value="ActualCompleteDate" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SytelineInterface.Dsl.FromSyteline">
+      <Item value="Jobs" priority="0" />
+      <Item value="BlanketOrderLine" priority="0" />
+      <Item value="UserSession" priority="1" />
+      <Item value="ArInvoices" priority="1" />
+      <Item value="ArTransactions" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SytelineInterface.Dsl.Queries.JobsBuilder">
+      <Item value="ActualCompleteDate" priority="0" />
+      <Item value="Job" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Boolean">
+      <Item value="ShouldBeTrue`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SytelineInterface.Dsl.Queries.BlanketOrderLine">
+      <Item value="OrderNumber" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SytelineInterface.Dsl.Queries.BlanketOrderLineBuilder">
+      <Item value="BlanketQty" priority="0" />
+      <Item value="Item" priority="0" />
+      <Item value="CustItem" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SytelineInterface.Dsl.Queries.Customers">
+      <Item value="CancelBackorders" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SytelineInterface.Dsl.Queries.CustomersBuilder">
+      <Item value="CancelBackorders" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SytelineInterface.Dsl.Queries.InvoicedOrders">
+      <Item value="ShipDate" priority="0" />
+      <Item value="InvNum" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SytelineInterface.Dsl.ShippedCustomerOrderCriteria">
+      <Item value="CustomerNumber" priority="0" />
+      <Item value="OrderNumber" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SytelineInterface.Dsl.Queries.ShippedCustomerOrder">
+      <Item value="GetFullProjection`0" priority="0" />
+      <Item value="DateSeq" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.Expressions.ParameterExpression">
+      <Item value="GetValue`0" priority="0" />
+      <Item value="Reduce`0" priority="1" />
+      <Item value="CanReduce" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SytelineInterface.Dsl.Queries.SytelineSession">
+      <Item value="ConnectionID" priority="0" />
+      <Item value="IDO_NAME" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SytelineInterface.Dsl.Queries.UserSession">
+      <Item value="IDO_NAME" priority="0" />
+      <Item value="ConnectionID" priority="3" />
+      <Item value="UserName" priority="1" />
+      <Item value="CreatedBy" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SytelineInterface.Dsl.Queries.UserSessionBuilder">
+      <Item value="ConnectionID" priority="0" />
+      <Item value="UserName" priority="0" />
+      <Item value="RecordDate" priority="0" />
+      <Item value="Where" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SytelineInterface.Dsl.ToSyteline">
+      <Item value="UserSession" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SytelineInterface.Dsl.Commands.SytelineSessionValues">
+      <Item value="Action`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Mongoose.IDO.Protocol.UpdateAction">
+      <Item value="Delete" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SytelineInterface.Dsl.Commands.UserSessionValues">
+      <Item value="ConnectionID`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SytelineInterface.Core.ISytelineIdoClient">
+      <Item value="UpdateCollection`0" priority="1" />
+      <Item value="ActiveSessions`0" priority="0" />
+      <Item value="KillSession`0" priority="0" />
+      <Item value="GetData`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SytelineIntegrationTests.SytelineSession">
+      <Item value="RecordDate" priority="1" />
+      <Item value="UserName" priority="0" />
+      <Item value="ConnectionID" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SytelineInterface.Dsl.Queries.ArInvoices">
+      <Item value="MiscCharges" priority="0" />
+      <Item value="Freight" priority="0" />
+      <Item value="Description" priority="0" />
+      <Item value="IDO_NAME" priority="1" />
+      <Item value="Amount" priority="0" />
+      <Item value="CustID" priority="0" />
+      <Item value="InvoiceNumber" priority="2" />
+      <Item value="SalesTax" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SytelineInterface.Dsl.Queries.ArInvoicesBuilder">
+      <Item value="InvoiceNumber" priority="2" />
+      <Item value="InvoiceDate" priority="0" />
+      <Item value="InvoiceTotal" priority="0" />
+      <Item value="SalesTax" priority="1" />
+      <Item value="WhereExp`1" priority="0" />
+      <Item value="Amount" priority="0" />
+      <Item value="LinkBy`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SytelineInterface.Dsl.ArInvoicesCriteria">
+      <Item value="OrderNumber" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SytelineInterface.Dsl.Queries.InvoicedOrdersBuilder">
+      <Item value="WithChildren`0" priority="0" />
+      <Item value="BillType" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SytelineInterface.Dsl.IdoArTransactionBuilder">
+      <Item value="Where" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Machine.Specifications.Result">
+      <Item value="Failure`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SytelineInterface.Dsl.Queries.CustomerPartNumberFilterExpressionBuilder">
+      <Item value="IsBacklogAutomationBlocked" priority="0" />
+      <Item value="CustomerNumber" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SytelineInterface.Dsl.FilterExpression`2">
+      <Item value="Eq`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SytelineInterface.Dsl.Queries.CustomerPartNumberBuilder">
+      <Item value="And" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SytelineInterface.Dsl.Commands.CustomerOrderValues">
+      <Item value="CustomerNumber`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

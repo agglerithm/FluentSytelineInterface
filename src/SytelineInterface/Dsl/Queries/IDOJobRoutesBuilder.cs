@@ -2,7 +2,9 @@ using SytelineInterface.Core;
 
                 namespace SytelineInterface.Dsl.Queries
                 {
-                  public class JobRoutes : IdoConstants 
+                    using Commands;
+
+                    public class JobRoutes : IdoConstants 
                 { 
                            public const string IDO_NAME = "SLJobRoutes";
        public const string BflushType = "BflushType";

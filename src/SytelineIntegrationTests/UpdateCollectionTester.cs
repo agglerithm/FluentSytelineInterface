@@ -54,12 +54,12 @@ namespace SytelineIntegrationTests
         public void can_insert_new_record()
         {
              var response = _client.Insert(TestHelper.GetTestSyteline(),
-                           ToSyteline.CustomerOrder.CustomerNumber("WWTI001").Carrier("01")
-                               .Discount("0").OrderDate(DateTime.Now).OrderType("R").OrderNumber("TBD").CancelBackorders("1").
+                           ToSyteline.CustomerOrder.CustomerNumber("WWTI001")  
+                               .Discount("0").OrderDate(DateTime.Now).OrderType("R").OrderNumber("TBD").
                                PONumber("998342")
                                .ShipToAddr1("1111 Elm St").ShipToAddr2("Suite 12").ShipToCity("Florence").ShipToState(
                                "OH")
-                               .ShipToCode("00001").ShipToName("Fred").ShipToZip("18736").DropShipOverride(SytelineBool.True)
+                               .ShipToCode("00001").ShipToName("Fred").ShipToZip("18736") 
                                .LinkProperty(CustomerOrder.OrderNumber).WithChildren(
                                ()=> ToSyteline.CustomerOrderLineItems.CustomerNumber("WWTI001").CustomerPartNumber
                                         ("23432").
@@ -77,12 +77,12 @@ namespace SytelineIntegrationTests
         public void can_get_item_id_from_new_record()
         {
             var response = _client.Insert(TestHelper.GetTestSyteline(),
-                          ToSyteline.CustomerOrder.CustomerNumber("WWTI001").Carrier("01")
+                          ToSyteline.CustomerOrder.CustomerNumber("WWTI001")  
                               .Discount("0").OrderDate(DateTime.Now).OrderType("R").OrderNumber("TBD").
                               PONumber("998342")
                               .ShipToAddr1("1111 Elm St").ShipToAddr2("Suite 12").ShipToCity("Florence").ShipToState(
                               "OH")
-                              .ShipToCode("00001").ShipToName("Fred").ShipToZip("18736").DropShipOverride(SytelineBool.True)
+                              .ShipToCode("00001").ShipToName("Fred").ShipToZip("18736") 
                               .LinkProperty(CustomerOrder.OrderNumber).WithChildren(
                               () => ToSyteline.CustomerOrderLineItems.CustomerNumber("WWTI001").CustomerPartNumber
                                        ("23432").
@@ -117,8 +117,7 @@ namespace SytelineIntegrationTests
             var queryBuilder = FromSyteline
                                     .CustomerOrder
                                     .OrderNumber
-                                    .PONumber
-                                    .ShippingInstructions
+                                    .PONumber 
                                     .Where
                                         .CustomerNumber.Eq("WWTI001")
                                     .WithMaxResults(1);
@@ -128,8 +127,8 @@ namespace SytelineIntegrationTests
                                 queryBuilder, MapCustomerOrder);
 
             var testNote = "TestNote: " + DateTime.Now.Ticks;
-
-            _client.UpdateCollection(loc, ToSyteline.CustomerOrder.ShippingInstructions(testNote),
+              
+            _client.UpdateCollection(loc, ToSyteline.CustomerOrder.CustomerNumber(testNote),
                                      FromSyteline.CustomerOrder.Where.OrderNumber.Eq(result.OrderNumber));
 
 
@@ -142,8 +141,7 @@ namespace SytelineIntegrationTests
         {
             var loc = TestHelper.GetTestSyteline();
             return new CustomerOrderEntity(loc)
-                       {
-                           Notes = idoItemWrapper.GetValue(CustomerOrder.ShippingInstructions).ToString(),
+                       { 
                            OrderNumber = idoItemWrapper.GetValue(CustomerOrder.OrderNumber).ToString(),
                            CustomerPO = idoItemWrapper.GetValue(CustomerOrder.PONumber).ToString()
             };

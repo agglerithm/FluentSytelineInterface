@@ -3,7 +3,8 @@ using Mongoose.IDO.Protocol;
 
 namespace SytelineInterface.Dsl.Queries
 {
-    
+    using Commands;
+
     public class ShipToAddress
     {
         public const string IDO_NAME = "SL.SLCustAddrs";

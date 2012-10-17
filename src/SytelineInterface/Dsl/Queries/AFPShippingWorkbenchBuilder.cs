@@ -1,7 +1,9 @@
-﻿using SytelineInterface.Core;
+using SytelineInterface.Core;
 
 namespace SytelineInterface.Dsl.Queries
 {
+    using Commands;
+
     public class AFPShippingWorkbench : IdoConstants
     {
         public const string IDO_NAME = "AFPShippingWorkbenchs";

@@ -5,6 +5,8 @@ using Mongoose.IDO.Protocol;
 
 namespace SytelineInterface.Dsl.Queries
 {
+    using Commands;
+
     public interface IIdoCommandBuilder
     {
         //DataSet GetDataSet();

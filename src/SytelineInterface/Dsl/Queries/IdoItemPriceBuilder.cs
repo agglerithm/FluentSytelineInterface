@@ -4,7 +4,8 @@ using SytelineInterface.Core;
 
 namespace SytelineInterface.Dsl.Queries
 {
-    
+    using Commands;
+
     public class ItemPrice : IdoConstants
     {
         public const string IDO_NAME = "SL.SLItemprices";

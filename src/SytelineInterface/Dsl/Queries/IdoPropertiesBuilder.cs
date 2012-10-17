@@ -5,7 +5,8 @@ using SytelineInterface.Core;
 
 namespace SytelineInterface.Dsl.Queries
 {
-    
+    using Commands;
+
     public class IDOCollections : IdoConstants
     {
         public const string CollectionName = "CollectionName";

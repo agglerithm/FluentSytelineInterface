@@ -1,6 +1,7 @@
 namespace SytelineInterface.Dsl.Queries
 {
     using System;
+    using Commands;
     using Core;
 
     public class UserSession : IdoConstants

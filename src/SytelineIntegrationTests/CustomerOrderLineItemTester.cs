@@ -8,6 +8,7 @@ using SytelineInterface.Dsl.Queries;
 namespace SytelineIntegrationTests
 {
     using SytelineInterface.Common;
+    using SytelineInterface.Dsl.Commands;
 
     [TestFixture]
     public class CustomerOrderLineItemTester
@@ -21,7 +22,9 @@ namespace SytelineIntegrationTests
         {
             _client = TestHelper.GetTestIdoClient();
             
-            _builder = CustomerOrderLineItem.GetFullProjection().Where.LineNumber.Eq("1").And.OrderNumber.Eq(OrderNumber);
+            _builder = CustomerOrderLineItem.GetFullProjection()
+                .Where<CustomerOrderLineItemCriteria>(c => c.LineNumber == "1" 
+                    && c.OrderNumber == OrderNumber);
             
         }
 
@@ -60,8 +63,8 @@ namespace SytelineIntegrationTests
             _client.UpdateCollection(TestHelper.GetTestSyteline(),
                                      ToSyteline.CustomerOrderLineItems.OrderNumber(OrderNumber).LineNumber("1").
                                          Description(testDescription),
-                                     FromSyteline.CustomerOrderLineItems.Where.OrderNumber.Eq(OrderNumber).And.
-                                         LineNumber.Eq("1"));
+                                     FromSyteline.CustomerOrderLineItems.Where<CustomerOrderLineItemCriteria>(l => l.OrderNumber == OrderNumber &&
+                                        l. LineNumber == "1"));
 
 
             var resp = _client.GetData(TestHelper.GetTestSyteline(), _builder);

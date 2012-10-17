@@ -6,6 +6,7 @@ namespace SytelineIntegrationTests
     using SytelineInterface.Core;
     using SytelineInterface.Core.impl;
     using SytelineInterface.Dsl;
+    using SytelineInterface.Dsl.Commands;
     using SytelineInterface.Dsl.Queries;
 
     [TestFixture]
@@ -17,9 +18,8 @@ namespace SytelineIntegrationTests
         {
             _client = TestHelper.GetLiveIdoClient();
             _builder =
-                FromSyteline.CustomerPartNumbers.CustomerNumber.CustomerPartNumber.IsBacklogAutomationBlocked.
-                    IsForecastAutomationBlocked
-                    .Item.Where.IsBacklogAutomationBlocked.Eq(false).And.CustomerNumber.Eq("WWTI001");
+                FromSyteline.CustomerPartNumbers.CustomerNumber.CustomerPartNumber 
+                    .Item.Where<CustomerPartNumbersCriteria>(c => c .CustomerNumber =="WWTI001");
         }
 
         [Test]

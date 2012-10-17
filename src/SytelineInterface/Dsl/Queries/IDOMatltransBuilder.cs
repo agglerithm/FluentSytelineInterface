@@ -2,7 +2,9 @@ using SytelineInterface.Core;
 
 namespace SytelineInterface.Dsl.Queries
                 {
-                  public class InventoryTransactions : IdoConstants 
+                    using Commands;
+
+                    public class InventoryTransactions : IdoConstants 
                 { 
                            public const string IDO_NAME = "SLMatltrans";
                            public const string AwaitingEop = "AwaitingEop";

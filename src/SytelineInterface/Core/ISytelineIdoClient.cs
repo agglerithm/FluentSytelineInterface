@@ -10,6 +10,8 @@ using SytelineInterface.Dsl.Queries;
 
 namespace SytelineInterface.Core
 {
+    using Dsl.Commands;
+
     public interface ISytelineIdoClient
     { 
         string GetScalar(SLConfiguration config, string idoName, string props, string filter);

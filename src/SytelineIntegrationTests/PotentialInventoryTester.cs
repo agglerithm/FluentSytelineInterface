@@ -9,6 +9,7 @@ namespace SytelineIntegrationTests
 {
     using System.Linq;
     using SytelineInterface.Common.Extensions;
+    using SytelineInterface.Dsl.Commands;
 
     [TestFixture]
     public class PotentialInventoryTester

@@ -1,6 +1,6 @@
 ﻿namespace SytelineInterface.Dsl.Queries
 {
-    
+    using Commands;
     using Core;
 
     

@@ -6,6 +6,8 @@ using SytelineInterface.Dsl.Queries;
 
 namespace SytelineIntegrationTests
 {
+    using SytelineInterface.Dsl.Commands;
+
     [TestFixture]
     public class CustomerIdoTester
     {
@@ -19,8 +21,8 @@ namespace SytelineIntegrationTests
                 .Contact.Contact2.Country.County.Currency.CustomerNumber
                 .CustomerSequence.CustType.Delterm.DoInvoice.EndUserType
             .InvCategory.InvFreq.Name 
-            .RowPointer.ShipCode.Slsman.State.CancelBackorders
-            .TaxCode.TaxRegNum.TermsCode.TerritoryCode.Whse.Where.CustomerNumber.StartsWith("WWT");
+            .RowPointer.ShipCode.Slsman.State
+            .TaxCode.TaxRegNum.TermsCode.TerritoryCode.Whse.Where<CustomersCriteria>(c => c .CustomerNumber.StartsWith("WWT"));
         }
 
         [Test]
@@ -55,8 +57,7 @@ namespace SytelineIntegrationTests
             resp.ContainsField(Customers.TermsCode).ShouldBeTrue();
             resp.ContainsField(Customers.TerritoryCode).ShouldBeTrue();
             resp.ContainsField(Customers.Whse).ShouldBeTrue();
-            resp.ContainsField(Customers.Zip).ShouldBeTrue();
-            resp.ContainsField(Customers.CancelBackorders).ShouldBeTrue(); 
+            resp.ContainsField(Customers.Zip).ShouldBeTrue(); 
 
         }
 

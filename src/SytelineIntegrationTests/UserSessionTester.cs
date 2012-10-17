@@ -11,6 +11,7 @@ namespace SytelineIntegrationTests
     using SytelineInterface.Core;
     using SytelineInterface.Core.impl;
     using SytelineInterface.Dsl;
+    using SytelineInterface.Dsl.Commands;
     using SytelineInterface.Dsl.Queries;
 
     [TestFixture]

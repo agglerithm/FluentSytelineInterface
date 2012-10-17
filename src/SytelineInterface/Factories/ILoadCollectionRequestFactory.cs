@@ -4,6 +4,8 @@ using SytelineInterface.Dsl;
 
 namespace SytelineInterface.Factories
 {
+    using Dsl.Commands;
+
     public interface ILoadCollectionRequestFactory
     {
         LoadCollectionRequestData GetLoadCollectionRequest(IIdoQueryBuilder idoParameterBuilder);

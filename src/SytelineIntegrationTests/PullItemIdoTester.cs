@@ -1,4 +1,4 @@
-﻿using NUnit.Framework;
+using NUnit.Framework;
 using SytelineInterface.Core;
 using SytelineInterface.Dsl;
 using SytelineInterface.Dsl.Queries;
@@ -6,6 +6,8 @@ using Machine.Specifications;
 
 namespace SytelineIntegrationTests
 {
+    using SytelineInterface.Dsl.Commands;
+
     [TestFixture]
     public class PullItemIdoTester
     {

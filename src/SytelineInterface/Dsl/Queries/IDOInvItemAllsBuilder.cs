@@ -2,7 +2,9 @@ using SytelineInterface.Core;
 
                 namespace SytelineInterface.Dsl
                 {
-                  public class InvoiceLineItemAlls : IdoConstants 
+                    using Commands;
+
+                    public class InvoiceLineItemAlls : IdoConstants 
                 { 
                            public const string IDO_NAME = "SLInvItemAlls";
                            public const string OrderLine = "CoLine";

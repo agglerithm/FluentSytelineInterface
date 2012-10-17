@@ -93,10 +93,7 @@ namespace SytelineInterface.Dsl.Commands
         public ShippedCustomerOrderValues ShipDate(string value) { AddValue(ShippedCustomerOrder.ShipDate, value); return this; }
         public ShippedCustomerOrderValues ShipperNum(string value) { AddValue(ShippedCustomerOrder.ShipperNum, value); return this; }
 
-        public override IIdoQueryBuilder GetBuilder()
-        {
-            return FromSyteline.ShippedCustomerOrder.Add(get_property_names());
-        }
+  
 
     }
 }

@@ -1,7 +1,9 @@
-﻿using SytelineInterface.Core;
+using SytelineInterface.Core;
 
 namespace SytelineInterface.Dsl
 {
+    using Commands;
+
     public class IdoCustomerOrderLinesHistory : IdoConstants
     {
         public const string IDO_NAME = "SLCitemhs";

@@ -1,4 +1,4 @@
-﻿using Machine.Specifications;
+using Machine.Specifications;
 using NUnit.Framework;
 using SytelineInterface.Core;
 using SytelineInterface.Dsl;
@@ -6,6 +6,8 @@ using SytelineInterface.Dsl.Queries;
 
 namespace SytelineIntegrationTests
 {
+    using SytelineInterface.Dsl.Commands;
+
     [TestFixture]
     public class InventoryIdoTester
     {

@@ -25,8 +25,7 @@ namespace SytelineInterface.Dsl.Commands
         public ItemForecastValues RecordDate(string value) { AddValue(ItemForecast.RecordDate, value); return this; }
         public ItemForecastValues RowPointer(string value) { AddValue(ItemForecast.RowPointer, value); return this; }
         public ItemForecastValues Status(string value) { AddValue(ItemForecast.Status, value); return this; }
-        public ItemForecastValues UpdatedBy(string value) { AddValue(ItemForecast.UpdatedBy, value); return this; }
-        public ItemForecastValues ForcastType(string value) { AddValue(ItemForecast.ForcastType, value); return this; }
+        public ItemForecastValues UpdatedBy(string value) { AddValue(ItemForecast.UpdatedBy, value); return this; } 
         public override IIdoQueryBuilder GetBuilder()
         {
             return FromSyteline.ItemForecast.Add(get_property_names());

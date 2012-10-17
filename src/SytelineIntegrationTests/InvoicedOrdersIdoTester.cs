@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using Machine.Specifications;
 using Mongoose.IDO.Protocol;
@@ -9,6 +9,8 @@ using SytelineInterface.Dsl.Queries;
 
 namespace SytelineIntegrationTests
 {
+    using SytelineInterface.Dsl.Commands;
+
     [TestFixture]
     public class InvoicedOrdersIdoTester
     {

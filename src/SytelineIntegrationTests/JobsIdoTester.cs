@@ -4,6 +4,7 @@ namespace SytelineIntegrationTests
     using NUnit.Framework;
     using SytelineInterface.Core;
     using SytelineInterface.Dsl;
+    using SytelineInterface.Dsl.Commands;
     using SytelineInterface.Dsl.Queries;
 
     [TestFixture]

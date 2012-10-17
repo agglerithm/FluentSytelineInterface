@@ -37,7 +37,7 @@ namespace SytelineIntegrationTests.builders
         public void build_ido()
         {
             var response = _client.GetData(TestHelper.GetTestSyteline(),
-                                           FromSyteline.IDOCollections.CollectionName.Where.CollectionName.StartsWith("SL")
+                                           FromSyteline.IDOCollections.CollectionName.Where<IDOCollectionsCriteria>(c => c.CollectionName.StartsWith("SL"))
                                            .WithChildren(FromSyteline.IDOProperties.PropertyName.LinkBy(IDOCollections.CollectionName, IDOProperties.CollectionName)));
             response.ShouldNotBeNull();
 

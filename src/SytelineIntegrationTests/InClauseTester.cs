@@ -10,6 +10,8 @@ using SytelineInterface.Dsl.Queries;
 
 namespace SytelineIntegrationTests
 {
+    using SytelineInterface.Dsl.Commands;
+
     [TestFixture]
     public class InClauseTester
     {
@@ -35,7 +37,7 @@ namespace SytelineIntegrationTests
         [Test]
         public void can_send_string_request()
         {
-            _builder = CustomerOrder.GetFullProjectionWithCustomer().Where.OrderNumber.In(get_orders());
+            _builder = CustomerOrder.GetFullProjectionWithCustomer().Where<CustomerOrderCriteria>( o => this.get_orders().Contains(o.OrderNumber));
             _client.GetList<CustomerOrder>(TestHelper.GetTestSyteline(), _builder, map);
         }
 
