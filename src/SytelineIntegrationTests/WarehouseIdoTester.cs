@@ -19,7 +19,7 @@ namespace SytelineIntegrationTests
         {
             _client = TestHelper.GetTestIdoClient();
             _builder =
-                FromSyteline.Warehouses.Address1.Address2.Address3.City.State.Zip.Name.Warehouse.Site.Where.Site.Eq(
+                FromSyteline.Warehouses.Address1.Address2.Address3.City.State.Zip.Name.Warehouse.Site.Where<WarehousesCriteria>(x => x.Site == 
                     "AUS");
         }
 

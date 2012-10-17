@@ -17,9 +17,9 @@ namespace SytelineIntegrationTests
         public void SetUp()
         {
             _client = TestHelper.GetTestIdoClient();
-            _builder = ShipToAddress.GetFullProjection().Where.Address1.Contains("St").And.Address2.Eq("").And.Address2.IsNull()
-                .And.Address4.IsNull().And.City.Eq("Austin").And.State.StartsWith("T")
-                .And.Zip.NotEq("").And.CustID.Eq("WWTI001").And.CustSeq.NotEq("");
+            _builder = ShipToAddress.GetFullProjection().Where<CustomerAddressesCriteria>(x => x.Address1.Contains("St") && x.Address2 == ""  && x.Address2 == null
+                 && x.Address4 == null && x.City == "Austin"  && x.State.StartsWith("T")
+                 && x.Zip != ""  && x.CustNum == "FEDEX01"  && x.CustSeq != "");
         }
 
         [Test]

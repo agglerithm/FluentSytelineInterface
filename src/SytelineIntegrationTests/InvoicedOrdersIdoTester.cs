@@ -9,6 +9,7 @@ using SytelineInterface.Dsl.Queries;
 
 namespace SytelineIntegrationTests
 {
+    using SytelineInterface.Common.Extensions;
     using SytelineInterface.Dsl.Commands;
 
     [TestFixture]
@@ -20,10 +21,12 @@ namespace SytelineIntegrationTests
         public void SetUp()
         {
             _client = TestHelper.GetTestIdoClient();
-            _builder = InvoicedOrders.GetFullProjectionWithLineItems().Where.Amount.GreaterThan(0)
-                .And.BillType.Contains("A")
-                .And.InvDate.GreaterThan(DateTime.Parse("1/1/2009"))
-                .And.InvDate.LessThan(DateTime.Today).And.InvNum.NotEq(string.Empty).And.InvSeq.Eq("0"); 
+            _builder = InvoicedOrders.GetFullProjectionWithLineItems()
+                .Where<InvoicedOrdersCriteria>(o => o.Amount  > 0 
+                && o.BillType.Contains("A")
+                && o.InvDate > DateTime.Parse("1/1/2009") 
+                && o.InvDate < DateTime.Today
+                && o.InvNum != string.Empty && o.InvSeq == "0"); 
         }
 
         [Test]

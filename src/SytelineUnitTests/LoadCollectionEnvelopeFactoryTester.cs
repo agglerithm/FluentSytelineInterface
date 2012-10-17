@@ -17,7 +17,7 @@ namespace SytelineUnitTests
         {
             _factory = new LoadCollectionRequestFactory();
             _req = _factory.GetLoadCollectionRequest(FromSyteline.CustomerOrder.CustomerNumber
-                .OrderNumber.Where.CustomerNumber.Eq("WWTI001")
+                .OrderNumber.Where<CustomerOrderCriteria>(x => x.CustomerNumber == "FEDEX01")
                 .WithChildren(
                 FromSyteline.CustomerOrderLineItems.CustomerPartNumber.Item.LineNumber.QtyOrdered ))
                 ;

@@ -17,8 +17,8 @@ namespace SytelineIntegrationTests
         public void SetUp()
         {
             _client = TestHelper.GetTestIdoClient();
-            _builder = FromSyteline.Inventory.Item.TotalQtyOnHand.Warehouse.Where.Item.StartsWith("FIN").And
-                .TotalQtyOnHand.GreaterThan(0).And.Warehouse.Eq("MAIN");
+            _builder = FromSyteline.Inventory.Item.TotalQtyOnHand.Warehouse.Where<InventoryCriteria>(i => i.Item.StartsWith("FIN") &&
+                i.TotalQtyOnHand > 0 && i.Warehouse == ("MAIN"));
         }
 
         [Test]

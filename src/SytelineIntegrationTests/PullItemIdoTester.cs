@@ -17,8 +17,8 @@ namespace SytelineIntegrationTests
         public void SetUp()
         {
             _client = TestHelper.GetTestIdoClient();
-            _builder = FromSyteline.PullItem.Item.TriggerPoint.Warehouse.Where.Item.StartsWith("FIN")
-                .And.TriggerPoint.IsNotNull().And.Warehouse.IsNotNull();
+            _builder = FromSyteline.PullItem.Item.TriggerPoint.Warehouse.Where<PullItemCriteria>(x => x.Item.StartsWith("FIN")
+                 &&  x.TriggerPoint != null  && x.Warehouse != null) ;
         }
 
         [Test, Explicit]

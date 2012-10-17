@@ -31,7 +31,7 @@ namespace SytelineUnitTests
             _loadFactory = new Mock<ILoadCollectionRequestFactory>();
             _client = new Mock<ISytelineIdoClient>();
             _builder =
-                FromSyteline.CustomerOrder.Where.CustomerNumber.Eq("WWTI001"); 
+                FromSyteline.CustomerOrder.Where<CustomerOrderCriteria>(x => x.CustomerNumber == "FEDEX01"); 
             _factory = new UpdateCollectionRequestFactory();
         };
 

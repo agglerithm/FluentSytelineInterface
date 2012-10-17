@@ -20,12 +20,12 @@ namespace SytelineIntegrationTests
             _client = TestHelper.GetTestIdoClient();
             _builder = FromSyteline.ItemForecast.AvailQty.CreateDate.CreatedBy.ForecastDate.InWorkflow
                 .Item.ItemDescription.ItemUOM.NoteExists.OrigQty.ProjectedDate.RecordDate.RowPointer.Status
-                .UpdatedBy.Where.AvailQty.GreaterThan(0).And.CreateDate.LessThan(DateTime.Today)
-                .And.CreatedBy.IsNotNull().And.ForecastDate.LessThan(DateTime.Today).And.InWorkflow.Eq(true)
-                .And.Item.StartsWith("FIN").And.ItemDescription.IsNotNull().And.ItemUOM.Eq("EA").And
-                .NoteExists.Eq(true).And.OrigQty.GreaterThan(0).And.ProjectedDate.LessThan(DateTime.Today)
-                .And.RecordDate.LessThan(DateTime.Today).And.RowPointer.IsNotNull().And.Status
-                .IsNotNull().And.UpdatedBy.IsNotNull();
+                .UpdatedBy.Where<ItemForecastCriteria>(f => f.AvailQty > 0 && f.CreateDate < DateTime.Today 
+                 && f.CreatedBy != null && f.ForecastDate < DateTime.Today  && f.InWorkflow == true 
+                 && f.Item.StartsWith("FIN") && f.ItemDescription != null  && f.ItemUOM == "EA" &&
+                f.NoteExists == true  && f.OrigQty > 0 && f.ProjectedDate < DateTime.Today 
+                 && f.RecordDate < DateTime.Today && f.RowPointer != null  && f.Status
+                 != null  && f.UpdatedBy != null) ;
         }
 
         [Test]

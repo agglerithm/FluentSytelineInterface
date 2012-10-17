@@ -18,9 +18,9 @@ namespace SytelineIntegrationTests
         {
             _client = TestHelper.GetTestIdoClient();
             _builder = FromSyteline.Items.Item.OrderMultiple.UnitWeight.Description.UnitCost.UnitPrice.UoM.DaysSupply
-                .Where.DaysSupply.GreaterThan(0)
-                .And.Item.Contains("FIN").And.OrderMultiple.Eq("1").And.UnitCost.GreaterThan(0)
-                .And.UnitWeight.GreaterThan(0).And.UoM.Eq("EA");
+                .Where<ItemsCriteria>(x => x.DaysSupply > 0 
+                 && x.Item.Contains("FIN") && x.OrderMultiple ==  1   && x.UnitCost > 0 
+                 && x.UnitWeight > 0  && x.UoM == "EA");
         }
 
         [Test]

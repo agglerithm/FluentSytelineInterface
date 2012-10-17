@@ -22,7 +22,7 @@ namespace SytelineIntegrationTests
             _client = TestHelper.GetTestIdoClient();
             _builder =
                 Items.GetFullProjection().WithChildren(FromSyteline.JobMaterials.Job.MatlQtyConv.Item.JobItem.Units.LinkBy(
-                                                              Items.ItemSuffix, JobMaterials.Suffix).LinkBy(Items.Job, JobMaterials.Job)).Where.Job.NotEq("");
+                                                              Items.ItemSuffix, JobMaterials.Suffix).LinkBy(Items.Job, JobMaterials.Job)).Where<JobMaterialsCriteria>(x => x.Job != "");
         }
         [SetUp]
         public void SetUpForEachTest()

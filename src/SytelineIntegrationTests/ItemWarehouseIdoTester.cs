@@ -19,11 +19,11 @@ namespace SytelineIntegrationTests
         {
             _client = TestHelper.GetTestIdoClient();
             _builder = ItemWarehouse.GetFullProjection()
-                .Where.Item.Contains("FIN").And.ItemDescription.IsNotNull().And.QtyMrb.GreaterThan(0)
-                .And.QtyOrdered.GreaterThan(0).And.QtyOnHand.GreaterThan(0).And.QtyReorder.GreaterThan(0)
-                .And.QtySoldYtd.GreaterThan(0).And.QtyWip.GreaterThan(0).And.RecordDate.LessThan(DateTime.Today)
-                .And.SalesPtd.GreaterThan(0).And.SalesYtd.GreaterThan(0).And.TotalQtyOnHand.GreaterThan(0)
-                .And.TotalQtyReserved.GreaterThan(0);
+                .Where<ItemWarehouseCriteria>(x => x.Item.Contains("FIN") && x.ItemDescription != null  && x.QtyMrb > 0 
+                 && x.QtyOrdered > 0  && x.QtyOnHand > 0 && x.QtyReorder > 0 
+                 && x.QtySoldYtd > 0  && x.QtyWip > 0  && x.RecordDate < DateTime.Today 
+                 && x.SalesPtd > 0  && x.SalesYtd > 0  && x.TotalQtyOnHand > 0 
+                 && x.TotalQtyReserved > 0);
         }
 
         [Test, Explicit]

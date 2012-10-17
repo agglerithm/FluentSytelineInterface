@@ -19,10 +19,10 @@ namespace SytelineIntegrationTests
         public void SetUp()
         {
             _client = TestHelper.GetLiveIdoClient();
-            _builder = FromSyteline.InvoicedOrders.OrderNumber.InvNum.InvDate.ShipDate.WhereExp<InvoicedOrdersCriteria>(
+            _builder = FromSyteline.InvoicedOrders.OrderNumber.InvNum.InvDate.ShipDate.Where<InvoicedOrdersCriteria>(
                     i => i.CustomerID == "FEDE002" && i.OrderNumber != "")
                     .WithChildren(FromSyteline.ArTransactions.SalesTax.Amount.InvNum.Type
-                    .WhereExp<IdoArTransactionCriteria>(i => i.Type == "I").LinkBy(InvoicedOrders.InvNum, IdoArTransaction.InvNum)
+                    .Where<IdoArTransactionCriteria>(i => i.Type == "I").LinkBy(InvoicedOrders.InvNum, IdoArTransaction.InvNum)
                     )
                     .WithChildren(FromSyteline.ArInvoices.SalesTax.Amount.LinkBy(InvoicedOrders.InvNum, ArInvoices.InvoiceNumber));
         }

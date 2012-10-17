@@ -44,7 +44,7 @@ namespace SytelineIntegrationTests
         [Test]
         public void can_send_date_request()
         {
-            _builder = CustomerOrder.GetFullProjectionWithCustomer().Where.OrderDate.In(get_dates());
+            _builder = CustomerOrder.GetFullProjectionWithCustomer().Where<CustomerOrderCriteria>(o =>  get_dates().Contains(o.OrderDate));
             _client.GetList<CustomerOrder>(TestHelper.GetTestSyteline(), _builder, map);
         }
 

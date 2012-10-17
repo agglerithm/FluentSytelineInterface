@@ -23,7 +23,7 @@ namespace SytelineInterface.Core.impl
         public void KillSession(SLConfiguration config, ActiveUserSession session, ISytelineIdoClient client)
         { 
             client.UpdateCollection(config, ToSyteline.UserSession.Action(UpdateAction.Delete),
-                FromSyteline.UserSession.WhereExp<UserSessionCriteria>(s => s.ConnectionID == session.ConnectionID));
+                FromSyteline.UserSession.Where<UserSessionCriteria>(s => s.ConnectionID == session.ConnectionID));
         }
 
         private ActiveUserSession mapUserSession(IdoItemWrapper arg)

@@ -54,7 +54,7 @@ namespace SytelineIntegrationTests
             {
                 Console.WriteLine("Deleting session for user {0}, last accessed on {1}.", session.UserName,  session.RecordDate );
             _client.UpdateCollection(_testLoc, ToSyteline.UserSession.Action(UpdateAction.Delete), 
-                FromSyteline.UserSession.WhereExp<UserSessionCriteria>(s => s.ConnectionID == session.ConnectionID));
+                FromSyteline.UserSession.Where<UserSessionCriteria>(s => s.ConnectionID == session.ConnectionID));
             }
         }
         [Test]

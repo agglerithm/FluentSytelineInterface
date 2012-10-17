@@ -17,7 +17,7 @@ namespace SytelineIntegrationTests
         public void SetUp()
         {
             _client = TestHelper.GetTestIdoClient();
-            _builder = ShippedCustomerOrder.GetFullProjection() .WhereExp<ShippedCustomerOrderCriteria>(s => s.CustomerNumber != "" && s.OrderNumber != null)   ;
+            _builder = ShippedCustomerOrder.GetFullProjection() .Where<ShippedCustomerOrderCriteria>(s => s.CustomerNumber != "" && s.OrderNumber != null)   ;
         }
 
         [Test, Explicit]

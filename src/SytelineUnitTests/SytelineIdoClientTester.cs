@@ -99,7 +99,7 @@ namespace SytelineUnitTests
 
         Because of = () =>
         {
-            _result = _sut.GetScalar(_loc, FromSyteline.Customers.CustomerNumber.Where.CustomerName.Contains("WWT"));
+            _result = _sut.GetScalar(_loc, FromSyteline.Customers.CustomerNumber.Where<CustomersCriteria>(x => x.Name.Contains("FedEx")));
         };
 
  
@@ -132,7 +132,7 @@ namespace SytelineUnitTests
         Because of = () =>
                                  {
                                      
-                                     _result = _sut.GetObject<CustomerEntity>(_loc, FromSyteline.Customers.CustomerNumber.Where.CustomerName.Contains("WWT"), map);
+                                     _result = _sut.GetObject<CustomerEntity>(_loc, FromSyteline.Customers.CustomerNumber.Where<CustomersCriteria>(x => x.Name.Contains("FedEx")), map);
                                  };
 
         static CustomerEntity map(IdoItemWrapper record)
@@ -174,7 +174,7 @@ namespace SytelineUnitTests
         Because of = () =>
         {
 
-            _result = _sut.GetList<CustomerEntity>(_loc, FromSyteline.Customers.CustomerNumber.Where.CustomerName.Contains("WWT"), map);
+            _result = _sut.GetList<CustomerEntity>(_loc, FromSyteline.Customers.CustomerNumber.Where<CustomersCriteria>(x => x.Name.Contains("FedEx")), map);
         };
 
         static CustomerEntity map(IdoItemWrapper record)

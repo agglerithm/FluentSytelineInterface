@@ -17,8 +17,8 @@ namespace SytelineIntegrationTests
         public void SetUp()
         {
             _client = TestHelper.GetTestIdoClient();
-            _builder = FromSyteline.Sites.Description.Site.SiteName.Where.Site.IsNotNull()
-                .And.SiteName.Eq("AUS").And.Description.Contains("Austin");
+            _builder = FromSyteline.Sites.Description.Site.SiteName.Where<SitesCriteria>(x => x.Site != null
+                 && x.SiteName == "AUS"  && x.Description.Contains("Austin"));
         }
 
         [Test]

@@ -17,7 +17,7 @@ namespace SytelineIntegrationTests
         public void SetUp()
         {
             _client = TestHelper.GetTestIdoClient();
-            _builder = FromSyteline.ItemPrice.Item.UnitPrice.BreakPrice1.BreakQty1.Where.Item.Contains("FIN").And.UnitPrice.GreaterThan(0);
+            _builder = FromSyteline.ItemPrice.Item.UnitPrice.BreakPrice1.BreakQty1.Where<ItemPriceCriteria>(x => x.Item.Contains("FIN") && x.UnitPrice > 0);
         }
 
         [Test]

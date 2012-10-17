@@ -18,7 +18,8 @@ namespace SytelineIntegrationTests
         {
             _client = TestHelper.GetTestIdoClient();
             _builder = ShippedCustomerOrderLineItem.GetFullProjection()
-                .Where.LineNumber.Eq("1").And.OrderNumber.NotEq("").And.QtyShipped.GreaterThan(0);
+                .Where<ShippedCustomerOrderLineItemCriteria>(x => x.LineNumber == "1"  && x.OrderNumber != "" 
+                && x.QtyShipped > 0);
         }
 
         [Test]

@@ -18,7 +18,7 @@ namespace SytelineUnitTests
         Establish context = () =>
         {
             _factory = new LoadCollectionRequestFactory();
-            _builder = FromSyteline.Customers.Where.CustomerNumber.Eq("WWTI001").WithMaxResults(2);
+            _builder = FromSyteline.Customers.Where<CustomersCriteria>(x => x.CustomerNumber == "FEDEX01").WithMaxResults(2);
         };
 
         Because of = () =>

@@ -829,7 +829,7 @@ namespace SytelineInterface.Dsl
         [FieldName(InvoicedOrders.TermsCode)]
         public string TermsCode { get; set; }
         [FieldName(InvoicedOrders.Amount)]
-        public string Amount { get; set; }
+        public decimal Amount { get; set; }
     }
 
     public class JobRoutesCriteria : IdoCriteria
@@ -2520,7 +2520,21 @@ namespace SytelineInterface.Dsl
         [FieldName(Jobs.WipVovhdTotal)]
         public string WipVovhdTotal { get; set; }
     }
+    public class SitesCriteria : IdoCriteria
+    {
+        public SitesCriteria( ) : base(Sites.IDO_NAME)
+        {
+        }
 
+        [FieldName(Sites.IDO_NAME)]
+        public string IDO_NAME { get; set; }
+        [FieldName(Sites.Site)]
+        public string Site { get; set; }
+        [FieldName(Sites.SiteName)]
+        public string SiteName { get; set; }
+        [FieldName(Sites.Description)]
+        public string Description { get; set; }
+    }
 
     public class CustomerAddressesCriteria : IdoCriteria
     {
@@ -3804,7 +3818,7 @@ namespace SytelineInterface.Dsl
         [FieldName(ItemWarehouse.ItemDescription)]
         public string ItemDescription { get; set; }
         [FieldName(ItemWarehouse.QtyMrb)]
-        public string QtyMrb { get; set; }
+        public int QtyMrb { get; set; }
         [FieldName(ItemWarehouse.QtyOnHand)]
         public int QtyOnHand { get; set; }
         [FieldName(ItemWarehouse.QtyOrdered)]
@@ -4804,7 +4818,7 @@ namespace SytelineInterface.Dsl
         [FieldName(Items.Datefld)]
         public string Datefld { get; set; }
         [FieldName(Items.DaysSupply)]
-        public string DaysSupply { get; set; }
+        public int DaysSupply { get; set; }
         [FieldName(Items.Decifld1)]
         public string Decifld1 { get; set; }
         [FieldName(Items.Decifld2)]
@@ -5704,7 +5718,7 @@ namespace SytelineInterface.Dsl
         [FieldName(ItemForecast.ForecastDate)]
         public DateTime ForecastDate { get; set; }
         [FieldName(ItemForecast.InWorkflow)]
-        public string InWorkflow { get; set; }
+        public bool InWorkflow { get; set; }
         [FieldName(ItemForecast.Item)]
         public string Item { get; set; }
         [FieldName(ItemForecast.ItemDescription)]
@@ -5712,9 +5726,9 @@ namespace SytelineInterface.Dsl
         [FieldName(ItemForecast.ItemUOM)]
         public string ItemUOM { get; set; }
         [FieldName(ItemForecast.NoteExists)]
-        public string NoteExists { get; set; }
+        public bool NoteExists { get; set; }
         [FieldName(ItemForecast.OrigQty)]
-        public string OrigQty { get; set; }
+        public int OrigQty { get; set; }
         [FieldName(ItemForecast.ProjectedDate)]
         public DateTime ProjectedDate { get; set; }
         [FieldName(ItemForecast.RecordDate)]

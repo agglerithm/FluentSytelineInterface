@@ -19,7 +19,7 @@ namespace SytelineUnitTests
         Establish context = () =>
         {
             _factory = new LoadCollectionRequestFactory();
-            _builder = FromSyteline.CustomerOrder.Where.CustomerNumber.Eq("AAAA");
+            _builder = FromSyteline.CustomerOrder.Where<CustomerOrderCriteria>(x => x.CustomerNumber == "AAAA");
         };
 
         Because of = () =>

@@ -30,7 +30,7 @@ namespace SytelineIntegrationTests
         public void can_get_results()
         {
             var results =
-                _client.GetData(TestHelper.GetTestSyteline(),FromSyteline.CustomerOrder.OrderNumber.PONumber.Where.CustomerNumber.Eq("WWTI001").WithChildren(
+                _client.GetData(TestHelper.GetTestSyteline(),FromSyteline.CustomerOrder.OrderNumber.PONumber.Where<CustomerOrderCriteria>(x => x.CustomerNumber == "WWTI001").WithChildren(
                                     FromSyteline.CustomerOrderLineItems.Item.LineNumber.QtyOrdered.
                                     LinkBy( CustomerOrder.OrderNumber, CustomerOrderLineItem.OrderNumber)));
             results.ShouldNotBeNull();

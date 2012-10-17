@@ -39,9 +39,9 @@ namespace SytelineIntegrationTests
         //                                .CustomerPartNumber
         //                                .CustomerNumber
         //                                .Where
-        //                                    .CustomerPartNumber.Eq(pn);
+        //                                    .CustomerPartNumber == pn);
 
-        //    var query1 = FromSyteline.CustomerPartNumbers.Where.CustomerPartNumber.Eq(pn).WithMaxResults(1);
+        //    var query1 = FromSyteline.CustomerPartNumbers.Where<Criteria>(x => CustomerPartNumber == pn).WithMaxResults(1);
 
 
         //    var loc = TestHelper.GetPilotSyteline();
@@ -107,7 +107,7 @@ namespace SytelineIntegrationTests
                                                            FromSyteline.Customers.CustomerNumber.CustomerSequence.
                                                                WithMaxResults(1), Map);
             _client.UpdateCollection(loc, ToSyteline.Customers.CustomerNumber(result.CustomerID),
-                                     FromSyteline.Customers.Where.CustomerNumber.Eq(result.CustomerID));
+                                     FromSyteline.Customers.Where<CustomersCriteria>(x => x.CustomerNumber == result.CustomerID));
         }
 
         [Test]
@@ -118,8 +118,8 @@ namespace SytelineIntegrationTests
                                     .CustomerOrder
                                     .OrderNumber
                                     .PONumber 
-                                    .Where
-                                        .CustomerNumber.Eq("WWTI001")
+                                    .Where<CustomerOrderCriteria>(o =>
+                                        o.CustomerNumber == "FEDEX01") 
                                     .WithMaxResults(1);
 
             //var result = _client.GetObject<CustomerOrderEntity>(loc, FromSyteline.CustomerOrder.ShippingInstructions.WithMaxResults(1), mapCustomerOrder);
@@ -129,7 +129,7 @@ namespace SytelineIntegrationTests
             var testNote = "TestNote: " + DateTime.Now.Ticks;
               
             _client.UpdateCollection(loc, ToSyteline.CustomerOrder.CustomerNumber(testNote),
-                                     FromSyteline.CustomerOrder.Where.OrderNumber.Eq(result.OrderNumber));
+                                     FromSyteline.CustomerOrder.Where<CustomerOrderCriteria>(x => x.OrderNumber == result.OrderNumber));
 
 
             var result2 = _client.GetObject<CustomerOrderEntity>(TestHelper.GetTestSyteline(), queryBuilder, MapCustomerOrder);

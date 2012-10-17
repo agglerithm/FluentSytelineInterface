@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
-using System.Text;
 using Machine.Specifications;
 using Mongoose.IDO.Protocol;
 using Moq;
@@ -49,10 +47,10 @@ namespace SytelineUnitTests
         {
             var loc = TestHelper.GetTestSyteline();
             _response = _client.GetObject<Foo>(loc,
-                                        FromSyteline.Customers.CustomerNumber.Where.CustomerNumber.Eq("AAA"),MapFoo);
-            _scalar = _client.GetScalar(loc, FromSyteline.Customers.CustomerNumber.Where.CustomerNumber.Eq("AAA"));
+                                        FromSyteline.Customers.CustomerNumber.Where<CustomersCriteria>(x => x.CustomerNumber == "AAA"),MapFoo);
+            _scalar = _client.GetScalar(loc, FromSyteline.Customers.CustomerNumber.Where<CustomersCriteria>(x => x.CustomerNumber == "AAA"));
             _list = _client.GetList<Foo>(loc,
-                                 FromSyteline.Customers.CustomerNumber.Where.CustomerNumber.Eq("AAA"), MapFoo);
+                                 FromSyteline.Customers.CustomerNumber.Where<CustomersCriteria>(x => x.CustomerNumber == "AAA"), MapFoo);
         };
 
         private static Foo MapFoo(IdoItemWrapper idoItemWrapper)
